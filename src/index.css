@@ -1,5 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Press Start 2P', cursive;
   line-height: 1.5;
   font-weight: 400;
 
@@ -26,31 +27,82 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  background-image: linear-gradient(#72009A, #E8E8E8, #72009A, #E8E8E8);
+  min-width: 100vi;
   min-height: 100vh;
+}
+
+footer {
+  margin-left: 500px;
+  color: #4ffafa;
+}
+
+ul {
+  margin-left: 500px;
+  color: #69008E;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #69008E;
+  text-decoration: inherit;
+  text-align: center;
+  margin-left: 400px;
 }
 
-button {
-  border-radius: 8px;
+/*button {
+  background-color: #646cff;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 5em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  border-radius: 12px;
+  color: #69008E;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-left: 500px;
+}
+*/
+
+.mainImageDiv{
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0,1);
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  align-items: center;
+  min-width: 90vi;
+  min-height: 80;
+}
+
+.mainImage {
+  padding: 10px;
+  margin: 10px;
+  display:block;
+  margin-left: 10%;
+  margin-right: auto;
+
+}
+
+
+.questionButton {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 button:hover {
+
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
+
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -63,6 +115,8 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.5)
+  
   }
 }
+
