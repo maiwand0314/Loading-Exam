@@ -10,12 +10,10 @@ function Question() {
             <img className= "mainImage"src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA5dXkybDVsZzM5cnFjdWFwZTBrN3BnN2tzdHlra3E0NnJrcnJ6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYsC1UC0BGwG2SQ/giphy.webp" alt="" />
         </div>
 
-        <ul>
-            <li>Test</li>
-            <li>{q1}</li>
-            <li>{q2}</li>
+        <h1 className="mainQuestion">You've met a fairy! What do you want to do?</h1>
 
-        </ul>
+
+    
         </>
     );
 }

@@ -1,122 +1,88 @@
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
-:root {
-  font-family: 'Press Start 2P', cursive;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
   background-image: linear-gradient(#72009A, #E8E8E8, #72009A, #E8E8E8);
-  min-width: 100vi;
+  min-width: 100%;
   min-height: 100vh;
 }
 
-footer {
-  margin-left: 500px;
-  color: #4ffafa;
+header {
+  margin: 0;
+  padding: 0;
 }
 
-ul {
-  margin-left: 500px;
-  color: #69008E;
+
+.mainImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-top: 20%;
+  border-radius: 25px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.mainQuestion{
+  padding: 25px;
+  font-size: 1EM;
+  line-height: 2;
   color: #69008E;
   text-decoration: inherit;
   text-align: center;
-  margin-left: 400px;
 }
 
-/*button {
-  background-color: #646cff;
-  border: 1px solid transparent;
-  padding: 5em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  border-radius: 12px;
-  color: #69008E;
+.questionButton1{
+  background-image: linear-gradient(#72009A, #E8E8E8);
+  color: rgb(0, 0, 0);
+  font-family: 'Press Start 2P', cursive;
+  padding: 35px 10px;
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-  margin-left: 500px;
-}
-*/
-
-.mainImageDiv{
-  border: 1px solid hsl(0, 0%, 80%);
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0,1);
-  padding: 0px;
-  margin: 0px;
-  display: block;
-  align-items: center;
-  min-width: 90vi;
-  min-height: 80;
+  position: relative;
+  left: 2%;
 }
 
-.mainImage {
-  padding: 10px;
-  margin: 10px;
-  display:block;
-  margin-left: 10%;
-  margin-right: auto;
-
-}
-
-
-.questionButton {
-    background-color: hsl(200, 100%, 50%);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: rgba(255, 255, 255, 0.5)
+.questionButton2{
+  background-image: linear-gradient(#72009A, #E8E8E8);
+  color: rgb(0, 0, 0);
+  font-family: 'Press Start 2P', cursive;
+  padding: 35px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 5%;
   
-  }
 }
 
+.questionButton3{
+  background-image: linear-gradient(#72009A, #E8E8E8);
+  color: rgb(0, 0, 0);
+  font-family: 'Press Start 2P', cursive;
+  padding: 35px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 2%;
+  margin-top: 5%;
+}
+
+.questionButton4{
+  background-image: linear-gradient(#72009A, #E8E8E8);
+  color: rgb(0, 0, 0);
+  font-family: 'Press Start 2P', cursive;
+  padding: 35px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 5%;
+}
+footer {
+  position: absolute;
+  top: 93vh;
+  left: 0;
+}
