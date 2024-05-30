@@ -59,13 +59,13 @@ body {
   width: 100%;
 }
 
-.grid-item {
+.box {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 5px;
 }
 
-.grid-item-full {
+.box-full {
   grid-column: span 12;
 }
 

@@ -24,20 +24,25 @@ function App() {
   return (
     <div className="App">
         <div className="container">
+
           <div className="grid">
-          <div className="grid-item grid-item-full">
+
+          <div className="box box-full">
             <h1>Welcome </h1>
           </div>
-          <div className="grid-item grid-item-full">
+
+          <div className="box box-full">
             {loading ? (
-              <div className="loading-bar">
+                <div className="loading-bar">
                 <div className="loading-bar-fill"></div>
-              </div>
-            ) : (
+                </div>
+                ) : (
               <div>
+
                 {isCodeCorrect ? (
                   <NextPage />
                 ) : (
+
                   <form onSubmit={handleSubmit} className="code-input">
                     <label htmlFor="code">Enter your code:</label>
                     <input
@@ -50,7 +55,9 @@ function App() {
                     <button type="submit">Submit</button>
                   </form>
                 )}
+
               </div>
+              
             )}
           </div>
         </div>
