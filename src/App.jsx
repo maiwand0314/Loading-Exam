@@ -11,7 +11,7 @@ function App() {
             <div className="loader-container">
                 <div className="loader"></div>
                 <div className="loader-inner"></div>
-                <img className={"vortex"} alt={"vortex"} src={"images/Pedro2.gif"}/>
+                <img className={"vortex"} alt={"vortex"} src={"images/3tick.gif"}/>
             </div>
 
             <div>
