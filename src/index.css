@@ -1,26 +1,142 @@
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
+
+:root {
+  font-family: 'Press Start 2P', cursive;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+}
+
+@media (min-width: 50em) {
+  :root {
+
+  }
+}
+
+/*
 body {
   margin: 0;
   padding: 0;
   font-family: 'Press Start 2P', cursive;
   background-image: linear-gradient(#72009A, #E8E8E8, #72009A, #E8E8E8);
-  min-width: 100%;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(#72009A, #72009A, #E8E8E8, #E8E8E8  );
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img, picture, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* General Styling */
+
+.padding-block {
+  padding-block: 2rem;
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) *2));
+  margin-inline: auto;
+}
+
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.questionButton{
+  background-image: linear-gradient(#72009A, #E8E8E8);
+  color: rgb(0, 0, 0);
+  font-family: 'Press Start 2P', cursive;
+  padding: 55px 10px;
+  border-radius: 25px;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 1em 1em purple;
+  
+}
+
+.questionButton:hover {
+
+  /*background-color: hsla(263, 98%, 60%, 0.411);*/
+  background-image: linear-gradient(#71009a7a, #e8e8e87c);
+  color: rgba(0, 0, 0, 0.329);
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  background-image: linear-gradient(#71009a7a, #e8e8e87c);
+  color: rgba(0, 0, 0, 0.329);
+  border-color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: rgba(255, 255, 255, 0.5)
+  
+  }
+}
+
+
+@media (min-width: 50em) {
+  .buttonsContainer {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+  }
 }
 
 header {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
+.mainImageDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding-top: 20%;
+  border-radius: 25px;
+  
+}
 
 .mainImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  margin-top: 20%;
   border-radius: 25px;
+  
 }
 
 .mainQuestion{
@@ -32,57 +148,16 @@ header {
   text-align: center;
 }
 
-.questionButton1{
-  background-image: linear-gradient(#72009A, #E8E8E8);
-  color: rgb(0, 0, 0);
-  font-family: 'Press Start 2P', cursive;
-  padding: 35px 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  left: 2%;
-}
 
-.questionButton2{
-  background-image: linear-gradient(#72009A, #E8E8E8);
-  color: rgb(0, 0, 0);
-  font-family: 'Press Start 2P', cursive;
-  padding: 35px 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  left: 5%;
-  
-}
 
-.questionButton3{
-  background-image: linear-gradient(#72009A, #E8E8E8);
-  color: rgb(0, 0, 0);
-  font-family: 'Press Start 2P', cursive;
-  padding: 35px 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  left: 2%;
-  margin-top: 5%;
-}
-
-.questionButton4{
-  background-image: linear-gradient(#72009A, #E8E8E8);
-  color: rgb(0, 0, 0);
-  font-family: 'Press Start 2P', cursive;
-  padding: 35px 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  left: 5%;
-}
 footer {
-  position: absolute;
-  top: 93vh;
-  left: 0;
+position: absolute;
+color: #69008E;
+margin-left: 10px;
+left:0;
+bottom:0;
+right:0;  
 }
+
+/* Utility Classes */
+

@@ -1,7 +1,6 @@
 import Header from "./Header.jsx"
 import Footer from "./Footer.jsx"
 import Question from "./Question.jsx"
-import Button from "./Button.jsx"
 
 function App() {
   
@@ -9,7 +8,6 @@ function App() {
     <>
     <Header/>
     <Question/>
-    <Button/>
     <Footer/>
     </>
   );
