@@ -1,4 +1,10 @@
+@font-face {
+  font-family: 'Press-Start-2P';
+  src: url('/fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Press-Start-2P', sans-serif; /* sans-serif som backup font i tilfelle problemer*/
 }

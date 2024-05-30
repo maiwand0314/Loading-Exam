@@ -1,0 +1,71 @@
+.name-and-avatar-container {
+    background-image: linear-gradient(to bottom, #FFFFFF, #72009A);
+    display: grid;
+    grid-template-columns: 12fr repeat(1fr);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+}
+
+.info-box {
+    border-bottom: 3px solid black;
+    width: 100dvw;
+    padding-bottom: 8px;
+    
+}
+
+.info-box p {
+    padding: 10px;
+}
+
+.name-container {
+    padding: 26px 0px;
+}
+
+.name-container p {
+    padding-top: 26px;
+}
+
+.avatars-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+    padding: 32px;
+}
+.continue-button {
+    padding: 8px;
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom, #FFFFFF, #72009A);
+    border-radius: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* unormalt liten skjerm */
+@media (width <= 360px) {
+    .avatars-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 20px;
+        padding: 32px;
+    }
+}
+
+/* basically anything 768px eller større i viewport */
+@media (width >= 786px) {
+    .avatars-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 20px;
+        padding: 32px;
+    }
+}

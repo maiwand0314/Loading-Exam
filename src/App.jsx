@@ -1,10 +1,11 @@
 import './App.css'
+import UserPage from './pages/UserPage'
 
 function App() {
 
   return (
     <>
-      <h1>Loading...</h1>
+      <UserPage />
     </>
   )
 }
