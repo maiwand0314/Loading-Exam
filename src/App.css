@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -29,7 +28,7 @@ body {
   text-align: center;
   position: relative;
   height: 100vh;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +43,6 @@ body {
   padding: 20px;
   border-radius: 10px;
   width: 80%;
-  max-width: 1200px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -122,7 +120,7 @@ body {
 }
 
 .next-page {
-  height: 30vh;
+  height: 25vh;
 }
 .next-page img {
   max-width: 100%;

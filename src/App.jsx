@@ -28,7 +28,7 @@ function App() {
           <div className="grid">
 
           <div className="box box-full">
-            <h1>Welcome </h1>
+            <h1>Welcome to Loading theatre</h1>
           </div>
 
           <div className="box box-full">
