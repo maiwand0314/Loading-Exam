@@ -1,7 +1,6 @@
 import Button from "./Button.jsx"
 import React, { useState } from 'react';
 
-
 const otherPage = () => {
     return(
         <>
@@ -14,7 +13,6 @@ const otherPage = () => {
     )
 }
 
-
 const home = () => {
     return(
         <div>
@@ -23,14 +21,12 @@ const home = () => {
     )
 }
 
-
 function Question({onTest}) {
     let q1 = "What do?"
     let q2 = "What then?"
 
     const [currentPage, setCurrentPage] = useState('home');
     
- 
     const choosePage = () => {
         switch (currentPage) {
             case 'home':
@@ -90,7 +86,6 @@ function Question({onTest}) {
     /*
     return(
         <>
-
         <div className="container">
         <div className="mainImageDiv">
             <img className= "mainImage"src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA5dXkybDVsZzM5cnFjdWFwZTBrN3BnN2tzdHlra3E0NnJrcnJ6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYsC1UC0BGwG2SQ/giphy.webp" alt="" />
@@ -115,14 +110,9 @@ function Question({onTest}) {
             {choosePage()}
         </div>
         </div>
-
-
         </>
-
     );
     */
 }
-
-
 
 export default Question
