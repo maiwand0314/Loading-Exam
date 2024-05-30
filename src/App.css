@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  position: relative;
+
+}
+
+.loader {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: absolute;
+  border-top: 4px solid cyan;
+  border-bottom: 4px solid cyan;
+  animation: spin-outer 4s linear infinite, glow-outer 3s infinite;
+}
+
+.loader-inner {
+  width: 140px;
+  height: 140px;
+  border: 4px;
+  border-radius: 40%;
+  position: absolute;
+
+
+
+  animation: spin-inner 3.5s linear infinite, glow-inner 3s infinite;
+}
+
+.vortex {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  z-index: -1;
+}
+
+@keyframes spin-outer {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-inner {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes glow-outer {
+  0%, 100% {
+    box-shadow: 0 0 20px cyan, 0 0 40px cyan, 0 0 60px cyan, 0 0 80px cyan;
+  }
+  50% {
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+  }
+}
+
+@keyframes glow-inner {
+  0%, 100% {
+    box-shadow: 0 0 20px magenta, 0 0 40px magenta, 0 0 60px magenta, 0 0 80px magenta;
+  }
+  50% {
+    box-shadow: 0 0 10px magenta, 0 0 20px magenta, 0 0 30px magenta, 0 0 40px magenta;
+  }
+}
+
+

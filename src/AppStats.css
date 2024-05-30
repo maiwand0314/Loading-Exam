@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+.result-container {
+  width: 100%;
+  position: relative;
+  bottom: 10vh;
+  border-bottom: 2px solid white;
+}
+
+.results {
+  /* Add specific styles for results if needed */
+}
+
+.container {
+  border-bottom: 2px solid white;
+}
+
+.loader-container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 200px;
+  gap: 30px;
+  margin: 10px;
+}
+
+.choice-1, .choice-2, .choice-3, .choice-4 {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-bar-1, .status-bar-2, .status-bar-3, .status-bar-4 {
+  width: 100%;
+  background-color: red;
+  border: 4px solid black;
+}
+
+.status-bar-1 {
+  height: 90px;
+
+}
+
+.status-bar-2 {
+  height: 140px;
+  animation: colorChanger 4s linear infinite;
+}
+
+.status-bar-3 {
+  height: 40px;
+}
+
+.status-bar-4 {
+  height: 60px;
+}
+
+@keyframes colorChanger {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+}
