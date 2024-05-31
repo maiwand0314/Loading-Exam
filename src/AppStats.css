@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-  overflow: hidden;
   margin: 0;
   height: 100vh;
   display: flex;
@@ -101,11 +100,11 @@ body {
 }
 
 .status-bar-1 {
-  height: 90px;
+  height: 80px;
 }
 
 .status-bar-2 {
-  height: 140px;
+  height: 100px;
   animation: colorChanger 4s linear infinite;
 }
 
@@ -221,18 +220,12 @@ body {
   }
 
   .result-container {
-    top: 0.5vh;
+
   }
 
 
   .container {
-    border-bottom: 2px solid white;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    height: 245px;
   }
 
 
@@ -248,16 +241,72 @@ body {
 /* For Large Devices (e.g., desktops) */
 @media only screen and (min-width: 1025px) and (orientation: landscape) {
   .container {
-    height: 300px;
-
-  }
-
-
-  .emoji {
-    font-size: 2.5rem; /* Adjust size for large landscape screens */
+    height: 600px; /* 2x the original height */
   }
 
   .loader-container {
-    gap: 30px; /* Adjust the gap between elements */
+    gap: 60px; /* 2x the original gap */
+    margin: 20px; /* 2x the original margin */
+  }
+
+  .choice-1, .choice-2, .choice-3, .choice-4 {
+    width: 80px; /* 2x the original width */
+  }
+
+  .status-bar-1 {
+    height: 160px; /* 2x the original height */
+  }
+
+  .status-bar-2 {
+    height: 200px; /* 2x the original height */
+  }
+
+  .status-bar-3 {
+    height: 80px; /* 2x the original height */
+  }
+
+  .status-bar-4 {
+    height: 120px; /* 2x the original height */
+  }
+
+  .emoji {
+    font-size: 5rem; /* 2x the original font size */
+  }
+}
+
+
+
+@media only screen and (min-width: 1025px) and (min-height: 770px) {
+  .container {
+    height: 600px; /* 2x the original height */
+  }
+
+  .loader-container {
+    gap: 60px; /* 2x the original gap */
+    margin: 20px; /* 2x the original margin */
+  }
+
+  .choice-1, .choice-2, .choice-3, .choice-4 {
+    width: 80px; /* 2x the original width */
+  }
+
+  .status-bar-1 {
+    height: 160px; /* 2x the original height */
+  }
+
+  .status-bar-2 {
+    height: 200px; /* 2x the original height */
+  }
+
+  .status-bar-3 {
+    height: 80px; /* 2x the original height */
+  }
+
+  .status-bar-4 {
+    height: 120px; /* 2x the original height */
+  }
+
+  .emoji {
+    font-size: 5rem; /* 2x the original font size */
   }
 }
