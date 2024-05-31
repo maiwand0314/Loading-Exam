@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './AppStats.css';
 
 function AppStats() {
+    const [isFullScreen, setIsFullScreen] = useState(false);
+
     const toggleSpawnAnimation = (event) => {
         // Lager en const og får den til å bli = event.currentTarget.
         // Registreringen av eventet gir oss mulighet til å plukke ut det som
         // stod mellom bracketsa i <h1></h1> en textcontent (emojien mellom <h1>🦝</h1> bracetsa)
         // Dette ligger i textcontentet under emoji.textcontent
+
         const emoji = event.currentTarget;
 
         // Lager en ny const som vi skal definere attributter for
@@ -24,21 +27,48 @@ function AppStats() {
         spawnEmoji.style.left = `${x}px`;
         spawnEmoji.style.top = `${y}px`;
 
-        //Adder det som typ "+= .innerhtml"
         document.body.appendChild(spawnEmoji);
 
-        // Fjerner emojien etter 5 sekunder
         setTimeout(() => {
             spawnEmoji.remove();
         }, 5000);
     };
 
+    const requestFullScreen = () => {
+        const element = document.documentElement;
+        if (!isFullScreen) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitRequestFullscreen) { /* Safari */
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) { /* IE11 */
+                element.msRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { /* Safari */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE11 */
+                document.msExitFullscreen();
+            }
+        }
+    };
+
+    useEffect(() => {
+        const fullscreenChangeHandler = () => {
+            setIsFullScreen(!!document.fullscreenElement);
+        };
+
+        document.addEventListener('fullscreenchange', fullscreenChangeHandler);
+
+        return () => {
+            document.removeEventListener('fullscreenchange', fullscreenChangeHandler);
+        };
+    }, []);
+
     return (
         <>
-            <div className={"result-container-2"}>
-                <img className={"fig2"} alt={"vortex"} src={"images/SwordmanSUp.png"}/>
-            </div>
-
             <div className={"result-container"}>
                 <h1 className={"results"}>Results</h1>
             </div>
@@ -71,6 +101,10 @@ function AppStats() {
                     </div>
                 </div>
             </div>
+
+            <button onClick={requestFullScreen} className={"fullscreenButton"}>
+                {isFullScreen ? "Exit Fullscreen" : "Go Fullscreen"}
+            </button>
         </>
     );
 }
