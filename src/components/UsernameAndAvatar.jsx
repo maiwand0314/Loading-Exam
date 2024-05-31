@@ -34,12 +34,12 @@ const UsernameAndAvatar = () => {
 
     /* avatar-data, kan og brude sikkert gjøres på en annen måte */
     const avatars = [
-        { id: 'mario-head-img-1', src: "/mario.png", alt: "avatar of mario-head" },
+        { id: 'viking1', src: "/Viking.png", alt: "avatar of viking" },
         { id: 'mario-head-img-2', src: "/mario.png", alt: "avatar of mario-head" },
         { id: 'mario-head-img-3', src: "/mario.png", alt: "avatar of mario-head" },
         { id: 'mario-head-img-4', src: "/mario.png", alt: "avatar of mario-head" },
         { id: 'mario-head-img-5', src: "/mario.png", alt: "avatar of mario-head" },
-        { id: 'mario-head-img-6', src: "/mario.png", alt: "avatar of mario-head" },
+        { id: 'viking2', src: "/Viking.png", alt: "avatar of viking" },
     ];
 
     return (
