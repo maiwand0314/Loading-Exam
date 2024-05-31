@@ -56,6 +56,21 @@ img, picture, svg {
   margin-inline: auto;
 }
 
+.avatarDiv {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: auto;
+  transform: scaleX(-1)
+}
+
 .buttonsContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -74,6 +89,15 @@ img, picture, svg {
   position: relative;
   box-shadow: 0 1em 1em purple;
   
+}
+
+.TesterText{
+  font-size: 3EM;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 .questionButton:hover {
