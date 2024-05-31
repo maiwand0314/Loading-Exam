@@ -93,3 +93,107 @@ body {
 }
 
 
+.fullscreenButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #20203a; /* Dark background color */
+
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+/* For Small Devices (e.g., phones) */
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+  body{
+
+    font-size: 5px;
+
+  }
+
+  .loader {
+    width: 180px;
+    height: 180px;
+  }
+
+  .loader-inner {
+    width: 140px;
+    height: 140px;
+  }
+
+  .vortex {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+
+  }
+
+}
+
+/* For Medium Devices (e.g., tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+  font-size: 11px;
+  }
+
+
+
+  .loader {
+    width: 135px;
+    height: 135px;
+  }
+
+  .loader-inner {
+    width: 105px;
+    height: 105px;
+  }
+
+  .vortex {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+
+  }
+}
+
+/* For Large Devices (e.g., desktops) */
+@media only screen and (min-width: 1025px) and (orientation: landscape) {
+
+
+  body{
+font-size: 20px;
+
+
+  }
+
+  .loader {
+    width: 360px;
+    height: 360px;
+  }
+
+  .loader-inner {
+    width: 280px;
+    height: 280px;
+  }
+
+  .vortex {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+
+  }
+
+  .loader-container{
+    height: 450px;
+  }
+}
