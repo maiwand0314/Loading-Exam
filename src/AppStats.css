@@ -181,7 +181,7 @@ body {
 
 .fullscreenButton {
   position: fixed;
-  bottom: 20px;
+  bottom: 5px;
   right: 20px;
   padding: 10px 20px;
   background-color: #20203a; /* Dark background color */
