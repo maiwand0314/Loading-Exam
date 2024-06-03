@@ -1,4 +1,4 @@
-import './assets/meme1.jpg'
+
 
 function MainPage() {
 
@@ -7,7 +7,7 @@ function MainPage() {
         <div className="mainBox">
             <h1>Please enjoy the meme while waiting for everyone..</h1>
             <div className="imgBox">
-                <img src={"vite-project\src\assets\meme1.jpg"} alt="" />
+            <img className="mainImage" src="src/assets/meme1.jpg" alt="Avatar of viking"></img>
             </div>
         </div>
     

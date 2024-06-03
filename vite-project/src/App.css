@@ -48,3 +48,16 @@
   left: 50%;
 
 }
+
+.imgBox {
+  display: block;
+  position: fixed;
+  top: 65%;
+  left: 37.5%;
+
+
+}
+
+.mainImage {
+  border-radius: 2em;
+}

@@ -12,10 +12,10 @@ body {
     position: relative;
     width: 500px;
     height: 3em;
-    background-color: aliceblue;
+    background-color:black;
     border-radius: 1.5em;
-    color: antiquewhite;
-
+    color: cyan;
+    left: 30%;
 }
 
 .loadingBar::before {
