@@ -5,9 +5,11 @@ function MainPage() {
 
     return(
         <div className="mainBox">
-            <h1>Please enjoy the meme while waiting for everyone..</h1>
+            <div className="mainTitleDiv">
+                 <h1 className="mainTitle">Please enjoy the meme while waiting for everyone..</h1>
+            </div>
             <div className="imgBox">
-            <img className="mainImage" src="src/assets/meme1.jpg" alt="Avatar of viking"></img>
+                <img className="mainImage" src="src/assets/meme1.jpg" alt="Avatar of viking"></img>
             </div>
         </div>
     

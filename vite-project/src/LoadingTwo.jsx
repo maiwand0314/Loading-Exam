@@ -5,9 +5,14 @@ const [filled, setFilled] = useState(0);
 	const [isRunning, setIsRunning] = useState(false);
 	useEffect(() => {
 		if (filled < 100 && isRunning) {
-			setTimeout(() => setFilled(prev => prev += 2), 50)
+			setTimeout(() => setFilled(prev => prev += 0.1), 50)
 		}
 	},[filled, isRunning])
+
+	useEffect(() => {
+		setIsRunning(true);
+	  }, []);
+
   return (
 	  <div>
 		  <div className="progressbar">
@@ -19,7 +24,6 @@ const [filled, setFilled] = useState(0);
 			  }}></div>
 			  <span className="progressPercent">{ filled }%</span>
 		  </div>
-		  <button className="btn" onClick={() => {setIsRunning(true)}}>Run</button>
 	</div>
   )
 }
