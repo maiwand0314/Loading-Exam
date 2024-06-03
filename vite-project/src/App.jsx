@@ -1,9 +1,17 @@
 import './App.css'
-import LoadingBar from './LoadingBar'
+import './Loading.css'
+import Loading from './Loading'
+import MainPage from './MainPage';
+import './assets/meme1.jpg'
 
 function App() {
 
-  return(<><LoadingBar/></>)
+  return(
+  <>
+  <MainPage/>
+  <Loading/>
+  </>
+);
 }
 
 export default App
