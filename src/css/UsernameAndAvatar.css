@@ -38,6 +38,11 @@
     row-gap: 10px;
     padding: 32px;
 }
+
+.avatars-container img {
+    width: 100px;
+}
+
 .continue-button {
     padding: 8px;
     border: 2px solid black;
@@ -68,4 +73,24 @@
         row-gap: 20px;
         padding: 32px;
     }
+}
+
+
+/* Landscape mode */
+@media (orientation: landscape) and (height <= 400px) {
+    .avatars-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 30px;
+        padding: 8px 0px;
+    }
+
+    .avatars-container img {
+        width: 75px;
+    }
+    .info-box p {
+        font-size: 16px;
+        padding: 8px;
+    }
+
 }
