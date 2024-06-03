@@ -1,13 +1,69 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  font-family: 'Press Start 2P', cursive;
+  
 
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
 
-
+  --fw-size: 1em;
+  --fw-size-larger: 2em;
 }
+
+@media (min-width: 50em) {
+  :root {
+
+  }
+}
+
+::selection {
+  color: red;
+  background: yellow;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(#72009A, #E8E8E8, #72009A, #E8E8E8);
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img, picture, svg {
+  max-width: 100%;
+  display: block;
+}
+
+.padding-block {
+  padding-block: 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: rgba(255, 255, 255, 0.5)
+  
+  }
+}
+
+
+@media (min-width: 50em) {
+  .buttonsContainer {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+  }
+}
+
 
 .logo {
   height: 6em;
@@ -52,21 +108,35 @@
   top: 0%;
   left: 0%;
   height: 100%;
+  min-width: 100%;
 }
 
 .mainTitleDiv{
-  position: relative;
-  top: 25%;
+ position: relative;
+  width: 80%;
+  transform: translate(-50%);
+  left: 50%;
+  top: 30%;
+  /*
+  word-wrap: break-word;
+  */
 }
 
 
-
+.mainTitle{
+  color: #FFD700;
+  font-size: 3em;
+  text-shadow: 4px 4px 5px black;
+  text-align: center;
+  /*word-wrap: break-word;*/
+  
+}
 .imgBox {
   display: block;
   position: inherit;
   min-width: 40%;
   height: 40%;
-  top: 75%;
+  top: 77.5%;
   transform: translate(-50%, -50%);
   left: 50%;
 
@@ -74,7 +144,7 @@
 
 .mainImage {
   border-radius: 2em;
-  border: 10px solid purple;
+  border: 10px solid #72009A;
   min-width: 100%;
   height: 100%;
 }
@@ -83,16 +153,7 @@
 /*
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
 
-:root {
-  font-family: 'Press Start 2P', cursive;
 
-  --fw-regular: 400;
-  --fw-semi-bold: 500;
-  --fw-bold: 700;
-
-  --fw-size: 1em;
-  --fw-size-larger: 2em;
-}
 
 @media (min-width: 50em) {
   :root {

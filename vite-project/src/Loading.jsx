@@ -11,12 +11,15 @@ function Loading() {
 
 
     return(
+        /*
         <>
         <div className="loadingBar" style={{"--width": 10}} 
         data-label="Loading"></div>
         </>
+        
     );
-
+*/
+    <></>)
 
 }
 

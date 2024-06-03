@@ -5,7 +5,7 @@ const [filled, setFilled] = useState(0);
 	const [isRunning, setIsRunning] = useState(false);
 	useEffect(() => {
 		if (filled < 100 && isRunning) {
-			setTimeout(() => setFilled(prev => prev += 0.1), 50)
+			setTimeout(() => setFilled(prev => prev += 1), 50)
 		}
 	},[filled, isRunning])
 
@@ -19,7 +19,7 @@ const [filled, setFilled] = useState(0);
 			  <div style={{
 				  height: "100%",
 				  width: `${filled}%`,
-				  backgroundColor: "#a66cff",
+				  backgroundColor: "#72009A",
 				  transition:"width 0.5s"
 			  }}></div>
 			  <span className="progressPercent">{ filled }%</span>

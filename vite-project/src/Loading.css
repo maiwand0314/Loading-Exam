@@ -2,11 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
-    padding: 0;
-    margin: 0;
 
-}
 
 .loadingBar {
     position: relative;
