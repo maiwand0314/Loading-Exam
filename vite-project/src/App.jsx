@@ -1,5 +1,4 @@
 import './App.css'
-import './Loading.css'
 import './LoadingTwo.css'
 import './index.css'
 import Loading from './Loading'
@@ -11,11 +10,13 @@ function App() {
   return(
   <>
 
-   <div className="Appe">
+  
+ 
 		<LoadingTwo />
-    </div>
+   
   <MainPage/>
  <Loading/>
+
   </>
 );
 }

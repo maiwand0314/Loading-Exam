@@ -1,4 +1,3 @@
-import App from './App'
 const loadingBar = document.getElementsByClassName("loadingBar")[0]
 setInterval(() => {
     const computedStyle = getComputedStyle(loadingBar)

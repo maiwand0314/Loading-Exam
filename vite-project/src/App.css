@@ -1,77 +1,4 @@
 
-
-
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-/* xs */
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
-  }
-}
-
-/* sm */
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-/* md */
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-/* lg */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-/* xl */
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    background-color: black;
-  }
-}
-
-/* 2xl */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-/* xs */
- @media (min-width: 475px) {  } 
-
-/* sm */
- @media (min-width: 640px) {} 
-
-/* md */
- @media (min-width: 768px) {} 
-
-/* lg */
- @media (min-width: 1024px) {} 
-
-/* xl */
- @media (min-width: 1280px) {} 
-
-/* 2xl */
-@media (min-width: 1536px) {
-} 
-
-
  @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
 
 :root {
@@ -87,7 +14,22 @@
   --fw-size-larger: 2em;
   --fw-size-largest: 3em;
 
+  color-scheme: light dark;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
+
+html, body {
+  margin: 0;
+  background-image: linear-gradient(#490064, #490064, #8200b1ab, #a005be42 , #E8E8E8, #a005be42, #8200b1ab,  #490064, #490064, #490064);
+  min-height: 100vh;
+}
+
 
 img, picture, svg {
   display: block;
@@ -96,11 +38,6 @@ img, picture, svg {
 
 
 
-@media (min-width: 50em) {
-  :root {
-
-  }
-}
 
 ::-moz-selection { /* Code for Firefox */
 
@@ -112,11 +49,6 @@ img, picture, svg {
   color: red;
   background: yellow;
 }
-html, body {
-  min-height: 100%;
-  margin: 0;
-  background-image: linear-gradient(#72009A, #E8E8E8, #72009A, #E8E8E8);
-}
 
 
 
@@ -127,6 +59,12 @@ html:focus-within {
 
 .padding-block {
   padding-block: 2rem;
+}
+
+.container{
+  max-width: 60%;
+  margin: 0 auto;
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -152,7 +90,7 @@ html:focus-within {
   }
 }
 
-
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -175,12 +113,14 @@ html:focus-within {
   }
 }
 
+
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-
+*/
 
 .card {
   padding: 2em;
@@ -191,51 +131,40 @@ html:focus-within {
 }
 
 .mainBoxcontainer {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 0%;
-  left: 0%;
-  height: 100%;
-  width: 100%;
-  margin-inline: auto;
-  border: 5px solid black;
+  position: relative;
+  height: 100vh;
 }
 
 .mainTitleDivcontainer{
- position: relative;
-
-
-  top: 30%;
-  /*
-
-  word-wrap: break-word;
-    */
-
-
+position: relative;
+top: 20%;
+margin: 0 auto;
 }
 
 .mainTitlecontainer{
-  color: #FFD700;
-  font-size: 3em;
-  text-shadow: 4px 4px 5px black;
+  color: #00ccff;
+
+  line-height: 1.5;
+  text-shadow: 7px 7px 3px black; 
   text-align: center;
   /*word-wrap: break-word;*/
+
+  /* #00afdb; */
   
 }
 .imgBoxcontainer {
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: inherit;
+  top: 40%;
+  width: 60%;
+  border-radius: 2em;
 
-  min-height: 30%;
-  left: 50%;
-  top: 80%;
-  border: 5px solid black;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px black;
 }
 
 .mainImagecontainer {
   border-radius: 2em;
-  border: 10px solid #72009A;
+  border: 5px solid #00ccff;
   min-width: 100%;
 }
 
@@ -246,5 +175,35 @@ margin-left: 10px;
 left:0;
 bottom:0;
 right:0;  
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.loadingBar {
+  position: relative;
+  width: 500px;
+  height: 3em;
+  background-color:black;
+  border-radius: 1.5em;
+  color: cyan;
+  left: 30%;
+}
+
+.loadingBar::before {
+  content: attr(data-label);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  bottom: 0.5em;
+  width: calc(var(--width, 0) * 1%);
+  min-width: 2rem;
+  max-width: calc(100% - 1em);
+  background-color: aqua;
+  border-radius: 1em;
+  padding: 1em;
 }
 

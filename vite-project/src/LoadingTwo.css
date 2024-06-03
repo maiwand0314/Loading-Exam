@@ -9,24 +9,29 @@
 .progressbar{
 	position: absolute;
 	overflow: hidden;
+	border: 5px solid #00ccff;
 	min-width: 80%;
 	height: 10%;
 	transform: translate(-50%, -50%);
-	border-radius: 3em;
-	top: 50%;
+	border-radius: 1em;
+	top: 45%;
 	left: 50%;
-	background-color: #fff9ff;
+	background-color: #83e5fd63;
+	box-shadow: 5px 5px 10px black;
 }
 
 .progressPercent{
-	font-size: 2em;
-	font-family:'Franklin Gothic Medium';
+	font-size: 1.5em;
+
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
-	color: #FFD700;
-	text-shadow: 4px 4px 6px black;
+	color: #00ccff;
+	
+	text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+	/*text-shadow: 5px 5px 5px black;*/
 	/*text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;*/
 }
 
