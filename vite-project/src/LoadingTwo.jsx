@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react';
 
 function LoadingTwo() {
 const [filled, setFilled] = useState(0);
-	const [isRunning, setIsRunning] = useState(false);
+const [isRunning, setIsRunning] = useState(false);
 	useEffect(() => {
 		if (filled < 100 && isRunning) {
-			setTimeout(() => setFilled(prev => prev += 1), 50)
+			setTimeout(() => setFilled(prev => prev += 0.1), 10)
+		
 		}
 	},[filled, isRunning])
 
@@ -20,9 +21,9 @@ const [filled, setFilled] = useState(0);
 				  height: "100%",
 				  width: `${filled}%`,
 				  backgroundColor: "#72009A",
-				  transition:"width 0.5s"
+				  transition:"width 0.1s"
 			  }}></div>
-			  <span className="progressPercent">{ filled }%</span>
+			  <span className="progressPercent">{ Math.floor(filled) }%</span>
 		  </div>
 	</div>
   )
