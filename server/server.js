@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 import * as bodyParser from "express";
 import {QuestionApi} from "./question.js";
 
-const voteList = [];
+
 
 dotenv.config();
 const app = express();
@@ -15,8 +15,10 @@ app.use(bodyParser.json());
 
 let counter = 0;
 
-
-
+const voteList = [];
+const ListA = [];
+const ListB = [];
+const ListC = [];
 
 
 
@@ -49,7 +51,19 @@ app.use((req, res, next) => {
 
 
 
+app.get("/api/votes", async (req, res) => {
+    res.json(voteList);
+});
 
+
+app.post("/api/votes/a", async (req, res) => {
+    res.json(ListA);
+});
+
+
+app.get("/api/votes/a", async (req, res) => {
+    res.json(ListA.length);
+});
 
 
 
@@ -58,6 +72,27 @@ app.use((req, res, next) => {
 app.post('/api/choices', (req, res) => {
     const choice = req.body.choice;
     console.log('Received choice:', choice);
+
+
+
+
+
+    if (choice == "A"){
+
+    ListA.push(choice);
+
+    console.log("Choice A " + ListA.length)
+    }
+
+    if (choice == "B"){
+
+        ListB.push(choice);
+
+        console.log(ListB.length)
+    }
+
+
+
 
 
     if (choice != null) {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Getready from "/Getready.jsx"
 
 async function insertChoice(choice) {
     await fetch("/api/choices", {
@@ -37,7 +38,7 @@ function Question() {
             case 'otherPage':
                 return (
                     <div>
-                        <h1>hi this is a test</h1>
+                        <Getready></Getready>
                     </div>
                 );
 
