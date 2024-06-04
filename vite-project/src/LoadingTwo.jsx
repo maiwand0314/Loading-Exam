@@ -15,16 +15,18 @@ const [isRunning, setIsRunning] = useState(false);
 	  }, []);
 
   return (
-	  <div>
+	  <div className='progressBarContainer'>
 		  <div className="progressbar">
+		  <span className="progressPercent">{ Math.floor(filled) }%</span>
 			  <div style={{
 				  height: "100%",
 				  width: `${filled}%`,
 				/*  backgroundColor: "#2f2f54", */
 					backgroundColor: "#00728f",
-				  transition:"width 0.1s"
-			  }}></div>
-			  <span className="progressPercent">{ Math.floor(filled) }%</span>
+					
+				  	transition:"width 0.1s"
+
+			  	}}></div>
 		  </div>
 	</div>
   )

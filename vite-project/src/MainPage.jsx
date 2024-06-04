@@ -1,20 +1,24 @@
-
+import LoadingTwo from "./LoadingTwo";
 
 function MainPage() {
 
 
     return(
+        <>
         <div className="container">
-        <div className="mainBoxcontainer">
-            <div className="mainTitleDivcontainer">
-                 <h1 className="mainTitlecontainer">Please enjoy the meme while waiting for everyone..</h1>
-            </div>
-            <div className="imgBoxcontainer">
-                <img className="mainImagecontainer" src="src/assets/meme1.jpg" alt="Avatar of viking"></img>
-            </div>
-        </div>
+                    <h1 className="mainTitle">Please enjoy the meme while waiting for everyone...</h1>
+                    <div className="loadingDiv">
+                    <LoadingTwo />
+                     </div>
+                    <div className="mainImageContainer">
+                    <img className="mainImage" src="src/assets/meme1.jpg" alt="Avatar of viking"></img>
+                    </div>
+       
+                  
         </div>
        
+ 
+        </>
     )
 
 
