@@ -3,7 +3,8 @@
     "nodemon": "^3.1.2"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongodb": "^6.7.0"
   },
   "scripts": {
     "dev": "nodemon server.js"
