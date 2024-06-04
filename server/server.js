@@ -19,8 +19,18 @@ const voteList = [];
 const ListA = [];
 const ListB = [];
 const ListC = [];
+const ListD = [];
 
 
+function createResults() {
+    const results = {
+        A: ListA.length,
+        B: ListB.length,
+        C: ListC.length,
+        D: ListD.length
+    }
+    return results
+}
 
 app.use(express.static("../client/dist"));
 app.use((req, res, next) => {
@@ -52,7 +62,7 @@ app.use((req, res, next) => {
 
 
 app.get("/api/votes", async (req, res) => {
-    res.json(voteList);
+    res.json(createResults());
 });
 
 

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './AppStats.css';
 
-const ListA = []
-const ListB = []
 
 async function getVotes(vote) {
     await fetch("/api/votes", {
@@ -25,11 +23,9 @@ async function getVotesA(vote) {
     });
 }
 
-
-
 function AppStats() {
     const [isFullScreen, setIsFullScreen] = useState(false);
-    const [votesA, setVotesA] = useState(null);
+    const [votes, setVotes] = useState(null);
     const [votesB, setVotesB] = useState(null);
 
 
@@ -85,12 +81,16 @@ function AppStats() {
     };
 
 async function test(){
-    const resulA = await fetch("/api/votes/a");
-    const data = await resulA.json();
+    const result = await fetch("/api/votes");
+    const data = await result.json();
+    setVotes(data.A)
+    setVotesB(data.B)
+    /*
     const resulB = await fetch("/api/votes/b");
     const data2 = await resulB.json();
         setVotesA(data);
         setVotesB(data2)
+        */
 }
     useEffect(() => {
 
@@ -122,7 +122,7 @@ async function test(){
             <div className="container">
                 <div className="loader-container">
                     <div className="choice-1">
-                        <a>{votesA}</a>
+                        <a>{votes}</a>
                         <div className={"status-bar-1"}></div>
                         <a>A</a>
                         <h1 className={"emoji"} onClick={toggleSpawnAnimation}>🦝</h1>
