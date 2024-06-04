@@ -29,6 +29,9 @@ async function getVotesA(vote) {
 
 function AppStats() {
     const [isFullScreen, setIsFullScreen] = useState(false);
+    const [votesA, setVotesA] = useState(null);
+    const [votesB, setVotesB] = useState(null);
+
 
     const toggleSpawnAnimation = (event) => {
         // Lager en const og får den til å bli = event.currentTarget.
@@ -83,12 +86,15 @@ function AppStats() {
 
 async function test(){
     const resulA = await fetch("/api/votes/a");
-    console.log(await resulA.json())
-    console.log(resulA);
+    const data = await resulA.json();
+    const resulB = await fetch("/api/votes/b");
+    const data2 = await resulB.json();
+        setVotesA(data);
+        setVotesB(data2)
 }
     useEffect(() => {
 
-test()
+        test()
 
 
     }, [])
@@ -116,13 +122,13 @@ test()
             <div className="container">
                 <div className="loader-container">
                     <div className="choice-1">
-                        <a>{}</a>
+                        <a>{votesA}</a>
                         <div className={"status-bar-1"}></div>
                         <a>A</a>
                         <h1 className={"emoji"} onClick={toggleSpawnAnimation}>🦝</h1>
                     </div>
                     <div className="choice-2">
-                        <a>{}</a>
+                        <a>{votesB}</a>
                         <div className={"status-bar-2"}></div>
                         <a>B</a>
                         <h1 className={"emoji"} onClick={toggleSpawnAnimation}>😊</h1>

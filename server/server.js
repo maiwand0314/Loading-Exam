@@ -65,6 +65,14 @@ app.get("/api/votes/a", async (req, res) => {
     res.json(ListA.length);
 });
 
+app.post("/api/votes/b", async (req, res) => {
+    res.json(ListB);
+});
+
+
+app.get("/api/votes/b", async (req, res) => {
+    res.json(ListB.length);
+});
 
 
 
