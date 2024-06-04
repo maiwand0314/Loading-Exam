@@ -10,13 +10,14 @@
 	position: absolute;
 	overflow: hidden;
 	border: 5px solid #00ccff;
+	/*border: 5px solid #004152;*/
 	min-width: 80%;
 	height: 10%;
 	transform: translate(-50%, -50%);
 	border-radius: 1em;
 	top: 45%;
 	left: 50%;
-	background-color: #83e5fd63;
+	background-color: #83e5fd05;
 	box-shadow: 5px 5px 10px black;
 }
 

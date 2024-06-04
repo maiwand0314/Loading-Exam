@@ -20,7 +20,8 @@ const [isRunning, setIsRunning] = useState(false);
 			  <div style={{
 				  height: "100%",
 				  width: `${filled}%`,
-				  backgroundColor: "#490064",
+				/*  backgroundColor: "#2f2f54", */
+					backgroundColor: "#00728f",
 				  transition:"width 0.1s"
 			  }}></div>
 			  <span className="progressPercent">{ Math.floor(filled) }%</span>
