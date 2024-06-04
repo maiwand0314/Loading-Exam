@@ -8,11 +8,11 @@ const UsernameAndAvatar = () => {
     /* avatar-data, kan og burde sikkert gjøres på en annen måte */
     const avatars = [
         { id: 'viking1', src: "/Viking.png", alt: "avatar of viking" },
-        { id: 'mario-head-img-2', src: "/mario.png", alt: "avatar of mario-head" },
-        { id: 'mario-head-img-3', src: "/mario.png", alt: "avatar of mario-head" },
-        { id: 'mario-head-img-4', src: "/mario.png", alt: "avatar of mario-head" },
-        { id: 'mario-head-img-5', src: "/mario.png", alt: "avatar of mario-head" },
-        { id: 'viking2', src: "/Viking.png", alt: "avatar of viking" },
+        { id: 'swordmanUp', src: "/SwordmanSUp.png", alt: "avatar of swordman with big sword up" },
+        { id: 'witch', src: "/Witch.png", alt: "avatar of a witch" },
+        { id: 'SwordWoman', src: "/SwordWoman.png", alt: "avatar of pink sword avatar" },
+        { id: 'Archer', src: "/Archer.png", alt: "avatar of archer" },
+        { id: 'swordmanDown', src: "/SwordmanSDown.png", alt: "avatar of swordman with big sword down" },
     ];
 
     const gameRoomId = "4400AB"
@@ -58,7 +58,7 @@ const UsernameAndAvatar = () => {
             </div>
             
             <div>
-            <h3>Choose an avatar:</h3>
+            <h3>Choose your avatar:</h3>
             <div className="avatars-container">
                 {avatars.map(avatar => (
                     <img
