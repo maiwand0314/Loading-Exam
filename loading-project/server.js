@@ -31,5 +31,4 @@ app.post('/api/choices', (req, res) => {
 
 
 
-
-ViteExpress.listen(app, 3000, () => console.log("Server is listening..."));
+ViteExpress.listen(app, 3002, () => console.log("Server is listening..."));
