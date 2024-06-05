@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './AppStats.css';
+import './Css/AppStats.css';
 
 
 async function getVotes(vote) {
