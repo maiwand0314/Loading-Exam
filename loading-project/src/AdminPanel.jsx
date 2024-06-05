@@ -24,12 +24,18 @@ const AdminPanel = () => {
 
   return (
     <div className="admin-panel">
-      <h1>Theatre Play Admin Panel</h1>
+      <h1 className="title">Theatre Play Admin Panel</h1>
       <div className="controls">
-        <Button onClick={handlePlayPause} label={isPlaying ? 'Pause' : 'Play'} />
-        <Button onClick={handleUpload} label="Upload Play Content" />
+        <div className="button-group">
+          <button className="btn" onClick={handlePlayPause}>
+            <span>{isPlaying ? 'Pause' : 'Play'}</span>
+          </button>
+          <button className="btn" onClick={handleUpload}>
+            <span>Upload Play Content</span>
+          </button>
+        </div>
+        <SceneManager onPrevScene={handlePrevScene} onNextScene={handleNextScene} />
       </div>
-      <SceneManager prevScene={handlePrevScene} nextScene={handleNextScene} />
     </div>
   );
 };
