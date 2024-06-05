@@ -9,6 +9,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .admin-panel {
@@ -17,7 +19,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
   padding: 40px;
-  width: 80%;
+  width: 90%;
   max-width: 500px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -32,7 +34,6 @@ body {
   font-size: 28px;
   font-weight: bold;
   color: #ffcc00; /* bright yellow */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .controls {
@@ -54,33 +55,8 @@ body {
   border-radius: 30px;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.15);
-  transition: all 0.3s;
-  border-radius: 50%;
-  z-index: 0;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.btn:hover::before {
-  width: 0;
-  height: 0;
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-.btn span {
-  position: relative;
-  z-index: 1;
+  flex: 1 1 calc(50% - 20px); /* Make buttons responsive */
+  box-sizing: border-box;
 }
 
 .btn:hover {
@@ -92,7 +68,6 @@ body {
 .scene-manager {
   display: flex;
   justify-content: center;
-  gap: 20px; /* add gap between buttons */
 }
 
 .message {
@@ -105,4 +80,32 @@ body {
 
 .message.show {
   opacity: 1;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    flex: 1 1 100%; /* Stack buttons on small screens */
+  }
+
+  .admin-panel {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
 }
