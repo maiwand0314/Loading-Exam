@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import UserPage from '../Pages/UserPage.jsx';
-import meme1 from './meme.jpeg';
-import meme2 from './meme.jpeg';
-import meme3 from './meme.jpeg';
 
-function FrontPage({currentPage, setCurrentPage }) {
+
+function FrontPage({ setCurrentPage }) {
   const [loading, setLoading] = useState(true);
   const [code, setCode] = useState('');
   const [isCodeCorrect, setIsCodeCorrect] = useState(false);
@@ -13,7 +11,7 @@ function FrontPage({currentPage, setCurrentPage }) {
   
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 20000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,8 +30,7 @@ function FrontPage({currentPage, setCurrentPage }) {
 
   return (
     <div className="FrontPage">
-        {currentPage === 'frontPage' && (
-        <div className="container">
+        <div className="containerFrontPage">
           <div className="grid">
           <div className="grid-item grid-item-full">
             <h1>Welcome </h1>
@@ -71,7 +68,7 @@ function FrontPage({currentPage, setCurrentPage }) {
         </div>
         
       </div>
-            )}
+       
       {/*{currentPage === 'nextPage' && <NextPage onContinue={handleNextPageSubmit} />}*/}
 
     </div>

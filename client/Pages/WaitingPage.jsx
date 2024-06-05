@@ -1,7 +1,7 @@
 import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
+import memeOne from "../assets/meme.jpeg"
 
-
-function WaitingPage({currentPage, setCurrentPage }) {
+function WaitingPage({ setCurrentPage }) {
 
     handleClick = (event) => {
         console.log('Screen clicked!', event);
@@ -10,7 +10,6 @@ function WaitingPage({currentPage, setCurrentPage }) {
     return(
         
        <div className="ClickerFurther" onClick={this.handleClick}>
-        {currentPage === 'waitingPage' && (
            
         <div className="containerWaitingPage">
                     <h1 className="mainTitle">Please enjoy the meme while waiting for everyone...</h1>
@@ -18,7 +17,7 @@ function WaitingPage({currentPage, setCurrentPage }) {
                     <WaitingPageLoadingBar />
                      </div>
                     <div className="mainImageContainer">
-                    <img className="mainImage" src="src/assets/meme1.jpg" alt="Avatar of viking"></img>
+                    <img className="mainImage" src={memeOne} alt="Image of a Meme"></img>
                     </div>
                     
         </div>
@@ -26,7 +25,7 @@ function WaitingPage({currentPage, setCurrentPage }) {
   
      
        
-        )}
+   
         </div>
         
 

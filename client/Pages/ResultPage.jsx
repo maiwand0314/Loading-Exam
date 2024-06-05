@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Css/AppStats.css';
+
 
 
 async function getVotes(vote) {
@@ -23,7 +23,7 @@ async function getVotesA(vote) {
     });
 }
 
-function AppStats() {
+function ResultPage() {
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [votes, setVotes] = useState(null);
     const [votesB, setVotesB] = useState(null);
@@ -155,4 +155,4 @@ async function test(){
     );
 }
 
-export default AppStats;
+export default ResultPage;

@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import GetReadyToVote from "../Pages/GetReadyToVote";
-
+import vikingAvatar from "../assets/Viking.png";
+import SwordmanSUpAvatar from '../assets/SwordmanSUp.png';
+import WitchAvatar from '../assets/Witch.png';
+import SwordWomanAvatar from '../assets/SwordWoman.png';
+import ArcherAvatar from '../assets/Archer.png';
+import SwordmanSDownAvatar from '../assets/SwordmanSDown.png';
 
 
 const UsernameAndAvatar = ({currentPage, setCurrentPage}) => {
@@ -10,12 +15,12 @@ const UsernameAndAvatar = ({currentPage, setCurrentPage}) => {
     
     /* avatar-data, kan og burde sikkert gjøres på en annen måte */
     const avatars = [
-        { id: 'viking1', src: "client/assets/Viking.png", alt: "avatar of viking" },
-        { id: 'swordmanUp', src: "../../public/SwordmanSUp.png", alt: "avatar of swordman with big sword up" },
-        { id: 'witch', src: "public/Witch.png", alt: "avatar of a witch" },
-        { id: 'SwordWoman', src: "public/SwordWoman.png", alt: "avatar of pink sword avatar" },
-        { id: 'Archer', src: "public/Archer.png", alt: "avatar of archer" },
-        { id: 'swordmanDown', src: "public/SwordmanSDown.png", alt: "avatar of swordman with big sword down" },
+        { id: 'viking1', src: vikingAvatar, alt: "avatar of viking" },
+        { id: 'swordmanUp', src: SwordmanSUpAvatar, alt: "avatar of swordman" },
+        { id: 'witch', src: WitchAvatar, alt: "avatar of witch" },
+        { id: 'SwordWoman', src: SwordWomanAvatar, alt: "avatar of pink sword" },
+        { id: 'Archer', src: ArcherAvatar, alt: "avatar of archer" },
+        { id: 'swordmanDown', src: SwordmanSDownAvatar, alt: "avatar of swordman" },
     ];
 
     const gameRoomId = "4400AB"
@@ -46,14 +51,15 @@ const UsernameAndAvatar = ({currentPage, setCurrentPage}) => {
             setCurrentPage('waitingPage');
            
         } else {
-            console.log("Please chose an avatar first.")
+            console.log("Please choose an avatar first.")
         }
     }
 
 
     return (
         <div>
-                    {currentPage === 'avatarPage' && (
+        
+   
 
         <section className="name-and-avatar-container">
             
@@ -87,7 +93,7 @@ const UsernameAndAvatar = ({currentPage, setCurrentPage}) => {
             <button className="continue-button" onClick={handleContinueClick}>CONTINUE</button>
           
         </section>
-        )}
+       
         </div>
     );
 };

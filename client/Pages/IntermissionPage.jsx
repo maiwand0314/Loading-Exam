@@ -1,7 +1,8 @@
 import '../Css/IntermissionPage.css';
 import React, {useEffect, useState} from "react";
+import pedroGif from "../assets/Pedro2.gif"
 
-function IntermissionPage({currentPage, setCurrentPage }) {
+function IntermissionPage({ setCurrentPage }) {
     const [isFullScreen, setIsFullScreen] = useState(false);
 
     const requestFullScreen = () => {
@@ -47,17 +48,19 @@ function IntermissionPage({currentPage, setCurrentPage }) {
     return (
     
         <div className="ClickerFurther" onClick={this.handleClick}>
-        {currentPage === 'intermissionScreen' && (
+        
             <div className="containerIntermissionPage">
                 <div>
                     <h1>Scene playing.</h1>
                     <h1>Please watch the stage!</h1>
                 </div>
 
-                <div className="loader-container">
-                    <div className="loader"></div>
-                    <div className="loader-inner"></div>
-                    <img className={"vortex"} alt={"vortex"} src={"images/Pedro2.gif"}/>
+                <div className="loader-container-pedro">
+                <img className={"vortex"} alt={"vortex"} src={pedroGif}/>
+
+                    <div className="loader-pedro"></div>
+
+                    <div className="loader-inner-pedro"></div>
                 </div>
 
                 <div>
@@ -69,7 +72,7 @@ function IntermissionPage({currentPage, setCurrentPage }) {
             </button>
         
             </div>
-        )}
+      
          </div>
     );
 }

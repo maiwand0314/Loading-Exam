@@ -1,8 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
-function GetreadyToVote({currentPage, setCurrentPage }) {
+function GetreadyToVote({ setCurrentPage }) {
     const [filled, setFilled] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
+    
+    
+    const handleButtonClick = () => {
+        setIsRunning(true);
+        setCurrentPage('questionPage');    };
+
+    
+
+    handleClick = (event) => {
+        setCurrentPage('questionPage');
+      };
+
+      useEffect(() => {
+        setIsRunning(true);
+        const timer = setTimeout(() => setCurrentPage("questionPage"), 5000);
+        return () => clearTimeout(timer);
+      }, []);
 
     useEffect(() => {
         if (filled < 100 && isRunning) {
@@ -11,20 +28,12 @@ function GetreadyToVote({currentPage, setCurrentPage }) {
         }
     }, [filled, isRunning]);
 
-    const handleButtonClick = () => {
-        setIsRunning(true);
-        setCurrentPage('questionPage');    };
-
-    
-    handleClick = (event) => {
-       
-        setCurrentPage('questionPage');
-      };
 
     return (
         <div className="ClickerFurther" onClick={this.handleClick}>
-        {currentPage === 'getReadyToVotePage' && (
-           
+   
+            <div className='containerGetReady'>
+            <h3>Get ready to vote!</h3>
             <div className="progressbar">
                 <div style={{
                     height: "100%",
@@ -35,10 +44,10 @@ function GetreadyToVote({currentPage, setCurrentPage }) {
                 <span className="progressPercent">{filled}%</span>
                 <button className="btn" onClick={handleButtonClick}>Run</button>
             </div>
-            
+            </div>
 
         
-    )}
+
     </div>
     );
 }
