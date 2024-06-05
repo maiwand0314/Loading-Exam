@@ -52,7 +52,11 @@ const UsernameAndAvatar = ({currentPage, setCurrentPage}) => {
 
 
     return (
+        <div>
+                    {currentPage === 'avatarPage' && (
+
         <section className="name-and-avatar-container">
+            
             <div className="info-box">
                 <p>Waiting for all players!</p>
                 <p>GameRoom: {gameRoomId}</p>
@@ -83,6 +87,8 @@ const UsernameAndAvatar = ({currentPage, setCurrentPage}) => {
             <button className="continue-button" onClick={handleContinueClick}>CONTINUE</button>
           
         </section>
+        )}
+        </div>
     );
 };
 

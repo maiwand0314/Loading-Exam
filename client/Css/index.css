@@ -48,7 +48,7 @@ img, picture, svg {
     padding-block: 2rem;
 }
 
-.container {
+.containerQuestionPage {
     --max-width: 1110px;
     --padding: 1rem;
     width: min(var(--max-width), 100% - (var(--padding) *2));

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import "../Css/FrontPage.css"
 import UserPage from '../Pages/UserPage.jsx';
 import meme1 from './meme.jpeg';
 import meme2 from './meme.jpeg';
@@ -81,7 +80,7 @@ function FrontPage({currentPage, setCurrentPage }) {
 
 
 
-
+/*
 const NextPage = ({ onContinue }) => {
   const memes = [meme1, meme2, meme3];
   const randomMeme = memes[Math.floor(Math.random() * memes.length)];
@@ -96,7 +95,7 @@ const NextPage = ({ onContinue }) => {
     </div>
   );
 };
-
+*/
 
 
 export default FrontPage;
