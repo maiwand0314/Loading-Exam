@@ -11,12 +11,13 @@ import "../Css/WaitingPage.css"
 import "../Css/GetReadyToVote.css"
 import "../Css/ResultPage.css"
 import "../Css/WaitingPageAfterQuestion.css"
-
+import "../Css/EndingPage.css"
 import GetReadyToVote from "./GetReadyToVote";
 import IntermissionPage from "./IntermissionPage";
 import Questions from "./Questions"
 import ResultPage from "./ResultPage"
 import WaitingPageAfterQuestion from "./WaitingPageAfterQuestion";
+import EndingPage from "./EndingPage";
 
 function UserPage () {
     const [currentPage, setCurrentPage] = useState('frontPage'); // New state to control the page rendering
@@ -35,7 +36,7 @@ function UserPage () {
             {currentPage === "questionPage" && <Questions currentPage={currentPage}  setCurrentPage={setCurrentPage}/>}
             {currentPage === "resultPage" && <ResultPage currentPage={currentPage}  setCurrentPage={setCurrentPage}/>}
             {currentPage === "waitingPageAfterQuestion" && <WaitingPageAfterQuestion currentPage={currentPage}  setCurrentPage={setCurrentPage}/>}
-            
+            {currentPage === "endingPage" && <EndingPage currentPage={currentPage}  setCurrentPage={setCurrentPage}/>}
 
             </>
             

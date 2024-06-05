@@ -46,7 +46,7 @@ function FrontPage({ setCurrentPage }) {
                {/* {isCodeCorrect ? (
                   <NextPage />
                */}
-                ) : ( 
+              
                   <form onSubmit={handleSubmit} className="code-input">
                     <label htmlFor="code">Enter your code:</label>
                     <input
@@ -58,7 +58,7 @@ function FrontPage({ setCurrentPage }) {
                     />
                     <button type="submit">Submit</button>
                   </form>
-                )
+                
                 
               </div>
             )}
@@ -74,25 +74,5 @@ function FrontPage({ setCurrentPage }) {
     </div>
   );
 }
-
-
-
-/*
-const NextPage = ({ onContinue }) => {
-  const memes = [meme1, meme2, meme3];
-  const randomMeme = memes[Math.floor(Math.random() * memes.length)];
-
-
-
-  return (
-    <div className="next-page">
-      <h2>Here's a Random Meme:</h2>
-      <img src={randomMeme} alt="Random Meme" />
-      <button onClick={onContinue}>Continue next page</button>
-    </div>
-  );
-};
-*/
-
 
 export default FrontPage;

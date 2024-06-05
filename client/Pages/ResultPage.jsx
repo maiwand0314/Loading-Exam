@@ -23,7 +23,7 @@ async function getVotesA(vote) {
     });
 }
 
-function ResultPage() {
+function ResultPage({setCurrentPage}) {
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [votes, setVotes] = useState(null);
     const [votesB, setVotesB] = useState(null);
@@ -113,8 +113,14 @@ async function test(){
         };
     }, []);
 
+    
+    handleClick = (event) => {
+        console.log('Screen clicked!', event);
+        setCurrentPage('endingPage');
+      };
+
     return (
-        <>
+        <div className="ClickerFurther" onClick={this.handleClick}>
             <div className={"result-container"}>
                 <h1 className={"results"}>Results</h1>
             </div>
@@ -151,7 +157,7 @@ async function test(){
             <button onClick={requestFullScreen} className={"fullscreenButton"}>
                 {isFullScreen ? "Exit Fullscreen" : "Go Fullscreen"}
             </button>
-        </>
+            </div>
     );
 }
 

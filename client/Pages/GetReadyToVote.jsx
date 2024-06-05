@@ -46,8 +46,6 @@ function GetreadyToVote({ setCurrentPage }) {
             </div>
             </div>
 
-        
-
     </div>
     );
 }
