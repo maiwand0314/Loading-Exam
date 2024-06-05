@@ -11,7 +11,7 @@ function FrontPage({ setCurrentPage }) {
   
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 20000);
+    const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 

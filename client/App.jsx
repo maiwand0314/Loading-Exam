@@ -9,15 +9,7 @@ function App() {
     return(
         <BrowserRouter>
         <Routes>
-
-    
           <Route path="/" element={<UserPage />} />
-         
-
-          
-       
-            {/*<Question/>*/}
-
         </Routes>
         </BrowserRouter>
     );
