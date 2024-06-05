@@ -1,39 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #2a0d45; /* dark purple */
-  color: #fff;
+  font-family: 'Comic Neue', cursive;
+  background: linear-gradient(135deg, #667eea, #764ba2); /* gradient background */
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .admin-panel {
+  background-color: #3b3f47; /* slightly lighter gray */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
-  padding: 20px;
+  padding: 40px;
+  width: 80%;
+  max-width: 500px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .title {
   margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffcc00; /* bright yellow */
 }
 
 .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
+  gap: 20px; /* add gap between buttons */
 }
 
 .btn {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #6930c3; /* purple */
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff6f61, #ff945e); /* gradient button */
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-  background-color: #5e2d91; /* darker purple on hover */
+  background: linear-gradient(135deg, #ff945e, #ff6f61); /* inverted gradient on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .scene-manager {
   display: flex;
   justify-content: center;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ffcc00; /* bright yellow */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.message.show {
+  opacity: 1;
 }
