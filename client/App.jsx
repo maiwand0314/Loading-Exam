@@ -1,10 +1,12 @@
 import Question from "./Question.jsx"
+import FrontPage from "./Pages/FrontPage.jsx"
 
 
 function App() {
     return(
         <>
-            <Question/>
+            <FrontPage/>
+            {/*<Question/>*/}
         </>
     );
 
