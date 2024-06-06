@@ -6,8 +6,26 @@ import WitchAvatar from '../assets/Witch.png';
 import SwordWomanAvatar from '../assets/SwordWoman.png';
 import ArcherAvatar from '../assets/Archer.png';
 import SwordmanSDownAvatar from '../assets/SwordmanSDown.png';
+import Cookies from "js-cookie";
+import usernames from "../assets/usernames";
+
+
+
+
 
 const UsernameAndAvatar2 = () => {
+    // Set a cookie
+    const userToken = Cookies.get("user_token");
+    const nameToken = Cookies.get("name_token");
+
+
+    // Delete a cookie
+    const logout = () => {
+        Cookies.remove("user_token");
+        // Additional logout logic...
+    };
+
+
     const [chosenAvatarId, setChosenAvatarId] = useState(null);
     const [randomUsername, setRandomUsername] = useState(null);
     const navigate = useNavigate(); // Use navigate for programmatic navigation
@@ -24,20 +42,18 @@ const UsernameAndAvatar2 = () => {
     const gameRoomId = "4400AB"
 
     useEffect(() => {
-        fetch("/usernames.json")
-            .then(response => response.json())
-            .then(data => {
-                const randomIndex = Math.floor(Math.random() * data.generatedUsernames.length);
-                setRandomUsername(data.generatedUsernames[randomIndex]);
-            })
-            .catch(error => {
-                console.error("Error fetching usernames:", error);
-                setRandomUsername("Burning Archer");
-            });
+        const randomIndex = Math.floor(Math.random() * usernames.generatedUsernames.length);
+        setRandomUsername(usernames.generatedUsernames[randomIndex]);
     }, []);
 
     const handleAvatarClick = (avatarId) => {
         setChosenAvatarId(avatarId);
+
+        //Made cookies secure with Library
+        Cookies.set("name_token", randomUsername, {expires: 1, path: "/gameID=1", secure: true, sameSite: 'strict'});
+        Cookies.set("user_token", avatarId, {expires: 1, path: "/gameID=1", secure: true, sameSite: 'strict'});
+
+        console.log("Worked")
     };
 
     function handleContinueClick() {
