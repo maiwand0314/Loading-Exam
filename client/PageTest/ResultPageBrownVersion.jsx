@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import ResultItem from "../Components/ResultItem"
 
 
 async function getVotes(vote) {
@@ -27,6 +27,8 @@ function ResultPageBrownVersion() {
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [votes, setVotes] = useState(null);
     const [votesB, setVotesB] = useState(null);
+    const [votingResults, setVotingResults] = useState(null)
+
 
 
     const toggleSpawnAnimation = (event) => {
@@ -80,18 +82,19 @@ function ResultPageBrownVersion() {
         }
     };
 
-async function test(){
-    const result = await fetch("/api/votes");
-    const data = await result.json();
-    setVotes(data.A)
-    setVotesB(data.B)
-    /*
-    const resulB = await fetch("/api/votes/b");
-    const data2 = await resulB.json();
-        setVotesA(data);
-        setVotesB(data2)
-        */
-}
+    async function test(){
+        const result = await fetch("/api/votes");
+        const resultData = await result.json();
+        setVotingResults(resultData)
+        /*
+        const resulB = await fetch("/api/votes/b");
+        const data2 = await resulB.json();
+            setVotesA(data);
+            setVotesB(data2)
+            */
+
+        return resultData
+    }
     useEffect(() => {
 
         test()
@@ -99,6 +102,18 @@ async function test(){
 
     }, [])
 
+    const createResultsJSX = () => {
+        if (votingResults != null) {
+            return Object.entries(votingResults).map(([choice, amountOfVotes], i) => (
+                <ResultItem
+                    key={i}
+                    amountOfVotes={amountOfVotes}
+                    choice={choice}
+                />
+            ));
+        }
+        return (<p>Loading results...</p>);
+    };
 
 
     useEffect(() => {
@@ -115,44 +130,29 @@ async function test(){
 
     return (
         <>
-        <div className='containerResultsBrownVersion'>
-            <div className={"result-container"}>
-                <h1 className={"results"}>Results</h1>
-            </div>
+            <div className='resultPage-main-containerBrownVersion'>
+                <div className="result-containerBrownVersion">
+                    <div className='result-title-containerBrownVersion'>
+                        <h1 className="results-titleBrownVersion">Results</h1>
+                    </div>
 
-            <div className="container">
-                <div className="loader-container">
-                    <div className="choice-1">
-                        <a>{votes}</a>
-                        <div className={"status-bar-1"}></div>
-                        <a>A</a>
-                        <h1 className={"emoji"} onClick={toggleSpawnAnimation}>🦝</h1>
+                    <div className="voting-results-displayedBrownVersion" style={
+                        {
+                            display: "flex",
+                            flexDirection: "row", alignItems: "flex-end",
+                            justifyContent: "space-evenly"
+                        }
+                    }>
+                        {createResultsJSX()}
                     </div>
-                    <div className="choice-2">
-                        <a>{votesB}</a>
-                        <div className={"status-bar-2"}></div>
-                        <a>B</a>
-                        <h1 className={"emoji"} onClick={toggleSpawnAnimation}>😊</h1>
-                    </div>
-                    <div className="choice-3">
-                        <a>{}</a>
-                        <div className={"status-bar-3"}></div>
-                        <a>C</a>
-                        <h1 className={"emoji"} onClick={toggleSpawnAnimation}>🥳</h1>
-                    </div>
-                    <div className="choice-4">
-                        <a>{}</a>
-                        <div className={"status-bar-4"}></div>
-                        <a>D</a>
-                        <h1 className={"emoji"} onClick={toggleSpawnAnimation}>🎉</h1>
+                    <div className='emoji-containerBrownVersion'>
+                        <p>🦝</p>
+                        <p>😊</p>
+                        <p>🥳</p>
+                        <p>🎉</p>
                     </div>
                 </div>
             </div>
-
-            <button onClick={requestFullScreen} className={"fullscreenButton"}>
-                {isFullScreen ? "Exit Fullscreen" : "Go Fullscreen"}
-            </button>
-        </div>
         </>
     );
 }

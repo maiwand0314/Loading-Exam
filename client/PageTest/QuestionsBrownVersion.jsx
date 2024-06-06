@@ -1,4 +1,5 @@
 import trollGif from '../assets/BrownTroll.gif';
+import React, {useState, useEffect} from 'react';
 
 
 async function insertChoice(choice) {
@@ -12,23 +13,40 @@ async function insertChoice(choice) {
 }
 
 function QuestionsBrownVersion({ setCurrentPage }) {
+    const [countdown, setCountdown] = useState(5);
 
+
+    useEffect(() => {
+        if (countdown === 0) {
+            // Handle the case when the countdown reaches 0
+            setCurrentPage('waitingPageAfterBrownQuestion'); // Redirect to a timeout page or handle as needed
+            return;
+        }
+        const timer = setTimeout(() => {
+            setCountdown(countdown - 1);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, [countdown, setCurrentPage]);
 
                 return (
-                <div className="ClickerFurther">
+                <div className="ClickerFurtherBrownVersion">
              
-                    <div className="containerQuestionPage">
-                        <div className="mainImageDiv">
-                            <img className="mainImage" src={trollGif} alt="Gif of troll" />
+                    <div className="containerQuestionPageBrownVersion">
+                        <div className="mainImageDivBrownVersion">
+                            <img className="mainImageBrownVersion" src={trollGif} alt="Gif of troll" />
                         </div>
-                        <div className="mainQuestionDiv">
-                            <h1 className="mainQuestion">You've met a fairy! What do you want to do?   </h1>
+                        <div className="countdownTimerBrown">
+                    Time left: {countdown} seconds
+                </div>
+                        <div className="mainQuestionDivBrownVersion">
+                            <h1 className="mainQuestionBrownVersion">You've met a fairy! What do you want to do?   </h1>
                         </div>
-                        <div className="buttonsContainer">
-                            <button className="questionButton" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("A"); }}>A. Run LOL</button>
-                            <button className="questionButton" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("B"); }}>B. Fart LOL</button>
-                            <button className="questionButton" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("C"); }}>C. Cry LOL</button>
-                            <button className="questionButton" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("D"); }}>D. Fight LOL</button>
+                        <div className="buttonsContainerBrownVersion">
+                            <button className="questionButtonBrownVersion" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("A"); }}>A. Run LOL</button>
+                            <button className="questionButtonBrownVersion" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("B"); }}>B. Fart LOL</button>
+                            <button className="questionButtonBrownVersion" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("C"); }}>C. Cry LOL</button>
+                            <button className="questionButtonBrownVersion" onClick={() => { setCurrentPage('waitingPageAfterBrownQuestion'); insertChoice("D"); }}>D. Fight LOL</button>
                         </div>
                     </div>
               

@@ -6,7 +6,7 @@
 }
 
 
-.progressbar{
+.progressbarGetReady{
 	position: relative;
 	overflow: hidden;
 	width: 700px;
@@ -15,7 +15,7 @@
 	background-color: #eee;
 }
 
-.progressPercent{
+.progressPercentGetReady{
 	font-weight: 600;
     font-size: 2em;
 	font-family:'Franklin Gothic Medium';
@@ -27,7 +27,8 @@
 	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }
 
-.btn{
+/*
+.btnGetReady{
 	display: block;
 	margin: 5rem auto;
 	border: none;
@@ -47,3 +48,4 @@
 	-webkit-box-shadow: inset 100px 0 0 0 #7c54d1;
     box-shadow: inset 100px 0 0 0 #7c54d1;
 }
+	*/

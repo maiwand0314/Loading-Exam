@@ -15,22 +15,22 @@
     color: #fafafc;
 }
 
-.info-box {
+.info-boxAvatar {
     border-bottom: 3px solid black;
     width: 100dvw;
     padding-bottom: 8px;
     
 }
 
-.info-box p {
+.info-boxAvatar p {
     padding: 10px;
 }
 
-.name-container {
+.name-containerAvatar {
     padding: 26px 0px;
 }
 
-.name-container p {
+.name-containerAvatar p {
     padding-top: 26px;
 }
 
@@ -46,7 +46,7 @@
     width: 100px;
 }
 
-.continue-button {
+.continue-buttonAvatar {
     padding: 8px;
     border: 2px solid black;
     background: linear-gradient(to bottom, #fafafc, #1A1A2E);
@@ -91,7 +91,7 @@
     .avatars-container img {
         width: 75px;
     }
-    .info-box p {
+    .info-boxAvatar p {
         font-size: 16px;
         padding: 8px;
     }

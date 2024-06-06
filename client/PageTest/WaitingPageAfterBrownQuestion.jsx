@@ -1,12 +1,29 @@
 import WaitingPageLoadingBarBrownVersion from "../Components/WaitingPageLoadingBarBrownVersion";
 import memeClassroom from "../assets/meme1.jpg"
+import {React, useState, useEffect } from "react";
 
 function WaitingPageAfterBrownQuestion({ setCurrentPage }) {
 
-    handleClick = (event) => {
-        console.log('Screen clicked!', event);
-        setCurrentPage('resultPage');
-      };
+
+
+    const [countdown, setCountdown] = useState(5);
+
+
+    useEffect(() => {
+        if (countdown === 0) {
+            // Handle the case when the countdown reaches 0
+            setCurrentPage('resultPageBrownVersion'); // Redirect to a timeout page or handle as needed
+            return;
+        }
+        const timer = setTimeout(() => {
+            setCountdown(countdown - 1);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, [countdown, setCurrentPage]);
+
+
+
     return(
         
 

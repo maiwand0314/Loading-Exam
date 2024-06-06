@@ -6,15 +6,13 @@ import Questions from "../PageTest/Questions2";
 import ResultPage from "../PageTest/ResultPage3";
 import WaitingPageAfterQuestion2 from "./WaitingPageAfterQuestion2";
 import GetReadyToVoteSecond2 from "./GetReadyToVoteSecond2";
-import WaitingPageAfterQuestion3 from './WaitingPageAfterQuestion3';
 import QuestionsBrownVersion from "./QuestionsBrownVersion";
 import WaitingPageAfterBrownQuestion from './WaitingPageAfterBrownQuestion';
 import ResultPageBrownVersion from './ResultPageBrownVersion';
-import EndingPage from '../Pages/EndingPage';
+import EndingPageMaiwand from '../Pages/EndingPageMaiwand';
 
 import "../Css/UsernameAndAvatar.css";
 import "../Css/FrontPage.css";
-import "../Css/index.css";
 import "../Css/IntermissionPage.css";
 import "../Css/WaitingPage.css";
 import "../Css/GetReadyToVote.css";
@@ -23,7 +21,10 @@ import "../Css/ResultPageBrownVersion.css"
 import "../Css/WaitingPageAfterQuestion.css";
 import "../Css/QuestionsBrownVersion.css"
 import "../Css/WaitingPageAfterBrownQuestion.css"
-import "../Css/EndingPage.css"
+import "../Css/EndingPageMaiwand.css"
+import "../Css/Question2.css"
+import "../Css/GetReadyToVoteSecond.css"
+
 import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function UserPage() {
@@ -88,8 +89,8 @@ function UserPage() {
             case "resultPageBrownVersion":
                 setCurrentPage("resultPageBrownVersion")
                 break;
-            case "endingPage":
-                setCurrentPage("endingPage")
+            case "EndingPageMaiwand":
+                setCurrentPage("EndingPageMaiwand")
                 break;
             default:
                 console.error("Unknown option received");
@@ -111,7 +112,6 @@ function UserPage() {
                 <CharacterTopLeft></CharacterTopLeft>
             <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />
                 </>;
-
         case "waitingPageAfterQuestion":
             return <WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "questionPageBrownVersion":
@@ -123,13 +123,9 @@ function UserPage() {
         case "waitingPageAfterBrownQuestion":
             return<WaitingPageAfterBrownQuestion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         case "resultPageBrownVersion":
-            return<>
-
-                <ResultPageBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-
-                </>;
-        case "endingPage":
-            return<EndingPage currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+            return<ResultPageBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+        case "EndingPageMaiwand":
+            return<EndingPageMaiwand currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         default:
             return <div>Error: Unknown page</div>;
     }

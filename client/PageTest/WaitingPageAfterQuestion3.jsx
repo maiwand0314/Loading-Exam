@@ -1,12 +1,12 @@
 import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
 import bowser from "../assets/boswer-fact(2).jpg"
 
+/*
 function WaitingPageAfterQuestion2({ setCurrentPage }) {
 
-    handleClick = (event) => {
-        console.log('Screen clicked!', event);
-        setCurrentPage('resultPage');
-      };
+
+
+
     return(
         
 
@@ -35,3 +35,4 @@ function WaitingPageAfterQuestion2({ setCurrentPage }) {
 }
 
 export default WaitingPageAfterQuestion2;
+*/

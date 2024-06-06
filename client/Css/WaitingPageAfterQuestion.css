@@ -31,13 +31,14 @@ img, picture, svg {
    
   }
 
-.mainImageContainerFunFact{
+.mainImageContainerFunFactPageAfterQuestion{
   border-radius: 2em;
   border: 5px solid #00ccff;
     width: 50%;
+  
 }
 
-.mainImageFunFact {
+.mainImageFunFactPageAfterQuestion {
   border-radius: 2em;
   width: 100%;
 }
@@ -46,19 +47,18 @@ img, picture, svg {
   color: #00ccff;
   font-size: 1.25em;
   padding: 0px 50px;
-
   line-height: 1.5;
   text-shadow: 7px 7px 3px black; 
 }
 
 
 
-.progressBarContainer{
+.progressBarContainerAfterQuestionPage{
   display: block;
   min-height: 100%;
 }
 
-.progressbar{
+.progressbarAfterQuestionPage{
   position: relative;
   overflow: hidden;
 	border: 5px solid #00ccff;
@@ -73,7 +73,7 @@ img, picture, svg {
 	box-shadow: 5px 5px 10px black;
 }
 
-.progressPercent{
+.progressPercentAfterQuestionPage{
   position: absolute;
 	transform: translate(-50%,-50%);
 	font-size: 1.5em;
@@ -89,29 +89,29 @@ img, picture, svg {
 
 
 @media (width<768px) {
-  .mainTitle{font-size: 0.5em;}
-  .progressbar{
+  .mainTitlePageAfterQuestion{font-size: 0.5em;}
+  .progressbarAfterQuestionPage{
     height: 3dvh;
   }
 
-  .progressPercent{
+  .progressPercentAfterQuestionPage{
     font-size: 0.75em;
   }
 }
 
 @media (width<=440px) {
-  .mainTitle{font-size: 1em;
+  .mainTitlePageAfterQuestion{font-size: 1em;
          padding: 0px 0px;
          margin: 0px 20px;
       
          
         }
 
-        .progressbar{
+        .progressbarAfterQuestionPage{
           height: 8dvh;
         }
 
-        .progressPercent{
+        .progressPercentAfterQuestionPage{
          font-size: 0.75em;
         }
          
@@ -120,23 +120,23 @@ img, picture, svg {
 
 /* Landscape mode */
 @media (orientation: landscape) and (height <= 500px) {
-  .mainTitle{font-size: 0.5em;
+  .mainTitlePageAfterQuestion{font-size: 0.5em;
     padding: 0px 0px;
     margin: 0px 20px;
  
     word-break: break-all;
    }
 
-   .progressbar{
+   .progressbarAfterQuestionPage{
      height: 10dvh;
      width: 80dvw;
   
    }
 
-   .progressPercent{
+   .progressPercentAfterQuestionPage{
     font-size: 0.75em;
    }
-   .mainImageContainer{
+   .mainImageContainerPageAfterQuestion{
     border-radius: 2em;
     border: 5px solid #00ccff;
     width: 50%;
@@ -145,14 +145,14 @@ img, picture, svg {
 }
 
 @media (width>=1024px) {
-  .mainTitle{font-size: 0.5em;}
-  .progressbar{
+  .mainTitlePageAfterQuestion{font-size: 0.5em;}
+  .progressbarAfterQuestionPage{
     height: 10dvh;
     width: 80dvw;
 
   }
 
-  .progressPercent{
+  .progressPercentAfterQuestionPage{
     font-size: 0.75em;
   }
 }

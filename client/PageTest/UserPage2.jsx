@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import "../Css/UsernameAndAvatar.css"
 import "../Css/FrontPage.css"
-import "../Css/index.css"
+import "../Css/Question2.css"
 import "../Css/IntermissionPage.css"
 import "../Css/WaitingPage.css"
 import "../Css/GetReadyToVote.css"

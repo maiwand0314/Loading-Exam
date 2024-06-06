@@ -30,18 +30,18 @@ img, picture, svg {
 
 }
 
-.mainImageContainer{
+.mainImageContainerWaitingPage{
   border-radius: 2em;
   border: 5px solid #00ccff;
   width: 20%;
 }
 
-.mainImage {
+.mainImageWaitingPage {
   border-radius: 2em;
   width: 100%;
 }
 
-.mainTitle {
+.mainTitleWaitingPage {
   color: #00ccff;
   font-size: 1.25em;
   padding: 0px 50px;

@@ -10,7 +10,7 @@ import WaitingPageAfterQuestion3 from './WaitingPageAfterQuestion3';
 import QuestionsBrownVersion from "./QuestionsBrownVersion";
 import WaitingPageAfterBrownQuestion from './WaitingPageAfterBrownQuestion';
 import ResultPageBrownVersion from './ResultPageBrownVersion';
-import EndingPage from '../Pages/EndingPage';
+import EndingPageMaiwand from '../Pages/EndingPageMaiwand';
 
 import "../Css/UsernameAndAvatar.css";
 import "../Css/FrontPage.css";
@@ -18,12 +18,14 @@ import "../Css/index.css";
 import "../Css/IntermissionPage.css";
 import "../Css/WaitingPage.css";
 import "../Css/GetReadyToVote.css";
+import "../Css/GetReadyToVoteSecond2.css"
 import "../Css/ResultPage3.css";
 import "../Css/ResultPageBrownVersion.css"
 import "../Css/WaitingPageAfterQuestion.css";
 import "../Css/QuestionsBrownVersion.css"
 import "../Css/WaitingPageAfterBrownQuestion.css"
-import "../Css/EndingPage.css"
+import "../Css/EndingPageMaiwand.css"
+import "../Css/WaitingPageAfterQuestion.css"
 import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function UserPage() {

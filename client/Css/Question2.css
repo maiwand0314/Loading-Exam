@@ -55,13 +55,17 @@ img, picture, svg {
     margin-inline: auto;
 }
 
-.buttonsContainer {
+.buttonsContainerQuestionPage {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 }
 
-.questionButton{
+.countdownTimerQuestionPage{
+    
+}
+
+.questionButtonQuestionPage {
     background-image: linear-gradient(#72009A, #E8E8E8);
     color: rgb(0, 0, 0);
     font-family: 'Press Start 2P', cursive;
@@ -75,7 +79,7 @@ img, picture, svg {
 
 }
 
-.questionButton:hover {
+.questionButtonQuestionPage:hover {
 
     /*background-color: hsla(263, 98%, 60%, 0.411);*/
     background-image: linear-gradient(#71009a7a, #e8e8e87c);
@@ -106,7 +110,7 @@ button:focus-visible {
 
 
 @media (min-width: 50em) {
-    .buttonsContainer {
+    .buttonsContainerQuestionPage {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
 
@@ -121,7 +125,7 @@ header {
     justify-content: center;
 }
 
-.mainImageDiv {
+.mainImageDivQuestionPage {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -131,7 +135,7 @@ header {
 
 }
 
-.mainImage {
+.mainImageQuestionPage {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -140,7 +144,7 @@ header {
 
 }
 
-.mainQuestion{
+.mainQuestionQuestionPage{
     padding: 25px;
     font-size: 1EM;
     line-height: 2;
@@ -162,7 +166,7 @@ footer {
 
 /* Utility Classes */
 
-
+/*
 .Appe{
     display: flex;
     justify-content: center;
@@ -212,3 +216,4 @@ footer {
     -webkit-box-shadow: inset 100px 0 0 0 #7c54d1;
     box-shadow: inset 100px 0 0 0 #7c54d1;
 }
+    */

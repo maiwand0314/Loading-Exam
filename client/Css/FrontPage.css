@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
+
 @keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;
@@ -27,7 +29,7 @@
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     z-index: 1;
     display: flex;
@@ -36,24 +38,24 @@
     justify-content: center;
   }
   
-  .grid {
+  .gridFrontPage {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     width: 100%;
   }
   
-  .grid-item {
+  .grid-itemFrontPage {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 5px;
   }
   
-  .grid-item-full {
+  .grid-item-fullFrontPage {
     grid-column: span 12;
   }
   
-  .loading-bar {
+  .loading-barFrontPage {
     width: 100%;
     height: 20px;
     background: #444;
@@ -61,7 +63,7 @@
     overflow: hidden;
   }
   
-  .loading-bar-fill {
+  .loading-bar-fillFrontPage {
     height: 100%;
     width: 0;
     background: #7f00ff;
@@ -75,24 +77,24 @@
     }
   }
   
-  .code-input {
+  .code-inputFrontPage {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  .code-input label {
+  .code-inputFrontPage label {
     margin-bottom: 10px;
   }
   
-  .code-input input {
+  .code-inputFrontPage input {
     padding: 10px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
   }
   
-  .code-input button {
+  .code-inputFrontPage button {
     padding: 10px 20px;
     border: none;
     background-color: #7f00ff;
@@ -101,15 +103,10 @@
     cursor: pointer;
   }
   
-  .code-input button:hover {
+  .code-inputFrontPage button:hover {
     background-color: #6000cc;
   }
   
-  .next-page {
-    height: 30vh;
-  }
-  .next-page img {
-    max-width: 100%;
-    height: 10vh;
-    border-radius: 10px;
-  }
+button {
+  font-family: 'Press Start 2P', cursive;
+}

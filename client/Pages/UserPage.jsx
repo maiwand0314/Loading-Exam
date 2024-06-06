@@ -5,7 +5,6 @@ import UsernameAndAvatar from "../Components/UsernameAndAvatar";
 import WaitingPage from "./WaitingPage";
 import "../Css/UsernameAndAvatar.css"
 import "../Css/FrontPage.css"
-import "../Css/index.css"
 import "../Css/IntermissionPage.css"
 import "../Css/WaitingPage.css"
 import "../Css/GetReadyToVote.css"

@@ -5,19 +5,10 @@ function GetReadyToVote2({ setCurrentPage }) {
     const [isRunning, setIsRunning] = useState(false);
     
     
-    const handleButtonClick = () => {
-        setIsRunning(true);
-        setCurrentPage('questionPage');    };
-
-    
-
-    handleClick = (event) => {
-        setCurrentPage('questionPage');
-      };
 
       useEffect(() => {
         setIsRunning(true);
-        const timer = setTimeout(() => setCurrentPage("questionPageBrownVersion"), 5000);
+        const timer = setTimeout(() => setCurrentPage("questionPageBrownVersion"), 3500);
         return () => clearTimeout(timer);
       }, []);
 
@@ -32,17 +23,17 @@ function GetReadyToVote2({ setCurrentPage }) {
     return (
 
    
-            <div className='containerGetReady'>
-            <h3>Get ready to vote!</h3>
-            <div className="progressbar">
+            <div className='containerGetReadyBrownVersion'>
+            <h3 className='mainTitleGetReadyBrownVersion'>Get ready to vote!</h3>
+            <div className="progressbarGetReadyBrownVersion">
                 <div style={{
                     height: "100%",
                     width: `${filled}%`,
                     backgroundColor: "#a66cff",
                     transition: "width 0.5s"
                 }}></div>
-                <span className="progressPercent">{filled}%</span>
-                <button className="btn" onClick={handleButtonClick}>Run</button>
+                <span className="progressPercentGetReadyBrownVersion">{filled}%</span>
+          
             </div>
             </div>
 

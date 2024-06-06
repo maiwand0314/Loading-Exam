@@ -31,15 +31,15 @@ function FrontPage({ setCurrentPage }) {
   return (
     <div className="FrontPage">
         <div className="containerFrontPage">
-          <div className="grid">
-          <div className="grid-item grid-item-full">
+          <div className="gridFrontPage">
+          <div className="grid-itemFrontPage grid-item-fullFrontPage">
             <h1>Welcome </h1>
           </div>
-          <div className="grid-item grid-item-full">
+          <div className="grid-itemFrontPage grid-item-fullFrontPage">
         
             {loading ? (
-              <div className="loading-bar">
-                <div className="loading-bar-fill"></div>
+              <div className="loading-barFrontPage">
+                <div className="loading-bar-fillFrontPage"></div>
               </div>
             ) : (
               <div>
@@ -47,7 +47,7 @@ function FrontPage({ setCurrentPage }) {
                   <NextPage />
                */}
               
-                  <form onSubmit={handleSubmit} className="code-input">
+                  <form onSubmit={handleSubmit} className="code-inputFrontPage">
                     <label htmlFor="code">Enter your code:</label>
                     <input
                       type="text"
@@ -56,7 +56,7 @@ function FrontPage({ setCurrentPage }) {
                       value={code}
                       onChange={(e) => setCode(e.target.value)}
                     />
-                    <button type="submit">Submit</button>
+                    <button type="submit">Join Game</button>
                   </form>
                 
                 
@@ -69,7 +69,6 @@ function FrontPage({ setCurrentPage }) {
         
       </div>
        
-      {/*{currentPage === 'nextPage' && <NextPage onContinue={handleNextPageSubmit} />}*/}
 
     </div>
   );
