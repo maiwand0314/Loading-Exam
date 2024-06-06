@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(228, 228, 228);
     overflow: hidden;
   }
   
@@ -38,6 +38,19 @@
     justify-content: center;
   }
   
+  .mainTitleFrontPage{
+    color: #e1f9ff;
+  }
+
+.enterYourCodeFrontPage{
+  color: #e1f9ff;
+}
+
+.typeFieldFrontPage{
+  color: rgb(77, 77, 77);
+  font-family: 'Press Start 2P', cursive;
+}
+
   .gridFrontPage {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -66,7 +79,7 @@
   .loading-bar-fillFrontPage {
     height: 100%;
     width: 0;
-    background: #7f00ff;
+    background: #e1f9ff;;
     border-radius: 10px;
     animation: loadingAnimation 3s linear forwards;
   }
@@ -81,10 +94,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+   
+
   }
   
   .code-inputFrontPage label {
     margin-bottom: 10px;
+    
+
   }
   
   .code-inputFrontPage input {
@@ -92,19 +109,20 @@
     margin: 10px 0;
     border: none;
     border-radius: 5px;
+    
   }
   
   .code-inputFrontPage button {
     padding: 10px 20px;
     border: none;
-    background-color: #7f00ff;
-    color: white;
+    background-color: #ffffff;;
+    color:  black;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .code-inputFrontPage button:hover {
-    background-color: #6000cc;
+    background-color: #ebebeb33;
   }
   
 button {

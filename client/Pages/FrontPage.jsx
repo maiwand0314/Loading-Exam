@@ -33,7 +33,7 @@ function FrontPage({ setCurrentPage }) {
         <div className="containerFrontPage">
           <div className="gridFrontPage">
           <div className="grid-itemFrontPage grid-item-fullFrontPage">
-            <h1>Welcome </h1>
+            <h1 className='mainTitleFrontPage'>Welcome</h1>
           </div>
           <div className="grid-itemFrontPage grid-item-fullFrontPage">
         
@@ -48,15 +48,15 @@ function FrontPage({ setCurrentPage }) {
                */}
               
                   <form onSubmit={handleSubmit} className="code-inputFrontPage">
-                    <label htmlFor="code">Enter your code:</label>
-                    <input
+                    <label className="enterYourCodeFrontPage"htmlFor="code">Enter your code:</label>
+                    <input className='typeFieldFrontPage'
                       type="text"
                       id="code"
                       name="code"
                       value={code}
                       onChange={(e) => setCode(e.target.value)}
                     />
-                    <button type="submit">Join Game</button>
+                    <button className='enterGameFrontPage' type="submit">Join Game</button>
                   </form>
                 
                 

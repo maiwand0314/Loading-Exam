@@ -19,6 +19,7 @@ img, picture, svg {
   max-width: 100%;
 }
 
+
 .containerWaitingPage {
   display: flex;
   flex-direction: column;
