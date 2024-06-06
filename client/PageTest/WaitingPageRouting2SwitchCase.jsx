@@ -3,7 +3,7 @@ import WaitingPage from "../PageTest/WaitingPage2";
 import GetReadyToVote from "../PageTest/GetReadyToVote2";
 import IntermissionPage from "../PageTest/IntermissionPage2";
 import Questions from "../PageTest/Questions2";
-import ResultPage from "../PageTest/ResultPage2";
+import ResultPage from "../PageTest/ResultPage3";
 import WaitingPageAfterQuestion2 from "./WaitingPageAfterQuestion2";
 import GetReadyToVoteSecond2 from "./GetReadyToVoteSecond2";
 import WaitingPageAfterQuestion3 from './WaitingPageAfterQuestion3';
@@ -18,7 +18,7 @@ import "../Css/index.css";
 import "../Css/IntermissionPage.css";
 import "../Css/WaitingPage.css";
 import "../Css/GetReadyToVote.css";
-import "../Css/ResultPage.css";
+import "../Css/ResultPage3.css";
 import "../Css/ResultPageBrownVersion.css"
 import "../Css/WaitingPageAfterQuestion.css";
 import "../Css/QuestionsBrownVersion.css"

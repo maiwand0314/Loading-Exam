@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: #1a1a2e;
+
+}
+
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header {
+  text-align: center;
+}
+
+.loading-text {
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4caf50, #ccc, #4caf50);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 2s linear;
+  animation-iteration-count: 3;
+}
+
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.loading-bar {
+  width: 400px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #aaa;
+}
+
+.loading-fill {
+  width: 100%; /* Adjust the width as needed to simulate loading */
+  height: 100%;
+  background-color: #4caf50;
+  animation: loading 2s linear;
+}
+
+@keyframes loading {
+  0% { width: 0; }
+
+  100% { width: 100%; }
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 0%; opacity: 1}
+  50% { background-position: 100% 0%; opacity: 0}
+  100% { background-position: 0% 0%; opacity: 1}
+}
+
+.qrK{
+
+  width: 20%;
+
+}
