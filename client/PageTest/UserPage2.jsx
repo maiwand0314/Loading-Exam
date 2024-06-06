@@ -1,6 +1,5 @@
 import FrontPage from "../Pages/FrontPage";
 import React, { useState } from 'react';
-import React from 'react'
 
 import "../Css/UsernameAndAvatar.css"
 import "../Css/FrontPage.css"

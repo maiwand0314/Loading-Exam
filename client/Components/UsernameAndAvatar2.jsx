@@ -7,7 +7,7 @@ import SwordWomanAvatar from '../assets/SwordWoman.png';
 import ArcherAvatar from '../assets/Archer.png';
 import SwordmanSDownAvatar from '../assets/SwordmanSDown.png';
 
-const UsernameAndAvatar2 = ({ currentPage, setCurrentPage }) => {
+const UsernameAndAvatar2 = () => {
     const [chosenAvatarId, setChosenAvatarId] = useState(null);
     const [randomUsername, setRandomUsername] = useState(null);
     const navigate = useNavigate(); // Use navigate for programmatic navigation
