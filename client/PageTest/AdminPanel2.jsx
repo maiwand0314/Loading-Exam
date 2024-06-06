@@ -11,9 +11,7 @@ const AdminPanel2 = () => {
         setSocket(newSocket);
 
         // Clean up function to close WebSocket connection when component unmounts
-        return () => {
-            newSocket.close();
-        };
+        
     }, []);
 
     const handleChooseScene = () => {
@@ -35,15 +33,24 @@ const AdminPanel2 = () => {
             <div className="controls">
                 <select className="input" value={selectedOption} onChange={handleSelectChange}>
                     <option value="">Select an option</option>
-                    <option value="waitingPage">waitingPage</option>
-                    <option value="intermissionScreen">intermissionScreen</option>
-                    <option value="getReadyToVotePage">getReadyToVotePage</option>
-                    <option value="questionPage">questionPage</option>
-                    <option value="resultPage">resultPage</option>
+                    <option value="waitingPage">Waiting Page</option>
+                    <option value="intermissionScreen">Scene Playing (intermission page)</option>
+                    <option value="getReadyToVotePage">Scene over (Get ready to vote Page)</option>
+                    <option value="questionPage">Choosing next scene (Choice page)</option>
+                    <option value="resultPage">Show results (Result page)</option>
+                    <option value="resultPage">---------------------------------------------------</option>
                     <option value="waitingPageAfterQuestion">waitingPageAfterQuestion</option>
-                 
+                    <option value="getReadyToVoteSecond2">getReadyToVoteSecond</option>
+                    <option value="questionPageBrownVersion">Choosing next scene (brown version)</option>
+                    <option value="resultPageBrownVersion">Show results (brown version)</option>
+                    <option value="resultPage">---------------------------------------------------</option>
+                    <option value="endingPage">End the Play/Game (ending page)</option>
+                    
+                
                 </select>
                 <button onClick={handleChooseScene} className="btn"><p>Select</p></button>
+        
+
             </div>
         </div>
     );

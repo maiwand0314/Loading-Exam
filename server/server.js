@@ -65,6 +65,7 @@ server.on("upgrade", (req, socket, head) => {
         socket.on("message", (msg) => {
             const { option } = JSON.parse(msg); // Parse the received message
             // Broadcast the selected option to all connected clients
+            console.log("Heh")
             for (const recipient of sockets) {
                 recipient.send(JSON.stringify({ option }));
             }

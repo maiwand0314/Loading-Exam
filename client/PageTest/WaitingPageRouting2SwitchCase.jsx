@@ -5,6 +5,13 @@ import IntermissionPage from "../PageTest/IntermissionPage2";
 import Questions from "../PageTest/Questions2";
 import ResultPage from "../PageTest/ResultPage2";
 import WaitingPageAfterQuestion2 from "./WaitingPageAfterQuestion2";
+import GetReadyToVoteSecond2 from "./GetReadyToVoteSecond2";
+import WaitingPageAfterQuestion3 from './WaitingPageAfterQuestion3';
+import QuestionsBrownVersion from "./QuestionsBrownVersion";
+import WaitingPageAfterBrownQuestion from './WaitingPageAfterBrownQuestion';
+import ResultPageBrownVersion from './ResultPageBrownVersion';
+import EndingPage from '../Pages/EndingPage';
+
 import "../Css/UsernameAndAvatar.css";
 import "../Css/FrontPage.css";
 import "../Css/index.css";
@@ -12,7 +19,11 @@ import "../Css/IntermissionPage.css";
 import "../Css/WaitingPage.css";
 import "../Css/GetReadyToVote.css";
 import "../Css/ResultPage.css";
+import "../Css/ResultPageBrownVersion.css"
 import "../Css/WaitingPageAfterQuestion.css";
+import "../Css/QuestionsBrownVersion.css"
+import "../Css/WaitingPageAfterBrownQuestion.css"
+import "../Css/EndingPage.css"
 
 function UserPage() {
     const [currentPage, setCurrentPage] = useState("waitingPage");
@@ -61,6 +72,24 @@ function UserPage() {
             case "waitingPageAfterQuestion":
                 setCurrentPage("waitingPageAfterQuestion");
                 break;
+            case "questionPageBrownVersion":
+                setCurrentPage("questionPageBrownVersion");
+                break;
+            case "getReadyToVoteSecond2":
+                setCurrentPage("getReadyToVoteSecond2");
+                break;
+            case "WaitingPageAfterQuestion3":
+                setCurrentPage("WaitingPageAfterQuestion3")
+                break;
+            case "waitingPageAfterBrownQuestion":
+                setCurrentPage("waitingPageAfterBrownQuestion")
+                break;
+            case "resultPageBrownVersion":
+                setCurrentPage("resultPageBrownVersion")
+                break;
+            case "endingPage":
+                setCurrentPage("endingPage")
+                break;
             default:
                 console.error("Unknown option received");
         }
@@ -80,6 +109,18 @@ function UserPage() {
             return <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "waitingPageAfterQuestion":
             return <WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+        case "questionPageBrownVersion":
+            return<QuestionsBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+        case "getReadyToVoteSecond2":
+            return<GetReadyToVoteSecond2 currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+        case "WaitingPageAfterQuestion3":
+            return<WaitingPageAfterQuestion3 currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+        case "waitingPageAfterBrownQuestion":
+            return<WaitingPageAfterBrownQuestion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+        case "resultPageBrownVersion":
+            return<ResultPageBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+        case "endingPage":
+            return<EndingPage currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         default:
             return <div>Error: Unknown page</div>;
     }

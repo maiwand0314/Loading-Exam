@@ -9,6 +9,9 @@ import "../Css/WaitingPage.css"
 import "../Css/GetReadyToVote.css"
 import "../Css/ResultPage.css"
 import "../Css/WaitingPageAfterQuestion.css"
+import "../Css/QuestionsBrownVersion.css"
+import "../Css/ResultPageBrownVersion.css"
+import "../Css/WaitingPageAfterBrownQuestion.css"
 
 import UsernameAndAvatar2 from "../Components/UsernameAndAvatar2";
 

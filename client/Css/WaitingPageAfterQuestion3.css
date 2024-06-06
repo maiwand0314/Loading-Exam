@@ -1,0 +1,158 @@
+
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
+
+:root {
+  font-family: 'Press Start 2P';
+}
+
+/*
+html, body {
+  margin: 0;
+  background-image: linear-gradient(#1a1a2e, #1a1a2e, #1a1a2e, #1a1a2e,  #9aedf805); 
+
+  min-height: 100%;
+}
+*/
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.containerWaitingPageAfterQuestion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 100dvh;
+    overflow: hidden;
+  
+   
+  }
+
+.mainImageContainerFunFact{
+  border-radius: 2em;
+  border: 5px solid #00ccff;
+    width: 50%;
+}
+
+.mainImageFunFact {
+  border-radius: 2em;
+  width: 100%;
+}
+
+.mainTitleAfterQuestion {
+  color: #00ccff;
+  font-size: 1.25em;
+  padding: 0px 50px;
+
+  line-height: 1.5;
+  text-shadow: 7px 7px 3px black; 
+}
+
+
+
+.progressBarContainer{
+  display: block;
+  min-height: 100%;
+}
+
+.progressbar{
+  position: relative;
+  overflow: hidden;
+	border: 5px solid #00ccff;
+  justify-content: center;
+	/*border: 5px solid #004152;*/
+	min-width: 80%;
+	height: 10dvh;
+  width: 40dvh;
+  top: 50%;
+	border-radius: 1em;
+	background-color: #83e5fd05;
+	box-shadow: 5px 5px 10px black;
+}
+
+.progressPercent{
+  position: absolute;
+	transform: translate(-50%,-50%);
+	font-size: 1.5em;
+  top: 50%;
+	color: #00ccff;
+	border-radius: 2em;
+	text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+	/*text-shadow: 5px 5px 5px black;*/
+	/*text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;*/
+}
+
+
+
+@media (width<768px) {
+  .mainTitle{font-size: 0.5em;}
+  .progressbar{
+    height: 3dvh;
+  }
+
+  .progressPercent{
+    font-size: 0.75em;
+  }
+}
+
+@media (width<=440px) {
+  .mainTitle{font-size: 1em;
+         padding: 0px 0px;
+         margin: 0px 20px;
+      
+         
+        }
+
+        .progressbar{
+          height: 8dvh;
+        }
+
+        .progressPercent{
+         font-size: 0.75em;
+        }
+         
+ 
+}
+
+/* Landscape mode */
+@media (orientation: landscape) and (height <= 500px) {
+  .mainTitle{font-size: 0.5em;
+    padding: 0px 0px;
+    margin: 0px 20px;
+ 
+    word-break: break-all;
+   }
+
+   .progressbar{
+     height: 10dvh;
+     width: 80dvw;
+  
+   }
+
+   .progressPercent{
+    font-size: 0.75em;
+   }
+   .mainImageContainer{
+    border-radius: 2em;
+    border: 5px solid #00ccff;
+    width: 50%;
+  }
+
+}
+
+@media (width>=1024px) {
+  .mainTitle{font-size: 0.5em;}
+  .progressbar{
+    height: 10dvh;
+    width: 80dvw;
+
+  }
+
+  .progressPercent{
+    font-size: 0.75em;
+  }
+}
