@@ -9,10 +9,7 @@ function OverView() {
                 <span>Game Pin: 123456</span>
             </div>
 
-            <div className="top-right">
 
-
-            </div>
             <UserPage/>
         </div>
     );

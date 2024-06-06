@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import * as bodyParser from "express";
 import { WebSocketServer } from "ws"; // Import WebSocketServer
 import { QuestionApi } from "./question.js";
+import {QuestionApi2} from "./qustion2.js";
 
 dotenv.config();
 const app = express();
@@ -43,6 +44,7 @@ mongoClient.connect().then(async () => {
     const database = await mongoClient.db().admin().listDatabases();
     console.log(database);
     app.use("/api/elements", QuestionApi(mongoClient.db("Loading")));
+    app.use("/api/questions", QuestionApi2(mongoClient.db("Loading")));
 });
 
 // Set up WebSocket server
