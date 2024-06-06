@@ -23,13 +23,10 @@ function App() {
                     <OverView />
                     </>
                 } />
-                <Route path="/gameID=1" element={<>
-
-
-                    <CharacterTopLeft/>
+                <Route path="/gameID=1" element={
                     <InGameSwitch />
 
-                </>
+
                 } />
 
 
