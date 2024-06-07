@@ -147,10 +147,10 @@ function ResultPage3() {
                         {createResultsJSX()}
                     </div>
                     <div className='emoji-container'>
-                        <p>🦝</p>
-                        <p>😊</p>
-                        <p>🥳</p>
-                        <p>🎉</p>
+                        <p className={"emoji"} onClick={toggleSpawnAnimation}>🦝</p>
+                        <p className={"emoji"} onClick={toggleSpawnAnimation}>😊</p>
+                        <p className={"emoji"} onClick={toggleSpawnAnimation}>🥳</p>
+                        <p className={"emoji"} onClick={toggleSpawnAnimation}>🎉</p>
                     </div>
                 </div>
             </div>

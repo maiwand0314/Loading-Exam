@@ -42,10 +42,10 @@ function Questions2({ setCurrentPage }) {
                             <h1 className="mainQuestionQuestionPage">The troll is aggresive, what to do?   </h1>
                         </div>
                         <div className="buttonsContainerQuestionPage">
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("A"); }}>A. Run LOL</button>
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("B"); }}>B. Fart LOL</button>
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("C"); }}>C. Cry LOL</button>
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('endingPageAfterQuestion'); insertChoice("D"); }}>D. Fight LOL</button>
+                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("A"); }}>A. RUN!!!!!</button>
+                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("B"); }}>B. Fight it</button>
+                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("C"); }}>C. Cry..</button>
+                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('endingPageAfterQuestion'); insertChoice("D"); }}>D. Play Dead</button>
                         </div>
                     </div>
               
