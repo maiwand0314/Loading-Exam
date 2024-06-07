@@ -3,7 +3,7 @@ import '../Css/overView.css';
 import ResultPageOverView from "../PageTest/overview/Result";
 import EndingPageMaiwandOverview from "../PageTest/overview/Ending";
 
-import WaitingPage from "../PageTest/WaitingPage2";
+import WaitingPage from "../PageTest/overview/Default.jsx";
 
 import GetReadyToVote from "../PageTest/GetReadyToVote2";
 
