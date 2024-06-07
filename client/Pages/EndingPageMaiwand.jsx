@@ -3,8 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import SwordmanSDownAvatar from '../assets/SwordmanSDown.png';
 import EndingPageLoadingBar from '../Components/EndingPageLoadingBar';
 import { useNavigate } from 'react-router-dom';
-
-
+import CharacterEndingPage from '../Components/CharacterEndingPage';
 function EndingPageMaiwand ({ setCurrentPage }) {
     const [rating, setRating] = useState(0);
     const handleRatingClick = (value) => {
@@ -26,8 +25,9 @@ function EndingPageMaiwand ({ setCurrentPage }) {
     return (
         <div className="containerEndingPage">
             <h1 className="mainTitleEndingPage">Thanks for playing! We hope you enjoyed the show</h1>
-            <div className='endingPageAvatarImage'><p>navn test</p>
-            <img alt='haha'></img>
+            <div className='endingPageAvatarImage'>
+            <CharacterEndingPage></CharacterEndingPage>
+            
             </div>
             <div className="loadingDivEndingPage">
                 <EndingPageLoadingBar/>

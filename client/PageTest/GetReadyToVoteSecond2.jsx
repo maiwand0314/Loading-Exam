@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CharacterTopLeft from '../Components/CharacterTopLeft';
 
 function GetReadyToVote2({ setCurrentPage }) {
     const [filled, setFilled] = useState(0);
@@ -22,7 +23,7 @@ function GetReadyToVote2({ setCurrentPage }) {
 
     return (
 
-   
+        <><CharacterTopLeft></CharacterTopLeft>
             <div className='containerGetReadyBrownVersion'>
             <h3 className='mainTitleGetReadyBrownVersion'>Get ready to vote!</h3>
             <div className="progressbarGetReadyBrownVersion">
@@ -37,6 +38,7 @@ function GetReadyToVote2({ setCurrentPage }) {
             </div>
             </div>
 
+        </>
         
 
 

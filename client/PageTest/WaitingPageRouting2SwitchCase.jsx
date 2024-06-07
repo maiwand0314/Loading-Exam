@@ -100,10 +100,7 @@ function UserPage() {
     // Render component based on currentPage
     switch (currentPage) {
         case "waitingPage":
-            return<>
-            <CharacterTopLeft></CharacterTopLeft>
-            <WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPage} />
-            </>;
+            return<WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "intermissionScreen":
             return <IntermissionPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "getReadyToVotePage":
@@ -111,10 +108,7 @@ function UserPage() {
         case "questionPage":
             return <Questions currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "resultPage":
-            return <>
-                <CharacterTopLeft></CharacterTopLeft>
-            <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />
-                </>;
+            return <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "waitingPageAfterQuestion":
             return <WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "questionPageBrownVersion":

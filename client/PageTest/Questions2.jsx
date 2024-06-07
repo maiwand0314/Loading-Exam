@@ -1,4 +1,5 @@
 import {React, useState, useEffect } from "react";
+import CharacterTopLeft from "../Components/CharacterTopLeft";
 async function insertChoice(choice) {
     await fetch("/api/choices", {
         method: "POST",
@@ -27,7 +28,7 @@ function Questions2({ setCurrentPage }) {
     }, [countdown, setCurrentPage]);
 
                 return (
-              
+              <><CharacterTopLeft></CharacterTopLeft>
               
                     <div className="containerQuestionPage">
                    
@@ -48,7 +49,7 @@ function Questions2({ setCurrentPage }) {
                         </div>
                     </div>
               
-           
+           </>
                 );
             }
 

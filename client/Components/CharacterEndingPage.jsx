@@ -6,7 +6,7 @@ import SwordWomanAvatar from '../assets/SwordWoman.png';
 import ArcherAvatar from '../assets/Archer.png';
 import SwordmanSDownAvatar from '../assets/SwordmanSDown.png';
 import Cookies from "js-cookie";
-import "../Css/CharacterTopLeft.css"
+import "../Css/CharacterEndingPage.css"
 
 
 function CharacterTopLeft() {
@@ -42,8 +42,8 @@ console.log(userToken);
     }
 
     return (
-        <div className="profile-container-avatar-top-left">
-            <p className="avatarTopLeftName">{nameToken}</p>
+        <div className="profile-container-avatarEndingPage">
+            <p className="avatarEndingPageName">{nameToken}</p>
             <img src={picture} alt="avatar"/>
         </div>
     );

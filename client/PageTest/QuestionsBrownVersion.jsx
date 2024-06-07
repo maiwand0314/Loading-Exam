@@ -1,6 +1,6 @@
 import trollGif from '../assets/BrownTroll.gif';
 import React, {useState, useEffect} from 'react';
-
+import CharacterTopLeft from '../Components/CharacterTopLeft';
 
 async function insertChoice(choice) {
     await fetch("/api/choices", {
@@ -30,6 +30,7 @@ function QuestionsBrownVersion({ setCurrentPage }) {
     }, [countdown, setCurrentPage]);
 
                 return (
+                    <><CharacterTopLeft></CharacterTopLeft>
                 <div className="ClickerFurtherBrownVersion">
              
                     <div className="containerQuestionPageBrownVersion">
@@ -51,6 +52,7 @@ function QuestionsBrownVersion({ setCurrentPage }) {
                     </div>
               
                 </div>
+                </>
                 );
 
         

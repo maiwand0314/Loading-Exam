@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ResultItem from "../Components/ResultItem"
-
+import CharacterTopLeft from '../Components/CharacterTopLeft';
 
 async function getVotes(vote) {
     await fetch("/api/votes", {
@@ -130,6 +130,7 @@ function ResultPageBrownVersion() {
 
     return (
         <>
+        <CharacterTopLeft></CharacterTopLeft>
             <div className='resultPage-main-containerBrownVersion'>
                 <div className="result-containerBrownVersion">
                     <div className='result-title-containerBrownVersion'>

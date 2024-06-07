@@ -1,6 +1,7 @@
 import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
 import memeOne from "../assets/meme.jpeg"
 import React from "react";
+import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function WaitingPage2({ setCurrentPage }) {
 
@@ -9,9 +10,11 @@ function WaitingPage2({ setCurrentPage }) {
         setCurrentPage('intermissionScreen');
       };
     return(
-        
+        <>
 
-           
+
+<CharacterTopLeft></CharacterTopLeft>
+
         <div className="containerWaitingPage">
                     <h1 className="mainTitleWaitingPage">Please enjoy the meme while waiting for the play to start...</h1>
                     <div className="loadingDivWaitingPage">
@@ -22,7 +25,7 @@ function WaitingPage2({ setCurrentPage }) {
                     </div>
                     
         </div>
-        
+        </>
   
      
        

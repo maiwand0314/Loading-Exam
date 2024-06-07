@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import CharacterTopLeft from '../Components/CharacterTopLeft';
 function GetReadyToVote2({ setCurrentPage }) {
     const [filled, setFilled] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
@@ -21,6 +21,7 @@ function GetReadyToVote2({ setCurrentPage }) {
 
 
     return (
+        <>        <CharacterTopLeft></CharacterTopLeft>
 
    
             <div className='containerGetReady'>
@@ -36,7 +37,7 @@ function GetReadyToVote2({ setCurrentPage }) {
                 {/*<button className="btnGetReady" onClick={handleButtonClick}>Run</button>*/}
             </div>
             </div>
-
+</>
         
 
 

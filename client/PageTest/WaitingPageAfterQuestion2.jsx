@@ -1,6 +1,7 @@
 import bowser from "../assets/boswer-fact(2).jpg"
 import { useState, useEffect} from 'react'
 import WaitingPageAfterQuestionLoadingBar from "../Components/WaitingPageAfterQuestionLoadingBar";
+import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function WaitingPageAfterQuestion2({ setCurrentPage }) {
 
@@ -24,7 +25,7 @@ function WaitingPageAfterQuestion2({ setCurrentPage }) {
 
     return(
         
-
+        <><CharacterTopLeft></CharacterTopLeft>
            
         <div className="containerWaitingPageAfterQuestion">
                     <h1 className="mainTitleAfterQuestion">Please enjoy the meme while counting votes</h1>
@@ -38,6 +39,7 @@ function WaitingPageAfterQuestion2({ setCurrentPage }) {
                     
         </div>
         
+        </>
   
      
        

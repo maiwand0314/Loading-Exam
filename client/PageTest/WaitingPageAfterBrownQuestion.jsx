@@ -1,6 +1,7 @@
 import WaitingPageLoadingBarBrownVersion from "../Components/WaitingPageLoadingBarBrownVersion";
 import memeClassroom from "../assets/meme1.jpg"
 import {React, useState, useEffect } from "react";
+import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function WaitingPageAfterBrownQuestion({ setCurrentPage }) {
 
@@ -26,6 +27,7 @@ function WaitingPageAfterBrownQuestion({ setCurrentPage }) {
 
     return(
         
+        <><CharacterTopLeft></CharacterTopLeft>
 
            <div className="containerWaitingPageAfterBrownQuestion">
         <div className="containerWaitingPageAfterQuestionBrown">
@@ -40,7 +42,7 @@ function WaitingPageAfterBrownQuestion({ setCurrentPage }) {
         </div>
         </div>
         
-  
+        </>
      
        
 

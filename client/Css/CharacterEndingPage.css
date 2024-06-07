@@ -1,5 +1,4 @@
-.profile-container-avatar-top-left {
-    position: absolute;
+.profile-container-avatarEndingPage {
     z-index: 10;
     top: 16px;
     left: 16px;
@@ -8,29 +7,26 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-   
 
 }
 
-.avatarTopLeftName{
+.avatarEndingPageName{
 
     text-align: center;
     
- 
     
   
 }
 
 
-.profile-container-avatar-top-left img {
+.profile-container-avatarEndingPage img {
     width: 50px;
     height: auto;
-  
-
+    width: 20%;
  
 }
 
-.profile-container-avatar-top-left p {
+.profile-container-avatarEndingPage p {
     font-size: 12px;
     margin: 0;
     padding-top: 5px;
