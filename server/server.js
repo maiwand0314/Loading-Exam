@@ -96,6 +96,27 @@ app.get("/api/votes/b", async (req, res) => {
     res.json(ListB.length);
 });
 
+
+app.post("/api/votes/c", async (req, res) => {
+    res.json(ListC);
+});
+
+app.get("/api/votes/c", async (req, res) => {
+    res.json(ListC.length);
+});
+
+
+
+
+app.post("/api/votes/d", async (req, res) => {
+    res.json(Listd);
+});
+
+app.get("/api/votes/d", async (req, res) => {
+    res.json(ListD.length);
+});
+
+
 app.post('/api/choices', (req, res) => {
     const choice = req.body.choice;
     console.log('Received choice:', choice);
@@ -108,6 +129,17 @@ app.post('/api/choices', (req, res) => {
     if (choice == "B") {
         ListB.push(choice);
         console.log(ListB.length)
+    }
+
+    if (choice == "C") {
+        ListC.push(choice);
+        console.log(ListC.length)
+    }
+
+
+    if (choice == "D") {
+        ListD.push(choice);
+        console.log(ListD.length)
     }
 
     if (choice != null) {

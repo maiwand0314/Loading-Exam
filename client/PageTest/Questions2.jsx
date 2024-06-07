@@ -45,7 +45,7 @@ function Questions2({ setCurrentPage }) {
                             <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("A"); }}>A. RUN!!!!!</button>
                             <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("B"); }}>B. Fight it</button>
                             <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("C"); }}>C. Cry..</button>
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('endingPageAfterQuestion'); insertChoice("D"); }}>D. Play Dead</button>
+                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("D"); }}>D. Play Dead</button>
                         </div>
                     </div>
               

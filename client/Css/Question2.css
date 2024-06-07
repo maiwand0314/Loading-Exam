@@ -28,7 +28,7 @@ body {
   justify-content: center;
 }
 */
-html, body {
+ body {
     height: 100%;
     margin: 0;
     background-image: linear-gradient(#1a1a2e, #1a1a2e, #1a1a2e, #1a1a2e,  #9aedf805); }

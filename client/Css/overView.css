@@ -1,17 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
-}
+
 
 
 .overview-container {
