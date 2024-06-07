@@ -24,7 +24,7 @@ function GetReadyToVote2({ setCurrentPage }) {
 
    
             <div className='containerGetReady'>
-            <h3>Get ready to vote!</h3>
+            <h3 className='mainTitleGetReady'>Get ready to vote!</h3>
             <div className="progressbarGetReady">
                 <div style={{
                     height: "100%",
