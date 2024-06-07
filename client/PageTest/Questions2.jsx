@@ -11,7 +11,52 @@ async function insertChoice(choice) {
 }
 
 function Questions2({ setCurrentPage }) {
-    const [countdown, setCountdown] = useState(5);
+    const [answerA, setAnswerA] = useState(null);
+    const [answerB, setAnswerB] = useState(null);
+    const [answerC, setAnswerC] = useState(null);
+    const [answerD, setAnswerD] = useState(null);
+
+    const [countdown, setCountdown] = useState(2000);
+
+
+
+
+
+    useEffect(() => {
+        async function fetchAnswers() {
+            const response = await fetch("/api/elements");
+            const data = await response.json();
+
+            setAnswerA(data[0]?.answer);
+            setAnswerB(data[1]?.answer);
+            setAnswerC(data[2]?.answer);
+            setAnswerD(data[3]?.answer);
+        }
+
+        fetchAnswers();
+    }, []);
+
+    const answers = [
+        { id: 'A', answer: answerA },
+        { id: 'B', answer: answerB },
+        { id: 'C', answer: answerC },
+        { id: 'D', answer: answerD },
+    ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     useEffect(() => {
@@ -42,10 +87,18 @@ function Questions2({ setCurrentPage }) {
                             <h1 className="mainQuestionQuestionPage">The troll is aggresive, what to do?   </h1>
                         </div>
                         <div className="buttonsContainerQuestionPage">
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("A"); }}>A. RUN!!!!!</button>
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("B"); }}>B. Fight it</button>
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("C"); }}>C. Cry..</button>
-                            <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("D"); }}>D. Play Dead</button>
+
+
+                            {answers.map(
+                                (data) =>
+                                    data.answer && (
+                                        <button className="questionButtonQuestionPage"
+                                            key={data.id}
+
+                                            onClick={() => { setCurrentPage('otherPage'); insertChoice(data.id); }}>{data.answer}</button>
+                                    )
+                            )}
+
                         </div>
                     </div>
               
