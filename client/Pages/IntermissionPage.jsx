@@ -47,7 +47,7 @@ function IntermissionPage({ setCurrentPage }) {
 
     return (
     
-        <div className="ClickerFurther" onClick={this.handleClick}>
+
         
             <div className="containerIntermissionPage">
                 <div>
@@ -73,7 +73,7 @@ function IntermissionPage({ setCurrentPage }) {
         
             </div>
       
-         </div>
+
     );
 }
 

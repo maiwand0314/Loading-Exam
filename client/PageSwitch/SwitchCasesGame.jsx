@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import WaitingPage from "../PageTest/WaitingPage2";
-import GetReadyToVote from "../PageTest/GetReadyToVote2";
-import IntermissionPage from "../PageTest/IntermissionPage2";
-import Questions from "../PageTest/Questions2";
-import ResultPage from "../PageTest/ResultPage3";
-import WaitingPageAfterQuestion2 from "./WaitingPageAfterQuestion2";
-import GetReadyToVoteSecond2 from "./GetReadyToVoteSecond2";
-import WaitingPageAfterQuestion3 from './WaitingPageAfterQuestion3';
-import QuestionsBrownVersion from "./QuestionsBrownVersion";
-import WaitingPageAfterBrownQuestion from './WaitingPageAfterBrownQuestion';
-import ResultPageBrownVersion from './ResultPageBrownVersion';
+import WaitingPage from "../Pages/WaitingPage";
+import GetReadyToVote from "../Pages/GetReadyToVote";
+import IntermissionPage from "../Pages/IntermissionPage";
+import Questions from "../Pages/Questions";
+import ResultPage from "../Pages/ResultPage";
+import WaitingPageAfterQuestion from "../Pages/WaitingPageAfterQuestion";
+import GetReadyToVoteSecond2 from "../PagesBrown/GetReadyToVoteSecond";
+import QuestionsBrownVersion from "../PagesBrown/QuestionsBrownVersion";
+import WaitingPageAfterBrownQuestion from '../PagesBrown/WaitingPageAfterBrownQuestion';
+import ResultPageBrownVersion from '../PagesBrown/ResultPageBrownVersion';
 import EndingPageMaiwand from '../Pages/EndingPageMaiwand';
 
 import "../Css/UsernameAndAvatar.css";
 import "../Css/FrontPage.css";
-import "../Css/index.css";
 import "../Css/IntermissionPage.css";
 import "../Css/WaitingPage.css";
 import "../Css/GetReadyToVote.css";
-import "../Css/GetReadyToVoteSecond2.css"
 import "../Css/ResultPage3.css";
 import "../Css/ResultPageBrownVersion.css"
 import "../Css/WaitingPageAfterQuestion.css";
 import "../Css/QuestionsBrownVersion.css"
 import "../Css/WaitingPageAfterBrownQuestion.css"
 import "../Css/EndingPageMaiwand.css"
-import "../Css/WaitingPageAfterQuestion.css"
+import "../Css/Question2.css"
+import "../Css/GetReadyToVoteSecond.css"
+
 import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function UserPage() {
@@ -90,8 +89,8 @@ function UserPage() {
             case "resultPageBrownVersion":
                 setCurrentPage("resultPageBrownVersion")
                 break;
-            case "endingPage":
-                setCurrentPage("endingPage")
+            case "EndingPageMaiwand":
+                setCurrentPage("EndingPageMaiwand")
                 break;
             default:
                 console.error("Unknown option received");
@@ -101,7 +100,7 @@ function UserPage() {
     // Render component based on currentPage
     switch (currentPage) {
         case "waitingPage":
-            return <WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+            return<WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "intermissionScreen":
             return <IntermissionPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "getReadyToVotePage":
@@ -109,13 +108,9 @@ function UserPage() {
         case "questionPage":
             return <Questions currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "resultPage":
-            return <>
-                <CharacterTopLeft></CharacterTopLeft>
-            <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />
-                </>;
-
+            return <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "waitingPageAfterQuestion":
-            return <WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+            return <WaitingPageAfterQuestion currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "questionPageBrownVersion":
             return<QuestionsBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         case "getReadyToVoteSecond2":
@@ -125,13 +120,9 @@ function UserPage() {
         case "waitingPageAfterBrownQuestion":
             return<WaitingPageAfterBrownQuestion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         case "resultPageBrownVersion":
-            return<>
-
-                <ResultPageBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-
-                </>;
-        case "endingPage":
-            return<EndingPage currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+            return<ResultPageBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+        case "EndingPageMaiwand":
+            return<EndingPageMaiwand currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         default:
             return <div>Error: Unknown page</div>;
     }

@@ -1,33 +1,50 @@
-import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
 import bowser from "../assets/boswer-fact(2).jpg"
+import { useState, useEffect} from 'react'
+import WaitingPageAfterQuestionLoadingBar from "../Components/WaitingPageAfterQuestionLoadingBar";
+import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function WaitingPageAfterQuestion({ setCurrentPage }) {
 
-    handleClick = (event) => {
-        console.log('Screen clicked!', event);
-        setCurrentPage('resultPage');
-      };
+   
+    const [countdown, setCountdown] = useState(5);
+
+
+    useEffect(() => {
+        if (countdown === 0) {
+            // Handle the case when the countdown reaches 0
+            setCurrentPage('resultPage'); // Redirect to a timeout page or handle as needed
+            return;
+        }
+        const timer = setTimeout(() => {
+            setCountdown(countdown - 1);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, [countdown, setCurrentPage]);
+
+
     return(
         
-       <div className="ClickerFurther" onClick={this.handleClick}>
+        <><CharacterTopLeft></CharacterTopLeft>
            
         <div className="containerWaitingPageAfterQuestion">
-                    <h1 className="mainTitleAfterQuestion">Please enjoy the meme while waiting for everyone...</h1>
+                    <h1 className="mainTitleAfterQuestion">Please enjoy the meme while counting votes</h1>
                     <div className="loadingDivAfterQuestion">
-                    <WaitingPageLoadingBar />
+                
+                    <WaitingPageAfterQuestionLoadingBar />
                      </div>
-                    <div className="mainImageContainerFunFact">
-                    <img className="mainImageFunFact" src={bowser} alt="Image of meme"></img>
+                    <div className="mainImageContainerFunFactPageAfterQuestion">
+                    <img className="mainImageFunFactPageAfterQuestion" src={bowser} alt="Image of meme"></img>
                     </div>
                     
         </div>
         
+        </>
   
      
        
-   
-        </div>
-        
+
+
 
     )
    

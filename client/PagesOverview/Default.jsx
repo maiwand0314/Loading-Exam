@@ -1,5 +1,5 @@
-import WaitingPageLoadingBar from "../../Components/WaitingPageLoadingBar";
-import memeOne from "../../assets/meme.jpeg";
+import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
+import memeOne from "../assets/meme.jpeg";
 import React from "react";
 
 function WaitingForPlayers(){

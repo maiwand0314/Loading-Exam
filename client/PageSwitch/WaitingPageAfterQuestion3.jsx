@@ -2,7 +2,7 @@ import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
 import bowser from "../assets/boswer-fact(2).jpg"
 
 /*
-function WaitingPageAfterQuestion2({ setCurrentPage }) {
+function WaitingPageAfterQuestion({ setCurrentPage }) {
 
 
 
@@ -34,5 +34,5 @@ function WaitingPageAfterQuestion2({ setCurrentPage }) {
 
 }
 
-export default WaitingPageAfterQuestion2;
+export default WaitingPageAfterQuestion;
 */

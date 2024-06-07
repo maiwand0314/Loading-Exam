@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import UserPage from '../Pages/UserPage.jsx';
+import UserPage from './UserPage.jsx';
 
 
 function FrontPage({ setCurrentPage }) {

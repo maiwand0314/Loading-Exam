@@ -1,21 +1,21 @@
 import React, {useEffect, useState} from 'react';
 import '../Css/overView.css';
-import ResultPageOverView from "../PageTest/overview/Result";
-import EndingPageMaiwandOverview from "../PageTest/overview/Ending";
+import ResultPageOverView from "../PagesOverview/Result";
+import EndingPageMaiwandOverview from "../PagesOverview/Ending";
 
-import WaitingPage from "../PageTest/overview/Default.jsx";
+import WaitingPage from "../PagesOverview/Default.jsx";
 
-import GetReadyToVote from "../PageTest/GetReadyToVote2";
+import GetReadyToVote from "./GetReadyToVote";
 
-import WaitingPageAfterQuestion2 from "../PageTest/WaitingPageAfterQuestion2";
+import WaitingPageAfterQuestion from "./WaitingPageAfterQuestion";
 
-import GetReadyToVoteSecond2 from "../PageTest/GetReadyToVoteSecond2";
-import WaitingPageAfterBrownQuestion from "../PageTest/WaitingPageAfterBrownQuestion";
+import GetReadyToVoteSecond2 from "../PagesBrown/GetReadyToVoteSecond";
+import WaitingPageAfterBrownQuestion from "../PagesBrown/WaitingPageAfterBrownQuestion";
 
-import Blank from "../PageTest/overview/Blank";
-import QuestionOverView from "../PageTest/overview/Question";
-import QuestionOverView2 from "../PageTest/overview/Question2";
-import ResultPageOverViewBrown from "../PageTest/overview/Result2";
+import Blank from "../PagesOverview/Blank";
+import QuestionOverView from "../PagesOverview/Question";
+import QuestionOverView2 from "../PagesOverview/Question2";
+import ResultPageOverViewBrown from "../PagesOverview/Result2";
 
 
 function OverView() {
@@ -118,13 +118,13 @@ function OverView() {
         case "resultPage":
             return <ResultPageOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "waitingPageAfterQuestion":
-            return <WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
+            return <WaitingPageAfterQuestion currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
         case "questionPageBrownVersion":
             return<QuestionOverView2 currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         case "getReadyToVoteSecond2":
             return<GetReadyToVoteSecond2 currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
         case "WaitingPageAfterQuestion3":
-            return<WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
+            return<WaitingPageAfterQuestion currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         case "waitingPageAfterBrownQuestion":
             return<WaitingPageAfterBrownQuestion currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
         case "resultPageBrownVersion":

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import trollGif from "../../assets/BrownTroll.gif";
+import trollGif from "../assets/BrownTroll.gif";
 
 
 

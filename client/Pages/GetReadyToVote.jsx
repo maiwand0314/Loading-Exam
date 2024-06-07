@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from 'react';
-
-function GetreadyToVote({ setCurrentPage }) {
+import CharacterTopLeft from '../Components/CharacterTopLeft';
+function GetReadyToVote({ setCurrentPage }) {
     const [filled, setFilled] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
     
     
-    const handleButtonClick = () => {
-        setIsRunning(true);
-        setCurrentPage('questionPage');    };
-
-    
-
-    handleClick = (event) => {
-        setCurrentPage('questionPage');
-      };
 
       useEffect(() => {
         setIsRunning(true);
-        const timer = setTimeout(() => setCurrentPage("questionPage"), 5000);
+        const timer = setTimeout(() => setCurrentPage("questionPage"), 3500);
         return () => clearTimeout(timer);
       }, []);
 
@@ -30,24 +21,27 @@ function GetreadyToVote({ setCurrentPage }) {
 
 
     return (
-        <div className="ClickerFurther" onClick={this.handleClick}>
+        <>        <CharacterTopLeft></CharacterTopLeft>
+
    
             <div className='containerGetReady'>
-            <h3>Get ready to vote!</h3>
-            <div className="progressbar">
+            <h3 className='mainTitleGetReady'>Get ready to vote!</h3>
+            <div className="progressbarGetReady">
                 <div style={{
                     height: "100%",
                     width: `${filled}%`,
                     backgroundColor: "#a66cff",
                     transition: "width 0.5s"
                 }}></div>
-                <span className="progressPercent">{filled}%</span>
-                <button className="btn" onClick={handleButtonClick}>Run</button>
+                <span className="progressPercentGetReady">{filled}%</span>
+                {/*<button className="btnGetReady" onClick={handleButtonClick}>Run</button>*/}
             </div>
             </div>
+</>
+        
 
-    </div>
+
     );
 }
 
-export default GetreadyToVote;
+export default GetReadyToVote;
