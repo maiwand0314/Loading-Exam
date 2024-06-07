@@ -39,7 +39,7 @@ function Questions2({ setCurrentPage }) {
                     Time left: {countdown} seconds
                 </div>
                         <div className="mainQuestionDivQuestionPage">
-                            <h1 className="mainQuestionQuestionPage">You've met a fairy! What do you want to do?   </h1>
+                            <h1 className="mainQuestionQuestionPage">The troll is aggresive, what to do?   </h1>
                         </div>
                         <div className="buttonsContainerQuestionPage">
                             <button className="questionButtonQuestionPage" onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice("A"); }}>A. Run LOL</button>

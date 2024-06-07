@@ -21,6 +21,13 @@
     width: 100%;
 }
 
+
+.bigDiv{
+
+    width: 100vw;
+    height: 45vh;
+}
+
 .result-containerBrownVersion h1 {
     font-size: 48px;
 }

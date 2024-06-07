@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ResultItem from "../../Components/ResultItem"
+import "./Result.css"
 
 
 
@@ -40,7 +41,7 @@ function ResultPageOverView() {
 
     return (
         <>
-            <div className='resultPage-main-container'
+            <div className='resultPage-main-container-3'
 
                  style={
                      {
@@ -53,14 +54,14 @@ function ResultPageOverView() {
 
 
             >
-                <div className="result-container">
-                    <div className='result-title-container'>
-                        <h1 className="results-title">Results
+                <div className="result-container-3">
+                    <div className='result-title-container-3'>
+                        <h1 className="results-title-3">Results
 
                         </h1>
                     </div>
 
-                    <div className="voting-results-displayed" style={
+                    <div className="voting-results-displayed-3" style={
                         {
                             display: "flex",
                             flexDirection: "row", alignItems: "flex-end",

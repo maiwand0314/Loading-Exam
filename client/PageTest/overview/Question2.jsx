@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import trollGif from "../../assets/BrownTroll.gif";
 
 
 
-function QuestionOverView2({  }) {
+function QuestionOverView2({setCurrentPageOverView}) {
     const [countdown, setCountdown] = useState(5);
 
 
@@ -10,40 +11,37 @@ function QuestionOverView2({  }) {
 
 
     useEffect(() => {
-
-        if (countdown <= 0){
-
-            return
+        if (countdown === 0) {
+            // Handle the case when the countdown reaches 0
+            setCurrentPageOverView('waitingPageAfterBrownQuestion'); // Redirect to a timeout page or handle as needed
+            return;
         }
-
         const timer = setTimeout(() => {
             setCountdown(countdown - 1);
         }, 1000);
 
         return () => clearTimeout(timer);
-    }, [countdown]);
-
-
-
-
+    }, [countdown, setCurrentPageOverView]);
 
 
 
 
 
     return (
-        <div>
+        <div className="ClickerFurtherBrownVersion">
 
-            <div className="container">
+            <div className="containerQuestionPageBrownVersion">
 
-                <div className="mainQuestionDiv">
-                    <h1 className="mainQuestion">
+                <div className={"bigDiv"}></div>
 
-                        TEST
-                    </h1>
-                    <div className="countdownTimerQuestionPage">
-                        Time left: {countdown} seconds
-                    </div>
+
+                <div className="mainQuestionDivBrownVersion">
+                    <h1 className="mainQuestionBrownVersion">You've met a fairy! What do you want to do?   </h1>
+                </div>
+
+
+                <div className="countdownTimerBrown">
+                    Time left: {countdown} seconds
                 </div>
 
             </div>

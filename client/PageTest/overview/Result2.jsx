@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ResultItem from "../../Components/ResultItem"
-
+import "./Result2.css"
 
 
 function ResultPageOverViewBrown() {
@@ -40,13 +40,13 @@ function ResultPageOverViewBrown() {
 
     return (
         <>
-            <div className='resultPage-main-containerBrownVersion'>
-                <div className="result-containerBrownVersion">
-                    <div className='result-title-containerBrownVersion'>
-                        <h1 className="results-titleBrownVersion">Results</h1>
+            <div className='resultPage-main-containerBrownVersion-2'>
+                <div className="result-containerBrownVersion-2">
+                    <div className='result-title-containerBrownVersion-2'>
+                        <h1 className="results-titleBrownVersion-2">Results</h1>
                     </div>
 
-                    <div className="voting-results-displayedBrownVersion" style={
+                    <div className="voting-results-displayedBrownVersion-2" style={
                         {
                             display: "flex",
                             flexDirection: "row", alignItems: "flex-end",

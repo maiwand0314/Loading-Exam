@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 
 
-function QuestionOverView() {
+function QuestionOverView({setCurrentPageOverView}) {
     const [countdown, setCountdown] = useState(5);
     const [question, setQuestion] = useState(null);
 
-    const [currentPage, setCurrentPage] = useState('home');
 
     useEffect(() => {
         async function fetchAnswers() {
@@ -24,21 +23,19 @@ function QuestionOverView() {
 
 
 
+
     useEffect(() => {
-
-        if (countdown <= 0){
-
-            return
-
+        if (countdown === 0) {
+            // Handle the case when the countdown reaches 0
+            setCurrentPageOverView('waitingPageAfterQuestion'); // Redirect to a timeout page or handle as needed
+            return;
         }
-
         const timer = setTimeout(() => {
             setCountdown(countdown - 1);
         }, 1000);
 
         return () => clearTimeout(timer);
-    }, [countdown]);
-
+    }, [countdown, setCurrentPageOverView]);
 
 
 

@@ -1,0 +1,78 @@
+.resultPage-main-containerBrownVersion-2 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(#653700, #653700, #653700, #653700, #9aedf805);
+}
+
+.result-containerBrownVersion-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+    width: 100%;
+}
+
+.bigDiv-2 {
+    width: 100vw;
+    height: 45vh;
+}
+
+.result-containerBrownVersion-2 h1 {
+    font-size: 48px;
+}
+
+.voting-results-displayedBrownVersion-2 {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 5px solid white;
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    justify-content: center; /* Center the items horizontally */
+}
+
+
+.result-title-containerBrownVersion-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh; /* Increase the height */
+    width: 100%; /* Increase the width */
+    padding: 20px; /* Add padding to increase size */
+}
+
+
+
+
+.voting-results-displayedBrownVersion-2 p {
+    font-size: 1.5em;
+}
+
+.emoji-containerBrownVersion-2 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.emoji-containerBrownVersion-2 p {
+    font-size: 6em;
+}
+
+.result-barBrownVersion-2 {
+    width: 5vw;
+    background-color: red;
+    border: 3px solid black;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}

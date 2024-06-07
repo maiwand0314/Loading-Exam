@@ -63,6 +63,11 @@ function OverView() {
                 break;
 
 
+            case "intermissionScreen":
+                setCurrentPageOverView("intermissionScreen");
+                break;
+
+
 
             case "resultPage":
                 setCurrentPageOverView("resultPage");
@@ -103,29 +108,29 @@ function OverView() {
     // Render component based on currentPage
     switch (currentPage) {
         case "waitingPage":
-            return<WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
+            return<WaitingPage currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "intermissionScreen":
-            return <Blank currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
+            return <Blank currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "getReadyToVotePage":
             return <GetReadyToVote currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
         case "questionPage":
-            return <QuestionOverView currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
+            return <QuestionOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "resultPage":
-            return <ResultPageOverView currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
+            return <ResultPageOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "waitingPageAfterQuestion":
             return <WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
         case "questionPageBrownVersion":
-            return<QuestionOverView2 currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
+            return<QuestionOverView2 currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         case "getReadyToVoteSecond2":
             return<GetReadyToVoteSecond2 currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
         case "WaitingPageAfterQuestion3":
-            return<WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
+            return<WaitingPageAfterQuestion2 currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         case "waitingPageAfterBrownQuestion":
             return<WaitingPageAfterBrownQuestion currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
         case "resultPageBrownVersion":
-            return<ResultPageOverViewBrown currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
+            return<ResultPageOverViewBrown currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         case "EndingPageMaiwand":
-            return<EndingPageMaiwandOverview currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
+            return<EndingPageMaiwandOverview currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         default:
             return <div>Error: Unknown page</div>;
     }

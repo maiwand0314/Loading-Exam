@@ -1,0 +1,50 @@
+.resultPage-main-container-3 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.result-container-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+    width: 100%;
+
+}
+
+.result-title-container-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Increase the height */
+    width: 80%; /* Increase the width */
+    padding: 20px; /* Add padding to increase size */
+}
+
+.results-title-3 {
+    font-size: 48px;
+    border-bottom: 6px solid black; /* Increase border width */
+}
+
+.voting-results-displayed-3 {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 5px solid white;
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    justify-content: space-between; /* Add space between items */
+}
+
+.voting-results-displayed-3 p {
+    font-size: 1.5em;
+}
