@@ -47,8 +47,8 @@ const UsernameAndAvatar2 = () => {
         setChosenAvatarId(avatarId);
 
         //Made cookies secure with Library
-        Cookies.set("name_token", randomUsername, {expires: 1, path: "/gameID=1", secure: true, sameSite: 'strict'});
-        Cookies.set("user_token", avatarId, {expires: 1, path: "/gameID=1", secure: true, sameSite: 'strict'});
+        Cookies.set("name_token", randomUsername, {expires: 1, path: "/", secure: true, sameSite: 'strict'});
+        Cookies.set("user_token", avatarId, {expires: 1, path: "/", secure: true, sameSite: 'strict'});
 
         console.log("Worked")
     };

@@ -3,7 +3,7 @@ import ResultItem from "../../Components/ResultItem"
 
 
 
-function ResultPageOverView() {
+function ResultPageOverViewBrown() {
     const [votes, setVotes] = useState(null);
     const [votesB, setVotesB] = useState(null);
     const [votingResults, setVotingResults] = useState(null)
@@ -40,27 +40,13 @@ function ResultPageOverView() {
 
     return (
         <>
-            <div className='resultPage-main-container'
-
-                 style={
-                     {
-                         display: "flex",
-
-                     }
-                 }
-
-
-
-
-            >
-                <div className="result-container">
-                    <div className='result-title-container'>
-                        <h1 className="results-title">Results
-
-                        </h1>
+            <div className='resultPage-main-containerBrownVersion'>
+                <div className="result-containerBrownVersion">
+                    <div className='result-title-containerBrownVersion'>
+                        <h1 className="results-titleBrownVersion">Results</h1>
                     </div>
 
-                    <div className="voting-results-displayed" style={
+                    <div className="voting-results-displayedBrownVersion" style={
                         {
                             display: "flex",
                             flexDirection: "row", alignItems: "flex-end",
@@ -69,10 +55,11 @@ function ResultPageOverView() {
                     }>
                         {createResultsJSX()}
                     </div>
+
                 </div>
             </div>
         </>
     );
 }
 
-export default ResultPageOverView;
+export default ResultPageOverViewBrown;

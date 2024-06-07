@@ -1,5 +1,6 @@
 import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
 import memeOne from "../assets/meme.jpeg"
+import React from "react";
 
 function WaitingPage2({ setCurrentPage }) {
 
@@ -12,7 +13,7 @@ function WaitingPage2({ setCurrentPage }) {
 
            
         <div className="containerWaitingPage">
-                    <h1 className="mainTitleWaitingPage">Please enjoy the meme while waiting for everyone...</h1>
+                    <h1 className="mainTitleWaitingPage">Please enjoy the meme while waiting for the play to start...</h1>
                     <div className="loadingDivWaitingPage">
                     <WaitingPageLoadingBar />
                      </div>

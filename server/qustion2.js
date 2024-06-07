@@ -4,11 +4,11 @@ export function QuestionApi2(mongoDatabase) {
 
     router.get("/", async (req, res) => {
         const elements = await mongoDatabase
-            .collection("answers")
+            .collection("question")
             .find()
-            .map(({ _id, answer }) => ({
+            .map(({ _id, name }) => ({
                 _id,
-                answer,
+                name,
             }))
             .limit(1)
             .toArray();

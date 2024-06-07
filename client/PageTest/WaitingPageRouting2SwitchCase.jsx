@@ -100,7 +100,10 @@ function UserPage() {
     // Render component based on currentPage
     switch (currentPage) {
         case "waitingPage":
-            return <WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+            return<>
+            <CharacterTopLeft></CharacterTopLeft>
+            <WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            </>;
         case "intermissionScreen":
             return <IntermissionPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
         case "getReadyToVotePage":

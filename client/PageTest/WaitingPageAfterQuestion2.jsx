@@ -1,6 +1,5 @@
-import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
 import bowser from "../assets/boswer-fact(2).jpg"
-import {react, useState, useEffect} from 'react'
+import { useState, useEffect} from 'react'
 import WaitingPageAfterQuestionLoadingBar from "../Components/WaitingPageAfterQuestionLoadingBar";
 
 function WaitingPageAfterQuestion2({ setCurrentPage }) {
@@ -28,7 +27,7 @@ function WaitingPageAfterQuestion2({ setCurrentPage }) {
 
            
         <div className="containerWaitingPageAfterQuestion">
-                    <h1 className="mainTitleAfterQuestion">Please enjoy the meme while waiting for everyone...</h1>
+                    <h1 className="mainTitleAfterQuestion">Please enjoy the meme while counting votes</h1>
                     <div className="loadingDivAfterQuestion">
                 
                     <WaitingPageAfterQuestionLoadingBar />
