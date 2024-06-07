@@ -13,7 +13,7 @@ const app = express();
 app.use(bodyParser.json());
 
 let counter = 0;
-
+let reviews = [];
 const voteList = [];
 const ListA = [];
 const ListB = [];
@@ -73,6 +73,27 @@ server.on("upgrade", (req, socket, head) => {
         });
     });
 });
+
+
+
+
+
+
+
+// REVIEW REST API
+app.post('/api/review', (req, res) => {
+    const { review } = req.body;
+    reviews.push(review);
+    console.log('Review added:', review);
+    res.status(200).send('Review added successfully');
+});
+
+// Route to get all reviews
+app.get('/api/reviews', (req, res) => {
+    res.json(reviews);
+});
+
+
 
 
 // REST API endpoints
