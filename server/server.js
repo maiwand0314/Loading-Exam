@@ -80,6 +80,31 @@ server.on("upgrade", (req, socket, head) => {
 
 
 
+
+
+
+app.post('/api/reset-votes', (req, res) => {
+    ListA.length = 0;
+    ListB.length = 0;
+    ListC.length = 0;
+    ListD.length = 0;
+    voteList.length = 0;
+    counter = 0;
+    console.log('Votes reset successfully');
+    res.status(200).send('Votes reset successfully');
+});
+
+
+
+
+
+
+
+
+
+
+
+
 app.get('/api/scene', (req, res) => {
     res.json(scene);
 });
