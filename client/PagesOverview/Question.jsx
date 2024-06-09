@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import QuestionComp from "../Components/QuestionComp";
 
 
 
@@ -36,14 +37,6 @@ function QuestionOverView({setCurrentPageOverView}) {
 
         return () => clearTimeout(timer);
     }, [countdown, setCurrentPageOverView]);
-
-
-
-
-    const answers = [
-        { id: 'A', answer: question },
-
-    ];
 
 
 
