@@ -6,7 +6,7 @@ import AdminPanel from "./Pages/AdminPanel";
 import InGameSwitch from "./PageSwitch/SwitchCasesGame";
 import UserPage from "./Pages/UserPage";
 import CharacterTopLeft from "./Components/CharacterTopLeft";
-import OverView from "./Pages/overView";
+import OverView from "./PageSwitch/overView";
 
 
 
