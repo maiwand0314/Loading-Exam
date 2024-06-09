@@ -12,6 +12,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
+let scene = "waitingPage";
 let counter = 0;
 let reviews = [];
 const voteList = [];
@@ -66,6 +67,7 @@ server.on("upgrade", (req, socket, head) => {
         // Set up the handling of messages from this socket
         socket.on("message", (msg) => {
             const { option } = JSON.parse(msg); // Parse the received message
+            scene = option;
             // Broadcast the selected option to all connected clients
             for (const recipient of sockets) {
                 recipient.send(JSON.stringify({ option }));
@@ -76,6 +78,11 @@ server.on("upgrade", (req, socket, head) => {
 
 
 
+
+
+app.get('/api/scene', (req, res) => {
+    res.json(scene);
+});
 
 
 
