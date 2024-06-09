@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminPanel from "./Pages/AdminPanel";
 import InGameSwitch from "./PageSwitch/SwitchCasesGame";
 import UserPage from "./Pages/UserPage";
-import CharacterTopLeft from "./Components/CharacterTopLeft";
 import OverView from "./PageSwitch/overView";
 
 
