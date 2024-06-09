@@ -135,29 +135,6 @@ function OverView() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return (
-        <div className="overview-container">
-            <div className="top-left">
-                <span>Game Pin: 123456</span>
-            </div>
-
-            <EndingPageMaiwandOverview/>
-        </div>
-    );
 }
 
 export default OverView;
