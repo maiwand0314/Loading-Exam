@@ -5,9 +5,9 @@ import EndingPageMaiwandOverview from "../PagesOverview/Ending";
 
 import WaitingPage from "../PagesOverview/Default.jsx";
 
-import GetReadyToVote from "./GetReadyToVote";
+import GetReadyToVote from "../Pages/GetReadyToVote";
 
-import WaitingPageAfterQuestion from "./WaitingPageAfterQuestion";
+import WaitingPageAfterQuestion from "../Pages/WaitingPageAfterQuestion";
 
 import GetReadyToVoteSecond2 from "../PagesBrown/GetReadyToVoteSecond";
 import WaitingPageAfterBrownQuestion from "../PagesBrown/WaitingPageAfterBrownQuestion";
@@ -30,9 +30,7 @@ function OverView() {
         setSocket(newSocket);
 
         // Clean up function to close WebSocket connection when component unmounts
-        return () => {
-            newSocket.close();
-        };
+
     }, []);
 
     useEffect(() => {
