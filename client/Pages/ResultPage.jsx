@@ -3,27 +3,6 @@ import ResultItem from "../Components/ResultItem"
 import CharacterTopLeft from '../Components/CharacterTopLeft';
 import FloatingE from "../Components/FloatingE";
 
-async function getVotes(vote) {
-    await fetch("/api/votes", {
-        method: "GET",
-        body: JSON.stringify({ vote }),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
-}
-
-
-async function getVotesA(vote) {
-    await fetch("/api/votes/a", {
-        method: "GET",
-        body: JSON.stringify({ vote }),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
-}
-
 function ResultPage() {
     const [votingResults, setVotingResults] = useState(null);
 
