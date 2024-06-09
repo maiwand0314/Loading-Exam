@@ -5,22 +5,7 @@ import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function WaitingPageAfterQuestion({ setCurrentPage }) {
 
-   
-    const [countdown, setCountdown] = useState(5);
 
-
-    useEffect(() => {
-        if (countdown === 0) {
-            // Handle the case when the countdown reaches 0
-            setCurrentPage('resultPage'); // Redirect to a timeout page or handle as needed
-            return;
-        }
-        const timer = setTimeout(() => {
-            setCountdown(countdown - 1);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, [countdown, setCurrentPage]);
 
 
     return(
