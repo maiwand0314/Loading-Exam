@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CharacterTopLeft from '../Components/CharacterTopLeft';
-function GetReadyToVote({ setCurrentPage }) {
+function GetReadyToVote() {
     const [filled, setFilled] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
     
@@ -8,7 +8,7 @@ function GetReadyToVote({ setCurrentPage }) {
 
       useEffect(() => {
         setIsRunning(true);
-        const timer = setTimeout(() => setCurrentPage("questionPage"), 3500);
+        const timer = setTimeout(() => 5000);
         return () => clearTimeout(timer);
       }, []);
 
