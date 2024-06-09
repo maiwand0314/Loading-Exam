@@ -1,5 +1,7 @@
 import {React, useState, useEffect } from "react";
 import CharacterTopLeft from "../Components/CharacterTopLeft";
+import QuestionButton from "../Components/QuestionButton";
+import QuestionComp from "../Components/QuestionComp";
 async function insertChoice(choice) {
     await fetch("/api/choices", {
         method: "POST",
@@ -72,38 +74,37 @@ function Questions({ setCurrentPage }) {
         return () => clearTimeout(timer);
     }, [countdown, setCurrentPage]);
 
-                return (
-              <><CharacterTopLeft></CharacterTopLeft>
-              
-                    <div className="containerQuestionPage">
-                   
-                        <div className="mainImageDivQuestionPage">
-                            <img className="mainImageQuestionPage" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA5dXkybDVsZzM5cnFjdWFwZTBrN3BnN2tzdHlra3E0NnJrcnJ6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYsC1UC0BGwG2SQ/giphy.webp" alt="" />
-                        </div>
-                        <div className="countdownTimerQuestionPage">
+    return (
+        <>
+            <CharacterTopLeft />
+            <div className="containerQuestionPage">
+                <div className="mainImageDivQuestionPage">
+                    <img className="mainImageQuestionPage" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA5dXkybDVsZzM5cnFjdWFwZTBrN3BnN2tzdHlra3E0NnJrcnJ6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYsC1UC0BGwG2SQ/giphy.webp" alt="" />
+                </div>
+                <div className="countdownTimerQuestionPage">
                     Time left: {countdown} seconds
                 </div>
-                        <div className="mainQuestionDivQuestionPage">
-                            <h1 className="mainQuestionQuestionPage">The troll is aggresive, what to do?   </h1>
-                        </div>
-                        <div className="buttonsContainerQuestionPage">
-
-
-                            {answers.map(
-                                (data) =>
-                                    data.answer && (
-                                        <button className="questionButtonQuestionPage"
-                                            key={data.id}
-
-                                            onClick={() => { setCurrentPage('waitingPageAfterQuestion'); insertChoice(data.id); }}>{data.answer}</button>
-                                    )
-                            )}
-
-                        </div>
-                    </div>
-              
-           </>
-                );
-            }
+                <div className="mainQuestionDivQuestionPage">
+                    <QuestionComp />
+                </div>
+                <div className="buttonsContainerQuestionPage">
+                    {answers.map(
+                        (data) =>
+                            data.answer && (
+                                <QuestionButton
+                                    key={data.id}
+                                    answer={data.answer}
+                                    onClick={() => {
+                                        setCurrentPage('waitingPageAfterQuestion');
+                                        insertChoice(data.id);
+                                    }}
+                                />
+                            )
+                    )}
+                </div>
+            </div>
+        </>
+    );
+}
 
 export default Questions;
