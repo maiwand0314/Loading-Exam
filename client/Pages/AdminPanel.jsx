@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../Css/AdminPanel.css";
-import StartPageCycleButton from "../Components/StartPageCycleButton";
-import ResetVotesButton from "../Components/ResetVotesButton";
-
 
 const AdminPanel = () => {
     const [socket, setSocket] = useState(null);
     const [currentState, setCurrentState] = useState(null);
+    const timeouts = useRef([]);
 
     useEffect(() => {
         // Connect to WebSocket server when component mounts
@@ -14,8 +12,13 @@ const AdminPanel = () => {
         setSocket(newSocket);
 
         // Clean up function to close WebSocket connection when component unmounts
-        return () => newSocket.close();
+
     }, []);
+
+    const clearAllTimeouts = () => {
+        timeouts.current.forEach(timeoutId => clearTimeout(timeoutId));
+        timeouts.current = [];
+    };
 
     const handleChooseScene = (option, startCycle = false) => {
         console.log("Sending selected option:", option);
@@ -26,6 +29,29 @@ const AdminPanel = () => {
         } else {
             console.error("WebSocket connection not available or no option selected");
         }
+
+        if (!startCycle) {
+            clearAllTimeouts();
+        }
+    };
+
+    const startPageCycle = () => {
+        clearAllTimeouts();
+        handleChooseScene("getReadyToVotePage", true);
+
+        const timeout1 = setTimeout(() => {
+            handleChooseScene("questionPage", true);
+        }, 5000); // Transition to questionPage after 5 seconds
+
+        const timeout2 = setTimeout(() => {
+            handleChooseScene("waitingPageAfterQuestion", true);
+        }, 25000); // Transition to waitingPageAfterQuestion after an additional 20 seconds
+
+        const timeout3 = setTimeout(() => {
+            handleChooseScene("resultPage", true);
+        }, 35000); // Transition to resultPage after an additional 10 seconds
+
+        timeouts.current.push(timeout1, timeout2, timeout3);
     };
 
     return (
@@ -35,12 +61,11 @@ const AdminPanel = () => {
                 <div className="controls">
                     <button onClick={() => handleChooseScene("intermissionScreen")} className="btn">Intermission Page</button>
                     <button onClick={() => handleChooseScene("waitingPage")} className="btn">Waiting Page</button>
-                    <StartPageCycleButton handleChooseScene={handleChooseScene} />
+                    <button onClick={startPageCycle} className="btn">Choice Page</button>
                     <button onClick={() => handleChooseScene("resultPage")} className="btn">Result Page</button>
                     <button onClick={() => handleChooseScene("getReadyToVoteSecond2")} className="btn">Brown Version Choice Page</button>
                     <button onClick={() => handleChooseScene("resultPageBrownVersion")} className="btn">Brown Version Result Page</button>
                     <button onClick={() => handleChooseScene("EndingPageMaiwand")} className="btn">Ending Page</button>
-                    <ResetVotesButton />
                 </div>
             </div>
             <div className="current-state-box">
