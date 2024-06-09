@@ -1,54 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import "../Css/AdminPanel.css";
 
-const AdminPanel = () => {
-    const [selectedOption, setSelectedOption] = useState('');
-    const [socket, setSocket] = useState(null);
 
+const AdminPanel = () => {
+    const [socket, setSocket] = useState(null);
+    const [currentState, setCurrentState] = useState()
     useEffect(() => {
         // Connect to WebSocket server when component mounts
         const newSocket = new WebSocket('ws://localhost:3000');
         setSocket(newSocket);
-
-        // Clean up function to close WebSocket connection when component unmounts
-        
     }, []);
 
-    const handleChooseScene = () => {
-        if (socket && selectedOption) {
+
+    const handleChooseScene = (handleButtonClick) => {
+        console.log("Sending selected option:", handleButtonClick);
+        if (socket) {
+            setCurrentState(handleButtonClick)
             // Send selected option to WebSocket server
-            socket.send(JSON.stringify({ option: selectedOption }));
+            socket.send(JSON.stringify({ option: handleButtonClick }));
         } else {
             console.error("WebSocket connection not available or no option selected");
         }
     };
 
-    const handleSelectChange = (event) => {
-        setSelectedOption(event.target.value);
-    };
+
 
     return (
-        <div className="admin-panel">
-            <h1 className="title">Theatre Play Admin Panel</h1>
-            <div className="controls">
-                <select className="input" value={selectedOption} onChange={handleSelectChange}>
-                <option value="intermissionScreen">Play Scene (intermission page)</option>
-                <option disabled>---------------------------------------------------</option>
-               
-                    <option value="waitingPage">Waiting Page</option>
-                    <option value="getReadyToVotePage">Choosing next scene (Choice page)</option>
-                    <option value="resultPage">Show results (Result page)</option>
-                    <option disabled>---------------------------------------------------</option>
-                    <option value="getReadyToVoteSecond2">Choosing next scene (brown version)</option>
-                    <option value="resultPageBrownVersion">Show results (brown version)</option>
-                    <option disabled>---------------------------------------------------</option>
-                    <option value="EndingPageMaiwand">End the Play/Game (ending page)</option>
-                    
-                
-                </select>
-                <button onClick={handleChooseScene} className="btn"><p>Select</p></button>
-        
-
+        <div className="admin-panel-container">
+            <div className="admin-panel">
+                <h1 className="title">Theatre Play Admin Panel</h1>
+                <div className="controls">
+                    <button onClick={(event) => handleChooseScene("intermissionScreen", event)} className="btn">Intermission Page</button>
+                    <button onClick={(event) => handleChooseScene("waitingPage", event)} className="btn">Waiting Page</button>
+                    <button onClick={(event) => handleChooseScene("getReadyToVotePage", event)} className="btn">Choice Page</button>
+                    <button onClick={(event) => handleChooseScene("resultPage", event)} className="btn">Result Page</button>
+                    <button onClick={(event) => handleChooseScene("getReadyToVoteSecond2", event)} className="btn">Brown Version Choice Page</button>
+                    <button onClick={(event) => handleChooseScene("resultPageBrownVersion", event)} className="btn">Brown Version Result Page</button>
+                    <button onClick={(event) => handleChooseScene("EndingPageMaiwand", event)} className="btn">Ending Page</button>
+                </div>
+            </div>
+            <div className="current-state-box">
+                <h2>Current State</h2>
+                <div className="current-state">{currentState}</div>
             </div>
         </div>
     );
