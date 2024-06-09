@@ -53,15 +53,7 @@ function QuestionOverView({setCurrentPageOverView}) {
             <div className="container">
 
                 <div className="mainQuestionDiv">
-                    <h1 className="mainQuestion">  {answers.map(
-                        (data) =>
-                            data.answer && (
-                                <p
-                                    key={data.id}
-                                    className="questionButton"
-                                >{data.answer}</p>
-                            )
-                    )}</h1>
+                    <QuestionComp></QuestionComp>
                     <div className="countdownTimerQuestionPage">
                         Time left: {countdown} seconds
                     </div>
