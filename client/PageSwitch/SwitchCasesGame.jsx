@@ -28,7 +28,11 @@ import "../Css/GetReadyToVoteSecond.css"
 import CharacterTopLeft from "../Components/CharacterTopLeft";
 
 function UserPage() {
+
+
     const [currentPage, setCurrentPage] = useState("waitingPage");
+
+
     const [socket, setSocket] = useState(null);
 
     useEffect(() => {
@@ -37,9 +41,7 @@ function UserPage() {
         setSocket(newSocket);
 
         // Clean up function to close WebSocket connection when component unmounts
-        return () => {
-            newSocket.close();
-        };
+
     }, []);
 
     useEffect(() => {
@@ -52,6 +54,18 @@ function UserPage() {
             };
         }
     }, [socket]);
+
+
+
+    useEffect(() => {
+        async function fetchAnswers() {
+            const response = await fetch("/api/scene");
+            const data = await response.json();
+        setCurrentPage(data);
+        }
+
+        fetchAnswers();
+    }, []);
 
     const handleOptionSelection = (option) => {
         // Update currentPage based on the option received
