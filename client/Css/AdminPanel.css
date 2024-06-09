@@ -1,7 +1,12 @@
+.admin-panel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .admin-panel {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
     padding: 20px;
     border: 3px solid transparent;
     border-radius: 8px;
@@ -11,9 +16,15 @@
     text-align: center;
     font-family: Arial, sans-serif;
     color: black;
+    margin-bottom: 20px; /* Added margin to separate the current state box */
 }
 
-
+.current-state-box {
+    width: 30vw;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
 
 .title {
     font-size: 24px;
@@ -28,23 +39,6 @@
     gap: 15px;
     align-items: center;
 }
-
-.input {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: black;
-    background-color: #fff;
-    overflow-y: auto;
-}
-
-.input option {
-    color: black;
-}
-
 
 .btn {
     color: #fff;
