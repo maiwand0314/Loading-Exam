@@ -18,12 +18,6 @@ function Questions({ setCurrentPage }) {
     const [answerC, setAnswerC] = useState(null);
     const [answerD, setAnswerD] = useState(null);
 
-    const [countdown, setCountdown] = useState(2000);
-
-
-
-
-
     useEffect(() => {
         async function fetchAnswers() {
             const response = await fetch("/api/elements");
@@ -46,34 +40,6 @@ function Questions({ setCurrentPage }) {
     ];
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    useEffect(() => {
-        if (countdown === 0) {
-            // Handle the case when the countdown reaches 0
-            setCurrentPage('waitingPageAfterQuestion'); // Redirect to a timeout page or handle as needed
-            return;
-        }
-        const timer = setTimeout(() => {
-            setCountdown(countdown - 1);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, [countdown, setCurrentPage]);
-
     return (
         <>
             <CharacterTopLeft />
@@ -81,9 +47,7 @@ function Questions({ setCurrentPage }) {
                 <div className="mainImageDivQuestionPage">
                     <img className="mainImageQuestionPage" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA5dXkybDVsZzM5cnFjdWFwZTBrN3BnN2tzdHlra3E0NnJrcnJ6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYsC1UC0BGwG2SQ/giphy.webp" alt="" />
                 </div>
-                <div className="countdownTimerQuestionPage">
-                    Time left: {countdown} seconds
-                </div>
+
                 <div className="mainQuestionDivQuestionPage">
                     <QuestionComp />
                 </div>
