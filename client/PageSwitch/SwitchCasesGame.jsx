@@ -25,12 +25,10 @@ import "../Css/EndingPageMaiwand.css"
 import "../Css/Question2.css"
 import "../Css/GetReadyToVoteSecond.css"
 
-import CharacterTopLeft from "../Components/CharacterTopLeft";
-
 function UserPage() {
 
 
-    const [currentPage, setCurrentPage] = useState("waitingPage");
+    const [currentPage, setCurrentPage] = useState("");
 
 
     const [socket, setSocket] = useState(null);
@@ -82,11 +80,12 @@ function UserPage() {
             case "questionPage":
                 setCurrentPage("questionPage");
                 break;
-            case "resultPage":
-                setCurrentPage("resultPage");
-                break;
+
             case "waitingPageAfterQuestion":
                 setCurrentPage("waitingPageAfterQuestion");
+                break;
+            case "resultPage":
+                setCurrentPage("resultPage");
                 break;
             case "questionPageBrownVersion":
                 setCurrentPage("questionPageBrownVersion");
@@ -107,7 +106,7 @@ function UserPage() {
                 setCurrentPage("EndingPageMaiwand")
                 break;
             default:
-                console.error("Unknown option received");
+
         }
     };
 
@@ -138,7 +137,7 @@ function UserPage() {
         case "EndingPageMaiwand":
             return<EndingPageMaiwand currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         default:
-            return <div>Error: Unknown page</div>;
+            return <div></div>;
     }
 }
 
