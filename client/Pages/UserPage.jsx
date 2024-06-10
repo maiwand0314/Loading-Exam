@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import "../Css/UsernameAndAvatar.css"
 import "../Css/FrontPage.css"
-import "../Css/Question2.css"
 import "../Css/IntermissionPage.css"
 import "../Css/WaitingPage.css"
 import "../Css/GetReadyToVote.css"
@@ -13,7 +12,7 @@ import "../Css/QuestionsBrownVersion.css"
 import "../Css/ResultPageBrownVersion.css"
 import "../Css/WaitingPageAfterBrownQuestion.css"
 
-import UsernameAndAvatar2 from "../Components/UsernameAndAvatar2";
+import UsernameAndAvatar from "../Components/UsernameAndAvatar";
 
 function UserPage () {
     const [currentPage, setCurrentPage] = useState('frontPage'); // New state to control the page rendering
@@ -25,7 +24,7 @@ function UserPage () {
             <>
 
             {currentPage === "frontPage" && <FrontPage currentPage={currentPage}  setCurrentPage={setCurrentPage}/>}
-            {currentPage === "avatarPage" && <UsernameAndAvatar2 currentPage={currentPage}  setCurrentPage={setCurrentPage}/>}
+            {currentPage === "avatarPage" && <UsernameAndAvatar currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
 
             
 

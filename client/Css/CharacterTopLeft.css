@@ -8,26 +8,27 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-   
+    padding: 10px;
+    row-gap: 10px;
 
 }
 
 .avatarTopLeftName{
 
     text-align: center;
-    
- 
-    
-  
+
+
+
+
 }
 
 
 .profile-container-avatar-top-left img {
     width: 50px;
     height: auto;
-  
 
- 
+
+
 }
 
 .profile-container-avatar-top-left p {

@@ -3,7 +3,7 @@ import React from 'react';
 
 function QuestionButton({ answer, onClick }) {
     return (
-        <button className="questionButtonQuestionPage" onClick={onClick}>
+        <button className="nes-btn is-primary" onClick={onClick}>
             {answer}
         </button>
     );

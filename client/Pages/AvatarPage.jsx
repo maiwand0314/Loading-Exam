@@ -1,5 +1,5 @@
 import MiniProfile from "../components/MiniProfile";
-import UsernameAndAvatar from "../Components/UsernameAndAvatar2"
+import UsernameAndAvatar from "../Components/UsernameAndAvatar"
 
 
 const AvatarPage = () => {
