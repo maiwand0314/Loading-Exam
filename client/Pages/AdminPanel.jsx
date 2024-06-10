@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import * as XLSX from 'xlsx';
 import "../Css/AdminPanel.css";
 
 const AdminPanel = () => {
     const [socket, setSocket] = useState(null);
     const [currentState, setCurrentState] = useState(null);
+    const [scenes, setScenes] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const timeouts = useRef([]);
 
     useEffect(() => {
@@ -12,7 +15,11 @@ const AdminPanel = () => {
         setSocket(newSocket);
 
         // Clean up function to close WebSocket connection when component unmounts
-
+        return () => {
+            if (newSocket) {
+                newSocket.close();
+            }
+        };
     }, []);
 
     const clearAllTimeouts = () => {
@@ -54,6 +61,48 @@ const AdminPanel = () => {
         timeouts.current.push(timeout1, timeout2, timeout3);
     };
 
+    const handleFileUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+                const parsedScenes = XLSX.utils.sheet_to_json(firstSheet, { header: 1 }).flat();
+                setScenes(parsedScenes);
+                setCurrentIndex(0); // Reset to the first scene
+                if (parsedScenes.length > 0) {
+                    handleChooseScene(parsedScenes[0]);
+                }
+            };
+            reader.readAsArrayBuffer(file);
+        }
+    };
+
+    const handleNextScene = () => {
+        if (currentIndex < scenes.length - 1) {
+            const nextIndex = currentIndex + 1;
+            setCurrentIndex(nextIndex);
+
+            if (scenes[nextIndex] === "questionCycle" ){
+                startPageCycle();
+                return;
+            }
+
+            handleChooseScene(scenes[nextIndex]);
+
+        }
+    };
+
+    const handlePreviousScene = () => {
+        if (currentIndex > 0) {
+            const prevIndex = currentIndex - 1;
+            setCurrentIndex(prevIndex);
+            handleChooseScene(scenes[prevIndex]);
+        }
+    };
+
     return (
         <div className="admin-panel-container">
             <div className="admin-panel">
@@ -66,6 +115,24 @@ const AdminPanel = () => {
                     <button onClick={() => handleChooseScene("getReadyToVoteSecond2")} className="btn">Brown Version Choice Page</button>
                     <button onClick={() => handleChooseScene("resultPageBrownVersion")} className="btn">Brown Version Result Page</button>
                     <button onClick={() => handleChooseScene("EndingPageMaiwand")} className="btn">Ending Page</button>
+                </div>
+                <input type="file" onChange={handleFileUpload} accept=".xlsx, .xls" />
+                <div className="navigation-buttons">
+                    <button onClick={handlePreviousScene} disabled={currentIndex === 0} className="btn">Previous</button>
+                    <button onClick={handleNextScene} disabled={currentIndex === scenes.length - 1} className="btn">Next</button>
+                </div>
+                <div className="storyline-preview">
+                    <h2>Storyline</h2>
+                    <ul>
+                        {scenes.map((scene, index) => (
+                            <li key={index} className={index === currentIndex ? 'current-scene' : ''}>
+                                {scene}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="index-indicator">
+                    <p>Current Index: {currentIndex + 1} / {scenes.length}</p>
                 </div>
             </div>
             <div className="current-state-box">
