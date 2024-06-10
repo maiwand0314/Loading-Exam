@@ -64,10 +64,10 @@ const server = app.listen(process.env.PORT || 3000, () => {
 server.on("upgrade", (req, socket, head) => {
     // This request is not passed through the middleware chain, so
     // you have to duplicate any modifications to req here
-    wsServer.handleUpgrade(req, socket, head, (ws) => {
-        sockets.push(ws);
+    wsServer.handleUpgrade(req, socket, head, (socket) => {
+        sockets.push(socket);
         // Set up the handling of messages from this socket
-        ws.on("message", (msg) => {
+        socket.on("message", (msg) => {
             const { option } = JSON.parse(msg); // Parse the received message
             scene = option;
             // Broadcast the selected option to all connected clients
