@@ -6,6 +6,7 @@ import * as bodyParser from "express";
 import { WebSocketServer } from "ws"; // Import WebSocketServer
 import { QuestionApi } from "./question.js";
 import {QuestionApi2} from "./qustion2.js";
+import { ReviewApi } from "./review.js"; // Import ReviewApi
 
 dotenv.config();
 const app = express();
@@ -14,7 +15,6 @@ app.use(bodyParser.json());
 
 let scene = "waitingPage";
 let counter = 0;
-let reviews = [];
 const voteList = [];
 const ListA = [];
 const ListB = [];
@@ -28,7 +28,7 @@ function createResults() {
         C: ListC.length,
         D: ListD.length
     }
-    return results
+    return results;
 }
 
 app.use(express.static("../client/dist"));
@@ -44,8 +44,10 @@ const mongoClient = new MongoClient(process.env.MONGODB_URL);
 mongoClient.connect().then(async () => {
     const database = await mongoClient.db().admin().listDatabases();
     console.log(database);
-    app.use("/api/elements", QuestionApi(mongoClient.db("Loading")));
-    app.use("/api/questions", QuestionApi2(mongoClient.db("Loading")));
+    const db = mongoClient.db("Loading");
+    app.use("/api/elements", QuestionApi(db));
+    app.use("/api/questions", QuestionApi2(db));
+    app.use("/api/reviews", ReviewApi(db));
 });
 
 // Set up WebSocket server
@@ -62,10 +64,10 @@ const server = app.listen(process.env.PORT || 3000, () => {
 server.on("upgrade", (req, socket, head) => {
     // This request is not passed through the middleware chain, so
     // you have to duplicate any modifications to req here
-    wsServer.handleUpgrade(req, socket, head, (socket) => {
-        sockets.push(socket);
+    wsServer.handleUpgrade(req, socket, head, (ws) => {
+        sockets.push(ws);
         // Set up the handling of messages from this socket
-        socket.on("message", (msg) => {
+        ws.on("message", (msg) => {
             const { option } = JSON.parse(msg); // Parse the received message
             scene = option;
             // Broadcast the selected option to all connected clients
@@ -75,13 +77,6 @@ server.on("upgrade", (req, socket, head) => {
         });
     });
 });
-
-
-
-
-
-
-
 
 app.post('/api/reset-votes', (req, res) => {
     ListA.length = 0;
@@ -94,39 +89,9 @@ app.post('/api/reset-votes', (req, res) => {
     res.status(200).send('Votes reset successfully');
 });
 
-
-
-
-
-
-
-
-
-
-
-
 app.get('/api/scene', (req, res) => {
     res.json(scene);
 });
-
-
-
-
-// REVIEW REST API
-app.post('/api/review', (req, res) => {
-    const { review } = req.body;
-    reviews.push(review);
-    console.log('Review added:', review);
-    res.status(200).send('Review added successfully');
-});
-
-// Route to get all reviews
-app.get('/api/reviews', (req, res) => {
-    res.json(reviews);
-});
-
-
-
 
 // REST API endpoints
 app.get("/api/votes", async (req, res) => {
@@ -149,7 +114,6 @@ app.get("/api/votes/b", async (req, res) => {
     res.json(ListB.length);
 });
 
-
 app.post("/api/votes/c", async (req, res) => {
     res.json(ListC);
 });
@@ -158,41 +122,36 @@ app.get("/api/votes/c", async (req, res) => {
     res.json(ListC.length);
 });
 
-
-
-
 app.post("/api/votes/d", async (req, res) => {
-    res.json(Listd);
+    res.json(ListD);
 });
 
 app.get("/api/votes/d", async (req, res) => {
     res.json(ListD.length);
 });
 
-
 app.post('/api/choices', (req, res) => {
     const choice = req.body.choice;
     console.log('Received choice:', choice);
 
-    if (choice == "A") {
+    if (choice === "A") {
         ListA.push(choice);
-        console.log("Choice A " + ListA.length)
+        console.log("Choice A " + ListA.length);
     }
 
-    if (choice == "B") {
+    if (choice === "B") {
         ListB.push(choice);
-        console.log(ListB.length)
+        console.log(ListB.length);
     }
 
-    if (choice == "C") {
+    if (choice === "C") {
         ListC.push(choice);
-        console.log(ListC.length)
+        console.log(ListC.length);
     }
 
-
-    if (choice == "D") {
+    if (choice === "D") {
         ListD.push(choice);
-        console.log(ListD.length)
+        console.log(ListD.length);
     }
 
     if (choice != null) {
