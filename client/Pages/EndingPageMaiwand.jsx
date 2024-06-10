@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import SwordmanSDownAvatar from '../assets/SwordmanSDown.png';
 import EndingPageLoadingBar from '../Components/EndingPageLoadingBar';
 import { useNavigate } from 'react-router-dom';
 import CharacterEndingPage from '../Components/CharacterEndingPage';
 
-function EndingPageMaiwand ({ setCurrentPage }) {
+function EndingPageMaiwand () {
     const [rating, setRating] = useState(0);
 
     async function insertChoice(rating) {
