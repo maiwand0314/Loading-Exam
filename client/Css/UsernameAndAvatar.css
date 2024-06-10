@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-evenly;
     height: 100dvh;
-    overflow: hidden;
+    overflow:hidden;
     position: relative;
 }
 * {
@@ -19,7 +19,7 @@
     border-bottom: 3px solid black;
     width: 100dvw;
     padding-bottom: 8px;
-    
+
 }
 
 .info-boxAvatar p {
@@ -27,7 +27,7 @@
 }
 
 .name-containerAvatar {
-    padding: 26px 0px;
+    padding: 26px 0px 64px 0px;
 }
 
 .name-containerAvatar p {
@@ -50,15 +50,14 @@
     padding: 8px;
     border: 2px solid black;
     background: linear-gradient(to bottom, #fafafc, #1A1A2E);
-    border-radius: 16px;
+    border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-
-
 
 /* unormalt liten skjerm */
 @media (width <= 360px) {
     .avatars-container {
+        background-color: pink;
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 30px;
@@ -67,7 +66,9 @@
     }
 }
 
-/* basically anything 768px eller større i viewport */
+
+
+/* basically anything 768px eller stÃ¸rre i viewport */
 @media (width >= 786px) {
     .avatars-container {
         display: grid;
@@ -80,10 +81,18 @@
 
 
 /* Landscape mode */
-@media (orientation: landscape) and (height <= 400px) {
+@media (height <= 615px) {
+    .username-and-avatar-mini-container {
+        width: 90dvw;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
     .avatars-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         column-gap: auto;
         padding: 8px 0px;
     }
@@ -93,7 +102,11 @@
     }
     .info-boxAvatar p {
         font-size: 16px;
-        padding: 8px;
+        padding: 0px;
+    }
+
+    .name-containerAvatar {
+        padding: 0px 0px;
     }
 
 }
