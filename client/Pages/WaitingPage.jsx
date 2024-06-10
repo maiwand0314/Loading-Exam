@@ -1,26 +1,31 @@
 import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import CharacterTopLeft from "../Components/CharacterTopLeft";
 import "../Css/WaitingPage.css"
+import funfacts from "../assets/funfacts";
 
 function WaitingPage({ setCurrentPage }) {
 
-    handleClick = (event) => {
-        console.log(event);
-        setCurrentPage('intermissionScreen');
-      };
+
+    const [randomFunfact, setRandomFunfact] = useState(null);
+
+    useEffect(() => {
+        const randomIndex = Math.floor(Math.random() * funfacts.funFacts.length);
+        setRandomFunfact(funfacts.funFacts[randomIndex]);
+    }, []);
+
+
     return(
-        <>
-
-
-<CharacterTopLeft></CharacterTopLeft>
+        <><CharacterTopLeft></CharacterTopLeft>
 
         <div className="containerWaitingPage">
-                    <h1 className="mainTitleWaitingPage">Please enjoy the meme while waiting for the play to start...</h1>
+                    <h1 className="mainTitleWaitingPage">Please enjoy the funfact while waiting for the play to start...</h1>
                     <div className="loadingDivWaitingPage">
                     <WaitingPageLoadingBar />
                      </div>
-                    <div className="fun-fact-template">Hei visste du at jeg har en tvillingbror?</div>
+            <div className="mainImageContainerFunFactPageAfterQuestion">
+                <p className={"nes-balloon from-left"}>{randomFunfact}</p>
+            </div>
                     
         </div>
         </>

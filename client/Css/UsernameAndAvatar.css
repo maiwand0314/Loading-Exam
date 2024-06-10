@@ -1,5 +1,5 @@
 .name-and-avatar-container {
-    background: linear-gradient(to bottom, #1A1A2E 45%, #68687a 65%, #1A1A2E 100%);
+    background-color: #209CEE;
     display: grid;
     grid-template-columns: 12fr repeat(1fr);
     display: flex;

@@ -1,7 +1,19 @@
 .admin-panel-container {
-    display: flex;
+    background-color: black;
     flex-direction: column;
     align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+}
+
+.admin-panel-container p li h2 div{
+    color: white;
+
 }
 
 .admin-panel {
@@ -15,7 +27,7 @@
     position: relative;
     text-align: center;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
     margin-bottom: 20px; /* Added margin to separate the current state box */
 }
 
@@ -40,7 +52,7 @@
     align-items: center;
 }
 
-.btn {
+.btn-admin-panel {
     color: #fff;
     cursor: pointer;
     background-color: #0056b3;

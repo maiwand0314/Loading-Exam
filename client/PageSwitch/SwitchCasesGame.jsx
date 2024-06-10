@@ -9,7 +9,7 @@ import GetReadyToVoteSecond2 from "../PagesBrown/GetReadyToVoteSecond";
 import QuestionsBrownVersion from "../PagesBrown/QuestionsBrownVersion";
 import WaitingPageAfterBrownQuestion from '../PagesBrown/WaitingPageAfterBrownQuestion';
 import ResultPageBrownVersion from '../PagesBrown/ResultPageBrownVersion';
-import EndingPageMaiwand from '../Pages/EndingPageMaiwand';
+import EndingPage from '../Pages/EndingPage';
 
 
 function UserPage() {
@@ -122,7 +122,7 @@ function UserPage() {
         case "resultPageBrownVersion":
             return<ResultPageBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         case "EndingPageMaiwand":
-            return<EndingPageMaiwand currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
+            return<EndingPage currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         default:
             return <div></div>;
     }

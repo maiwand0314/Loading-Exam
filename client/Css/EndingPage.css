@@ -1,80 +1,79 @@
-
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-:root {
-  font-family: 'Press Start 2P';
-}
 
-
-img, picture, svg {
-  display: block;
-  max-width: 100%;
-}
 
 .containerEndingPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  min-height: 100dvh;
-  overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #e46b43;
 }
 
-.mainImageContainerEndingPage{
-  border-radius: 2em;
-  width: 20%;
+.containerEndingPage h2{
+  color: yellow;
+    text-shadow: 3px 3px 1px black;
+}
+
+
+
+.mainImageContainerEndingPage {
+    top: 0;
+    left: 0;
+    position: fixed;
+    border-radius: 2em;
+    width: 20%;
 }
 
 .mainImageEndingPage {
-  border-radius: 2em;
-  width: 100%;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-radius: 2em;
+    width: 8%;
 }
 
 .mainTitleEndingPage {
-  color: #00ccff;
-  font-size: 1.25em;
-  padding: 0px 50px;
-
-  line-height: 1.5;
-  text-shadow: 7px 7px 3px black; 
+    color: white;
+    font-size: 1.25em;
+    padding: 0px 50px;
+    line-height: 1.5;
+    text-shadow: 3px 3px 1px black;
+    margin-bottom: 20px;
 }
 
-.containerQuestionPage {
+.containerEndingPageEndingPageEnding {
     --max-width: 1110px;
     --padding: 1rem;
     width: min(var(--max-width), 100% - (var(--padding) *2));
     margin-inline: auto;
 }
 
-.buttonsContainer {
+.buttonsContainerEndingPage {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    width: 30%;
+    
 }
 
-.questionButtonEndingPage{
-    background-image: linear-gradient(#00ccff, #E8E8E8);
-    color: rgb(0, 0, 0);
-    font-family: 'Press Start 2P', cursive;
-    padding: 55px 10px;
-    border-radius: 25px;
-    line-height: 1;
-    border: none;
+.questionButtonEndingPage {
+   
+    background-color: #00ccff;
+    color: white;
+    border:none;
+    border-radius: 5px;
     cursor: pointer;
-    position: relative;
-    box-shadow: 0 1em 1em purple;
-
+    font-size: 1em;
+    width: 100%;    
+    
 }
 
-.questionButton:hover {
-
-    /*background-color: hsla(263, 98%, 60%, 0.411);*/
-    background-image: linear-gradient(#71009a7a, #e8e8e87c);
-    color: rgba(0, 0, 0, 0.329);
-    border-color: #646cff;
+.questionButtonEndingPage:hover {
+    background-color: #008bb0;
 }
 
 button:focus,
@@ -84,105 +83,148 @@ button:focus-visible {
     border-color: #646cff;
 }
 
-.progressBarContainer{
-  display: block;
-  min-height: 100%;
+.progressBarContainerEndingPage {
+    display: block;
+    min-height: 100%;
 }
 
-.progressbar{
-  position: relative;
-  overflow: hidden;
-	border: 5px solid #00ccff;
-  justify-content: center;
-	/*border: 5px solid #004152;*/
-	min-width: 80%;
-	height: 10dvh;
-  width: 40dvh;
-  top: 50%;
-	border-radius: 1em;
-	background-color: #83e5fd05;
-	box-shadow: 5px 5px 10px black;
+.progressbarEndingPage { 
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #00ccff;
+    justify-content: center;
+    min-width: 80%;
+    height: 10vh;
+    width: 40vh;
+    top: 50%;
+    border-radius: 1em;
+    background-color: #83e5fd05;
+    box-shadow: 5px 5px 10px black;
 }
 
-.progressPercent{
-  position: absolute;
-	transform: translate(-50%,-50%);
-	font-size: 1.5em;
-  top: 50%;
-	color: #00ccff;
-	border-radius: 2em;
-	text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-             1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
-	/*text-shadow: 5px 5px 5px black;*/
-	/*text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;*/
+.progressPercentEndingPage {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    top: 50%;
+    color: #00ccff;
+    border-radius: 2em;
+    text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+.reviewSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.starsContainer {
+    display: flex;
+    color: gray !important;
+
+}
+
+.star{
+    color: gray !important;
 }
 
 
-@media (width<768px) {
-  .mainTitle{font-size: 0.5em;}
-  .progressbar{
-    height: 3dvh;
-  }
+.star.active {
+    margin-right: 5px;
+    cursor: pointer;
+    width: 20vh;
+    height: 5dvh;
+    color: gray !important;
+}
+/* Media Queries */
 
-  .progressPercent{
-    font-size: 0.75em;
-  }
+/* Small screens */
+@media (max-width: 768px) {
+    .mainTitleEndingPage {
+        font-size: 0.75em;
+    }
+
+    .progressbarEndingPage {
+        height: 3vh;
+    }
+
+    .progressPercentEndingPage {
+        font-size: 0.75em;
+    }
 }
 
-@media (width<=440px) {
-  .mainTitle{font-size: 1em;
-         padding: 0px 0px;
-         margin: 0px 20px;
-      
-         
-        }
+/* Extra small screens */
+@media (max-width: 440px) {
+    .mainTitleEndingPage {
+        font-size: 0.5em;
+        padding: 0px 0px;
+        margin: 0px 20px;
+    }
 
-        .progressbar{
-          height: 8dvh;
-        }
+    .progressbarEndingPage {
+        height: 8vh;
+    }
 
-        .progressPercent{
-         font-size: 0.75em;
-        }
-         
- 
+    .progressPercentEndingPage {
+        font-size: 0.75em;
+    }
 }
 
 /* Landscape mode */
-@media (orientation: landscape) and (height <= 500px) {
-  .mainTitle{font-size: 0.5em;
-    padding: 0px 0px;
-    margin: 0px 20px;
- 
-    word-break: break-all;
-   }
+@media (orientation: landscape) and (max-height: 500px) {
+    .mainTitleEndingPage {
+        font-size: 1em;
+        padding: 0px 0px;
+        margin: 0px 20px;
+        word-break: break-all;
+    }
 
-   .progressbar{
-     height: 10dvh;
-     width: 80dvw;
-  
-   }
+    .progressbarEndingPage {
+        height: 10vh;
+        width: 80vw;
+    }
 
-   .progressPercent{
-    font-size: 0.75em;
-   }
-   .mainImageContainer{
-    border-radius: 2em;
-    border: 5px solid #00ccff;
-    width: 50%;
-  }
+    .progressPercentEndingPage {
+        font-size: 0.75em;
+    }
 
+    .mainImageContainerEndingPage {
+        border-radius: 2em;
+        width: 50%;
+    }
 }
 
-@media (width>=1024px) {
-  .mainTitle{font-size: 0.5em;}
-  .progressbar{
-    height: 10dvh;
-    width: 80dvw;
+/* Large screens */
+@media (min-width: 1024px) {
+    .mainTitleEndingPage {
+        font-size: 1.5em;
+    }
 
-  }
+    .progressbarEndingPage {
+        height: 10vh;
+        width: 80vw;
+    }
 
-  .progressPercent{
-    font-size: 0.75em;
-  }
+    .progressPercentEndingPage {
+        font-size: 0.75em;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .mainTitleEndingPage {
+        font-size: 1em;
+    }
+
+    .progressbarEndingPage {
+        height: 5vh;
+        width: 60vw;
+    }
+
+    .progressPercentEndingPage {
+        font-size: 1em;
+    }
 }

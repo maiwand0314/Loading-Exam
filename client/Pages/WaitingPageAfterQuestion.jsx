@@ -2,11 +2,16 @@ import bowser from "../assets/boswer-fact(2).jpg"
 import { useState, useEffect} from 'react'
 import WaitingPageAfterQuestionLoadingBar from "../Components/WaitingPageAfterQuestionLoadingBar";
 import CharacterTopLeft from "../Components/CharacterTopLeft";
-
+import "../Css/WaitingPageAfterQuestion.css";
+import funfacts from "../assets/funfacts";
 function WaitingPageAfterQuestion({ setCurrentPage }) {
 
+    const [randomFunfact, setRandomFunfact] = useState(null);
 
-
+    useEffect(() => {
+        const randomIndex = Math.floor(Math.random() * funfacts.funFacts.length);
+        setRandomFunfact(funfacts.funFacts[randomIndex]);
+    }, []);
 
     return(
         
@@ -18,18 +23,12 @@ function WaitingPageAfterQuestion({ setCurrentPage }) {
                 
                     <WaitingPageAfterQuestionLoadingBar />
                      </div>
-                    <div className="mainImageContainerFunFactPageAfterQuestion">
-                    <img className="mainImageFunFactPageAfterQuestion" src={bowser} alt="Image of meme"></img>
-                    </div>
-                    
-        </div>
+            <div className="mainImageContainerFunFactPageAfterQuestion">
+                    <p className={"nes-balloon from-left"}>{randomFunfact}</p>
+            </div>
+            </div>
         
         </>
-  
-     
-       
-
-
 
     )
    

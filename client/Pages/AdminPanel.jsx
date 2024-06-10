@@ -108,18 +108,18 @@ const AdminPanel = () => {
             <div className="admin-panel">
                 <h1 className="title">Theatre Play Admin Panel</h1>
                 <div className="controls">
-                    <button onClick={() => handleChooseScene("intermissionScreen")} className="btn">Intermission Page</button>
-                    <button onClick={() => handleChooseScene("waitingPage")} className="btn">Waiting Page</button>
-                    <button onClick={startPageCycle} className="btn">Choice Page</button>
-                    <button onClick={() => handleChooseScene("resultPage")} className="btn">Result Page</button>
-                    <button onClick={() => handleChooseScene("getReadyToVoteSecond2")} className="btn">Brown Version Choice Page</button>
-                    <button onClick={() => handleChooseScene("resultPageBrownVersion")} className="btn">Brown Version Result Page</button>
-                    <button onClick={() => handleChooseScene("EndingPageMaiwand")} className="btn">Ending Page</button>
+                    <button onClick={() => handleChooseScene("intermissionScreen")} className="btn-admin-panel">Intermission Page</button>
+                    <button onClick={() => handleChooseScene("waitingPage")} className="btn-admin-panel">Waiting Page</button>
+                    <button onClick={startPageCycle} className="btn-admin-panel">Choice Page</button>
+                    <button onClick={() => handleChooseScene("resultPage")} className="btn-admin-panel">Result Page</button>
+                    <button onClick={() => handleChooseScene("getReadyToVoteSecond2")} className="btn-admin-panel">Brown Version Choice Page</button>
+                    <button onClick={() => handleChooseScene("resultPageBrownVersion")} className="btn-admin-panel">Brown Version Result Page</button>
+                    <button onClick={() => handleChooseScene("EndingPageMaiwand")} className="btn-admin-panel">Ending Page</button>
                 </div>
                 <input type="file" onChange={handleFileUpload} accept=".xlsx, .xls" />
                 <div className="navigation-buttons">
-                    <button onClick={handlePreviousScene} disabled={currentIndex === 0} className="btn">Previous</button>
-                    <button onClick={handleNextScene} disabled={currentIndex === scenes.length - 1} className="btn">Next</button>
+                    <button onClick={handlePreviousScene} disabled={currentIndex === 0} className="btn-admin-panel">Previous</button>
+                    <button onClick={handleNextScene} disabled={currentIndex === scenes.length - 1} className="btn-admin-panel">Next</button>
                 </div>
                 <div className="storyline-preview">
                     <h2>Storyline</h2>

@@ -94,7 +94,7 @@ const UsernameAndAvatar = () => {
                     </div>
 
                 </div>
-                <button className="nes-btn is-primary" onClick={handleContinueClick}>CONTINUE</button>
+                <button className="nes-btn is-error" onClick={handleContinueClick}>CONTINUE</button>
 
             </section>
         </div>

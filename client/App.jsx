@@ -6,7 +6,7 @@ import AdminPanel from "./Pages/AdminPanel";
 import InGameSwitch from "./PageSwitch/SwitchCasesGame";
 import UserPage from "./Pages/UserPage";
 import OverView from "./PageSwitch/overView";
-import ResultPage from "./Pages/ResultPage";
+import WaitingPageAfterQuestion from "./Pages/WaitingPageAfterQuestion";
 
 
 
@@ -20,7 +20,7 @@ function App() {
                 <Route path="/admin" element={<AdminPanel />} />
                 <Route path="/over-view=1" element={<><OverView /></>} />
                 <Route path="/gameID=1" element={<InGameSwitch />} />
-                <Route path="/1" element={<ResultPage />} />
+                <Route path="/1" element={<WaitingPageAfterQuestion />} />
             </Routes>
         </BrowserRouter>
     );
