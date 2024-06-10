@@ -8,11 +8,10 @@ import CharacterEndingPage from '../Components/CharacterEndingPage';
 function EndingPageMaiwand ({ setCurrentPage }) {
     const [rating, setRating] = useState(0);
 
-    async function insertChoice(review) {
-        // Modify the endpoint and payload according to your backend API
-        await fetch("/api/review", {
+    async function insertChoice(rating) {
+        await fetch("/api/reviews", {
             method: "POST",
-            body: JSON.stringify({ review }),
+            body: JSON.stringify({ rating }), // Rating is sent as a number
             headers: {
                 "Content-Type": "application/json",
             },
@@ -24,7 +23,7 @@ function EndingPageMaiwand ({ setCurrentPage }) {
         console.log(`${value}`);
 
         // Call insertChoice to send the rating to the backend
-        await insertChoice({ rating: value });
+        await insertChoice(value);
     };
 
     const navigate = useNavigate();
@@ -62,7 +61,7 @@ function EndingPageMaiwand ({ setCurrentPage }) {
                 <button className="questionButtonEndingPage" onClick={handleExitClick}>Exit Game</button>
             </div>
         </div>
-    )
+    );
 }
 
 export default EndingPageMaiwand;
