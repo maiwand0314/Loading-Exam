@@ -1,11 +1,31 @@
 
 
+.pedros-graveyard {
+  background-color: #231e1e;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pedros-graveyard h1{
+  color: white;
+
+}
+
+
 .containerIntermissionPage{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+
 
 }
 
@@ -90,33 +110,11 @@
 }
 
 
-.fullscreenButton {
-  position: fixed;
-  bottom: 5px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #20203a; /* Dark background color */
-
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-
 
 
 /* For Small Devices (e.g., phones) */
 @media only screen and (max-width: 600px) and (orientation: landscape) {
-  body{
 
-    font-size: 5px;
-
-  }
 
   .loader {
     width: 180px;
@@ -139,9 +137,6 @@
 
 /* For Medium Devices (e.g., tablets) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
-  body {
-  font-size: 11px;
-  }
 
 
 
@@ -167,11 +162,6 @@
 @media only screen and (min-width: 1025px) and (orientation: landscape) {
 
 
-  body{
-font-size: 20px;
-
-
-  }
 
   .loader {
     width: 360px;

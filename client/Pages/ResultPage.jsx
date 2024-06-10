@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ResultItem from "../Components/ResultItem"
 import CharacterTopLeft from '../Components/CharacterTopLeft';
 import FloatingE from "../Components/FloatingE";
-
+import "../Css/ResultPage.css"
 function ResultPage() {
     const [votingResults, setVotingResults] = useState(null);
 

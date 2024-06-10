@@ -1,26 +1,9 @@
 
  @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
 
-:root {
-  font-family: 'Press Start 2P';
-}
-
-/*
-html, body {
-  margin: 0;
-  background-image: linear-gradient(#1a1a2e, #1a1a2e, #1a1a2e, #1a1a2e,  #9aedf805); 
-
-  min-height: 100%;
-}
-*/
-
-img, picture, svg {
-  display: block;
-  max-width: 100%;
-}
-
 
 .containerWaitingPage {
+    background-color: #e46b43;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -28,7 +11,6 @@ img, picture, svg {
   text-align: center;
   min-height: 100dvh;
   overflow: hidden;
-
 }
 
 .mainImageContainerWaitingPage{
@@ -43,7 +25,7 @@ img, picture, svg {
 }
 
 .mainTitleWaitingPage {
-  color: #00ccff;
+    color: white;
   font-size: 1.25em;
   padding: 0px 50px;
 
@@ -86,7 +68,9 @@ img, picture, svg {
 	/*text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;*/
 }
 
-
+.fun-fact-template{
+   color: white;
+}
 
 @media (width<768px) {
   .mainTitle{font-size: 0.5em;}

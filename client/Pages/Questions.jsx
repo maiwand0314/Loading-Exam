@@ -2,6 +2,7 @@ import {React, useState, useEffect } from "react";
 import CharacterTopLeft from "../Components/CharacterTopLeft";
 import QuestionButton from "../Components/QuestionButton";
 import QuestionComp from "../Components/QuestionComp";
+import "../Css/Question2.css"
 async function insertChoice(choice) {
     await fetch("/api/choices", {
         method: "POST",
@@ -44,9 +45,8 @@ function Questions({ setCurrentPage }) {
         <>
             <CharacterTopLeft />
             <div className="containerQuestionPage">
-                <div className="mainImageDivQuestionPage">
-                    <img className="mainImageQuestionPage" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA5dXkybDVsZzM5cnFjdWFwZTBrN3BnN2tzdHlra3E0NnJrcnJ6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYsC1UC0BGwG2SQ/giphy.webp" alt="" />
-                </div>
+
+
 
                 <div className="mainQuestionDivQuestionPage">
                     <QuestionComp />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CharacterTopLeft from '../Components/CharacterTopLeft';
+import "../Css/GetReadyToVote.css"
 function GetReadyToVote() {
     const [filled, setFilled] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
@@ -21,10 +22,11 @@ function GetReadyToVote() {
 
 
     return (
-        <>        <CharacterTopLeft></CharacterTopLeft>
+        <><CharacterTopLeft></CharacterTopLeft>
 
    
             <div className='containerGetReady'>
+                <div className={"load-vote-container"}>
             <h3 className='mainTitleGetReady'>Get ready to vote!</h3>
             <div className="progressbarGetReady">
                 <div style={{
@@ -33,9 +35,11 @@ function GetReadyToVote() {
                     backgroundColor: "#a66cff",
                     transition: "width 0.5s"
                 }}></div>
-                <span className="progressPercentGetReady">{filled}%</span>
+
                 {/*<button className="btnGetReady" onClick={handleButtonClick}>Run</button>*/}
             </div>
+                    <span className="progressPercentGetReady">{filled}%</span>
+                </div>
             </div>
 </>
         

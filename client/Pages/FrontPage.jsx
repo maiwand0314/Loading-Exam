@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import UserPage from './UserPage.jsx';
-
+import "../Css/FrontPage.css"
+import RoadLines from "../assets/Linern.gif"
 
 function FrontPage({ setCurrentPage }) {
   const [loading, setLoading] = useState(true);
@@ -29,8 +29,11 @@ function FrontPage({ setCurrentPage }) {
 
 
   return (
+
     <div className="FrontPage">
-        <div className="containerFrontPage">
+
+        <div className="nes-container is-rounded is-primary test1">
+
           <div className="gridFrontPage">
           <div className="grid-itemFrontPage grid-item-fullFrontPage">
             <h1 className='mainTitleFrontPage'>Welcome</h1>
@@ -48,8 +51,8 @@ function FrontPage({ setCurrentPage }) {
                */}
               
                   <form onSubmit={handleSubmit} className="code-inputFrontPage">
-                    <label className="enterYourCodeFrontPage"htmlFor="code">Enter your code:</label>
-                    <input className='typeFieldFrontPage'
+                    <label className="enterYourCodeFrontPage" htmlFor="code">Enter your code:</label>
+                    <input className='nes-input is-dark'
                       type="text"
                       id="code"
                       name="code"
@@ -68,7 +71,7 @@ function FrontPage({ setCurrentPage }) {
         </div>
         
       </div>
-       
+
 
     </div>
   );

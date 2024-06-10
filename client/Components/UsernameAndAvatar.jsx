@@ -8,6 +8,7 @@ import ArcherAvatar from '../assets/Archer.png';
 import SwordmanSDownAvatar from '../assets/SwordmanSDown.png';
 import Cookies from "js-cookie";
 import usernames from "../assets/usernames";
+import "../Css/UsernameAndAvatar.css"
 
 
 const UsernameAndAvatar = () => {
@@ -93,7 +94,7 @@ const UsernameAndAvatar = () => {
                     </div>
 
                 </div>
-                <button className="continue-buttonAvatar" onClick={handleContinueClick}>CONTINUE</button>
+                <button className="nes-btn is-primary" onClick={handleContinueClick}>CONTINUE</button>
 
             </section>
         </div>

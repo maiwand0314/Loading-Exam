@@ -1,16 +1,6 @@
 import FrontPage from "./FrontPage";
 import React, { useState } from 'react';
 
-import "../Css/UsernameAndAvatar.css"
-import "../Css/FrontPage.css"
-import "../Css/IntermissionPage.css"
-import "../Css/WaitingPage.css"
-import "../Css/GetReadyToVote.css"
-import "../Css/ResultPage.css"
-import "../Css/WaitingPageAfterQuestion.css"
-import "../Css/QuestionsBrownVersion.css"
-import "../Css/ResultPageBrownVersion.css"
-import "../Css/WaitingPageAfterBrownQuestion.css"
 
 import UsernameAndAvatar from "../Components/UsernameAndAvatar";
 

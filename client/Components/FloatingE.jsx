@@ -6,7 +6,7 @@ function FloatingEmoji({ emoji }) {
         const emojiElement = event.currentTarget;
 
         const spawnEmoji = document.createElement('div');
-        spawnEmoji.className = 'emoji floating-emoji';
+        spawnEmoji.className = 'spawning-emojis';
         spawnEmoji.textContent = emojiElement.textContent;
 
         const x = Math.random() * (window.innerWidth - 40);

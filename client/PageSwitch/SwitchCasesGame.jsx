@@ -11,19 +11,6 @@ import WaitingPageAfterBrownQuestion from '../PagesBrown/WaitingPageAfterBrownQu
 import ResultPageBrownVersion from '../PagesBrown/ResultPageBrownVersion';
 import EndingPageMaiwand from '../Pages/EndingPageMaiwand';
 
-import "../Css/UsernameAndAvatar.css";
-import "../Css/FrontPage.css";
-import "../Css/IntermissionPage.css";
-import "../Css/WaitingPage.css";
-import "../Css/GetReadyToVote.css";
-import "../Css/ResultPage3.css";
-import "../Css/ResultPageBrownVersion.css"
-import "../Css/WaitingPageAfterQuestion.css";
-import "../Css/QuestionsBrownVersion.css"
-import "../Css/WaitingPageAfterBrownQuestion.css"
-import "../Css/EndingPageMaiwand.css"
-import "../Css/Question2.css"
-import "../Css/GetReadyToVoteSecond.css"
 
 function UserPage() {
 

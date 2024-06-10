@@ -1,13 +1,27 @@
-.Appe{
+
+
+.containerGetReady {
+	background-color: #e46b43;
+	width: 100dvw;
+	height: 100dvh;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-content: center;
 	align-items: center;
-	margin-top: 10%;
+	justify-content: center;
+	text-align: center;
+}
+.containerGetReady span {
+	color: black;
 }
 
-.mainTitleGetReady{
-	
+
+
+.testesttest{
+	border: 2px solid black;
 }
+
+
 .progressbarGetReady{
 	position: relative;
 	overflow: hidden;
@@ -18,13 +32,9 @@
 }
 
 .progressPercentGetReady{
-	font-weight: 600;
+
     font-size: 2em;
-	font-family:'Franklin Gothic Medium';
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
+
 	color: black;
 	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }

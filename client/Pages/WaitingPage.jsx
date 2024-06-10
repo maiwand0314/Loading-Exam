@@ -1,7 +1,7 @@
 import WaitingPageLoadingBar from "../Components/WaitingPageLoadingBar";
-import memeOne from "../assets/meme.jpeg"
 import React from "react";
 import CharacterTopLeft from "../Components/CharacterTopLeft";
+import "../Css/WaitingPage.css"
 
 function WaitingPage({ setCurrentPage }) {
 
@@ -20,9 +20,7 @@ function WaitingPage({ setCurrentPage }) {
                     <div className="loadingDivWaitingPage">
                     <WaitingPageLoadingBar />
                      </div>
-                    <div className="mainImageContainerWaitingPage">
-                    <img className="mainImageWaitingPage" src={memeOne} alt="Image of a Meme"></img>
-                    </div>
+                    <div className="fun-fact-template">Hei visste du at jeg har en tvillingbror?</div>
                     
         </div>
         </>

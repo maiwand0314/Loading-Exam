@@ -11,7 +11,7 @@
     overflow: hidden;
     position: relative;
 }
-* {
+.name-and-avatar-container h3, p {
     color: #fafafc;
 }
 

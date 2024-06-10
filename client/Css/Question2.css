@@ -1,129 +1,30 @@
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap%27);
 
-:root {
-    font-family: 'Press Start 2P', cursive;
 
-    --fw-regular: 400;
-    --fw-semi-bold: 500;
-    --fw-bold: 700;
 
-    --fw-size: 1em;
-    --fw-size-larger: 2em;
-}
-
-@media (min-width: 50em) {
-    :root {
-
-    }
-}
-
-/*
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Press Start 2P', cursive;
-  background-image: linear-gradient(#72009A, #E8E8E8, #72009A, #E8E8E8);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-*/
- body {
-    height: 100%;
-    margin: 0;
-    background-image: linear-gradient(#1a1a2e, #1a1a2e, #1a1a2e, #1a1a2e,  #9aedf805); }
-
-html:focus-within {
-    scroll-behavior: smooth;
-}
-
-img, picture, svg {
-    max-width: 100%;
-    display: block;
-}
-
-/* General Styling */
-
-.padding-block {
-    padding-block: 2rem;
-}
 
 .containerQuestionPage {
-    --max-width: 1110px;
-    --padding: 1rem;
-    width: min(var(--max-width), 100% - (var(--padding) *2));
-    margin-inline: auto;
+    padding: 0px 12px;
+    background-color: #e46b43;
+    flex-direction: column;
+    place-content: center space-evenly;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 5rem;
 }
-
 .buttonsContainerQuestionPage {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
 }
 
-.countdownTimerQuestionPage{
-    
-}
 
-.questionButtonQuestionPage {
-    background-image: linear-gradient(#72009A, #E8E8E8);
-    color: rgb(0, 0, 0);
-    font-family: 'Press Start 2P', cursive;
-    padding: 55px 10px;
-    border-radius: 25px;
-    line-height: 1;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    box-shadow: 0 1em 1em purple;
-
-}
-
-.questionButtonQuestionPage:hover {
-
-    /*background-color: hsla(263, 98%, 60%, 0.411);*/
-    background-image: linear-gradient(#71009a7a, #e8e8e87c);
-    color: rgba(0, 0, 0, 0.329);
-    border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-    background-image: linear-gradient(#71009a7a, #e8e8e87c);
-    color: rgba(0, 0, 0, 0.329);
-    border-color: #646cff;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: rgba(255, 255, 255, 0.5)
-
-    }
-}
-
-
-@media (min-width: 50em) {
-    .buttonsContainerQuestionPage {
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-
-    }
-}
-
-header {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 
 .mainImageDivQuestionPage {
     display: flex;
@@ -139,81 +40,10 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 30%;
     border-radius: 25px;
 
 }
 
-.mainQuestionQuestionPage{
-    padding: 25px;
-    font-size: 1EM;
-    line-height: 2;
-    color: #69008E;
-    text-decoration: inherit;
-    text-align: center;
-}
 
 
-
-footer {
-    position: absolute;
-    color: #69008E;
-    margin-left: 10px;
-    left:0;
-    bottom:0;
-    right:0;
-}
-
-/* Utility Classes */
-
-/*
-.Appe{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-}
-
-
-.progressbar{
-    position: relative;
-    overflow: hidden;
-    width: 700px;
-    height: 80px;
-    border-radius: 5px;
-    background-color: #eee;
-}
-
-.progressPercent{
-    font-weight: 600;
-    font-size: 2em;
-    font-family:'Franklin Gothic Medium';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: black;
-    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
-}
-
-.btn{
-    display: block;
-    margin: 5rem auto;
-    border: none;
-    border-radius: 3px;
-    outline: none;
-    width: 100px;
-    height: 40px;
-    background-color: #937DC2;
-    transition: box-shadow 0.5s;
-    font-size: 16px;
-    font-family:arial;
-    color: #fff;
-    cursor: pointer;
-}
-
-.btn:hover{
-    -webkit-box-shadow: inset 100px 0 0 0 #7c54d1;
-    box-shadow: inset 100px 0 0 0 #7c54d1;
-}
-    */
