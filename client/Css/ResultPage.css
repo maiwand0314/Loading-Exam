@@ -53,9 +53,17 @@
 .result-bar {
     width: 5dvw;
     background-color: red;
+    
+    /*  
+        uncomment the code below and remove classnames: 
+        "nes-container" and "is-rounded" from 
+        ResultItem.jsx inner div to restore the old look
+    */
+    /*
     border: 3px solid black;
     border-top-left-radius: 1dvw;
     border-top-right-radius: 1dvw;
+    */
 }
 
 
