@@ -6,7 +6,8 @@ import * as bodyParser from "express";
 import { WebSocketServer } from "ws"; // Import WebSocketServer
 import { QuestionApi } from "./question.js";
 import {QuestionApi2} from "./qustion2.js";
-import { ReviewApi } from "./review.js"; // Import ReviewApi
+import { ReviewApi } from "./review.js";
+import {LoginApi} from "./login.js"; // Import ReviewApi
 
 dotenv.config();
 const app = express();
@@ -48,6 +49,7 @@ mongoClient.connect().then(async () => {
     app.use("/api/elements", QuestionApi(db));
     app.use("/api/questions", QuestionApi2(db));
     app.use("/api/reviews", ReviewApi(db));
+    app.use("/api/login", LoginApi(db));
 });
 
 // Set up WebSocket server

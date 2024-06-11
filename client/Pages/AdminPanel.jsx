@@ -7,20 +7,22 @@ const AdminPanel = () => {
     const [currentState, setCurrentState] = useState(null);
     const [scenes, setScenes] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const timeouts = useRef([]);
 
     useEffect(() => {
-        // Connect to WebSocket server when component mounts
-        const newSocket = new WebSocket('ws://localhost:3000');
-        setSocket(newSocket);
+        if (isLoggedIn) {
+            // Connect to WebSocket server when component mounts
+            const newSocket = new WebSocket('ws://localhost:3000');
+            setSocket(newSocket);
 
-        // Clean up function to close WebSocket connection when component unmounts
-        return () => {
-            if (newSocket) {
-                newSocket.close();
-            }
-        };
-    }, []);
+            // Clean up function to close WebSocket connection when component unmounts
+
+        }
+    }, [isLoggedIn]);
 
     const clearAllTimeouts = () => {
         timeouts.current.forEach(timeoutId => clearTimeout(timeoutId));
@@ -102,6 +104,57 @@ const AdminPanel = () => {
             handleChooseScene(scenes[prevIndex]);
         }
     };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        // Simulate an API call to your backend for authentication
+        // Replace this with your actual login check logic
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            setIsLoggedIn(true);
+        } else {
+            setError(result.message || 'Invalid login credentials');
+        }
+    };
+
+    if (!isLoggedIn) {
+        return (
+            <div className={"login-div-for-login"}>
+            <div className="login-container">
+                <h1>Admin Login</h1>
+                <form onSubmit={handleLogin} className="login-form">
+                    <div>
+                        <label>Username:</label>
+                        <input
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    {error && <div className="error">{error}</div>}
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            </div>
+        );
+    }
 
     return (
         <div className="admin-panel-container">

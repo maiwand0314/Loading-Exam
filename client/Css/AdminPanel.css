@@ -1,3 +1,18 @@
+
+.login-div-for-login{
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+}
+
+
 .admin-panel-container {
     background-color: black;
     flex-direction: column;
@@ -11,9 +26,8 @@
     color: white;
 }
 
-.admin-panel-container p li h2 div{
+.admin-panel-container p li h2 div {
     color: white;
-
 }
 
 .admin-panel {
@@ -66,7 +80,59 @@
     align-items: center;
 }
 
-.btn:hover {
+.btn-admin-panel:hover {
     background-color: #004080;
     transform: scale(1.05);
+}
+
+.login-container {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .3s, transform .2s;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.error {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
