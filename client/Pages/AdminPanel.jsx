@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import * as XLSX from 'xlsx';
+import ExcelJS from 'exceljs';
 import "../Css/AdminPanel.css";
 
 const AdminPanel = () => {
@@ -63,15 +63,21 @@ const AdminPanel = () => {
         timeouts.current.push(timeout1, timeout2, timeout3);
     };
 
-    const handleFileUpload = (event) => {
+    const handleFileUpload = async (event) => {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
-            reader.onload = (e) => {
-                const data = new Uint8Array(e.target.result);
-                const workbook = XLSX.read(data, { type: 'array' });
-                const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-                const parsedScenes = XLSX.utils.sheet_to_json(firstSheet, { header: 1 }).flat();
+            reader.onload = async (e) => {
+                const buffer = e.target.result;
+                const workbook = new ExcelJS.Workbook();
+                await workbook.xlsx.load(buffer);
+                const worksheet = workbook.worksheets[0];
+                const parsedScenes = [];
+                worksheet.eachRow({ includeEmpty: false }, (row, rowNumber) => {
+                    row.eachCell({ includeEmpty: false }, (cell, colNumber) => {
+                        parsedScenes.push(cell.value);
+                    });
+                });
                 setScenes(parsedScenes);
                 setCurrentIndex(0); // Reset to the first scene
                 if (parsedScenes.length > 0) {

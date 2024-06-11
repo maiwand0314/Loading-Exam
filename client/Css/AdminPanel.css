@@ -136,3 +136,20 @@
     margin-top: -10px;
     margin-bottom: 10px;
 }
+
+.storyline-preview ul {
+    list-style-type: none; /* Remove dots from the list */
+    padding: 0;
+}
+
+.storyline-preview li {
+    padding: 10px;
+    margin: 5px 0;
+    border: 4px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.storyline-preview li.current-scene {
+    border-color: Green; /* Highlight color for the selected scene */
+}
