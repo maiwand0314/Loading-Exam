@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import EndingPageLoadingBar from '../Components/EndingPageLoadingBar';
 import { useNavigate } from 'react-router-dom';
+import "../Css/EndingPage.css"
 
 
 function EndingPageMaiwandOverview () {

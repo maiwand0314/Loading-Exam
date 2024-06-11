@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import '../Css/overView.css';
-import ResultPageOverView from "../PagesOverview/Result";
+import ResultPageOverView from "../PagesOverview/ResultOverview";
 import EndingPageMaiwandOverview from "../PagesOverview/Ending";
 
 import WaitingPage from "../PagesOverview/Default.jsx";
@@ -12,10 +12,12 @@ import WaitingPageAfterQuestion from "../Pages/WaitingPageAfterQuestion";
 import GetReadyToVoteSecond2 from "../PagesBrown/GetReadyToVoteSecond";
 import WaitingPageAfterBrownQuestion from "../PagesBrown/WaitingPageAfterBrownQuestion";
 
-import Blank from "../PagesOverview/Blank";
-import QuestionOverView from "../PagesOverview/Question";
+import QuestionOverView from "../PagesOverview/QuestionOverview";
 import QuestionOverView2 from "../PagesOverview/Question2";
 import ResultPageOverViewBrown from "../PagesOverview/Result2";
+import IntermissionPage from "../Pages/IntermissionPage";
+import GRTVOverview from "../PagesOverview/GRTVOverview";
+import AQOverview from "../PagesOverview/AQOverview";
 
 
 function OverView() {
@@ -43,6 +45,17 @@ function OverView() {
             };
         }
     }, [socket]);
+
+
+    useEffect(() => {
+        async function fetchAnswers() {
+            const response = await fetch("/api/scene");
+            const data = await response.json();
+            setCurrentPageOverView(data);
+        }
+
+        fetchAnswers();
+    }, []);
 
     const handleOptionSelection = (option) => {
         // Update currentPage based on the option received
@@ -99,7 +112,7 @@ function OverView() {
                 setCurrentPageOverView("EndingPageMaiwand")
                 break;
             default:
-                console.error("Unknown option received");
+                break;
         }
     };
 
@@ -108,15 +121,15 @@ function OverView() {
         case "waitingPage":
             return<WaitingPage currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "intermissionScreen":
-            return <Blank currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
+            return <IntermissionPage currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "getReadyToVotePage":
-            return <GetReadyToVote currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
+            return <GRTVOverview currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
         case "questionPage":
             return <QuestionOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "resultPage":
             return <ResultPageOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "waitingPageAfterQuestion":
-            return <WaitingPageAfterQuestion currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
+            return <AQOverview currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
         case "questionPageBrownVersion":
             return<QuestionOverView2 currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         case "getReadyToVoteSecond2":

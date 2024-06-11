@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ResultItem from "../Components/ResultItem"
-import "./Result2.css"
 
 
 function ResultPageOverViewBrown() {

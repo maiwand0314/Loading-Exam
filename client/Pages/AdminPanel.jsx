@@ -108,8 +108,6 @@ const AdminPanel = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        // Simulate an API call to your backend for authentication
-        // Replace this with your actual login check logic
         const response = await fetch('/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

@@ -14,7 +14,7 @@ export function LoginApi(mongoDatabase) {
             console.log(user)
             if (!user) {
                 console.log("Login failed for username:", username);
-                return res.status(401).send('Invalid username or password');
+                return res.status(401).send.message('Invalid username or password');
             }
 
             console.log("Login successful for username:", username);

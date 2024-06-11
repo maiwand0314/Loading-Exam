@@ -4,10 +4,7 @@ import React from "react";
 
 function WaitingForPlayers(){
 
-    handleClick = (event) => {
-        console.log(event);
-        setCurrentPage('intermissionScreen');
-    };
+
     return(
 
 

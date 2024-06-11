@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { FaStar } from 'react-icons/fa';
 import EndingPageLoadingBar from '../Components/EndingPageLoadingBar';
 import { useNavigate } from 'react-router-dom';
 import CharacterEndingPage from '../Components/CharacterEndingPage';
-import "../Css/EndingPage.css"
+import "../css/EndingPage.css"
 
-function EndingPage () {
+function EndingPageNew () {
     const [rating, setRating] = useState(0);
 
     async function insertChoice(rating) {
@@ -64,4 +63,4 @@ function EndingPage () {
     );
 }
 
-export default EndingPage;
+export default EndingPageNew;
