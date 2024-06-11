@@ -24,10 +24,9 @@
 }
 
 .voting-results-displayed {
-    height: 100%;
-    width: 100%;
+    width: 80%;
     padding-bottom: 12px;
-
+    border-bottom: 3px solid white;
 }
 
 .voting-results-displayed p {
@@ -44,7 +43,7 @@
 }
 
 .emoji-container p {
-    font-size: 6em;
+    font-size: 4em;
 }
 
 .result-bar {
@@ -60,193 +59,10 @@
     animation: jump 0.5s ease;
 }
 
-@media (height < 550px) {
-    .result-container h1 {
-        font-size: 32px;
-    }
-
-
-    .result-container {
-        display: grid;
-        justify-content: flex-end;
-        text-align: center;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto auto;
-        height: 100%;
-        width: 100%;
-    }
-
-
-    .result-title-container {
-        grid-column: 5 / 9;
-        grid-row: 1 / 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .voting-results-displayed {
-        grid-column: 2 / 4;
-        grid-row: 2 / 3;
-        gap: 20px;
-        border-bottom: none;
-        height: 50%;
-    }
-
-    .emoji-container {
-        grid-column: 8 / 10;
-        grid-row: 2 / 3;
-        gap: 20px;
-
-    }
-
-    .emoji-container p {
-        font-size: 4em;
-    }
-}
-
 .spawning-emojis{
     position: absolute;
     animation: floatUp 5s forwards;
 }
-
-
-
-@media (height < 376px) {
-    .result-container h1 {
-        font-size: 16px;
-    }
-
-
-    .result-container {
-        display: grid;
-        justify-content: flex-end;
-        text-align: center;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto auto;
-        height: 100%;
-        width: 100%;
-    }
-
-
-    .result-title-container {
-        grid-column: 5 / 9;
-        grid-row: 1 / 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .voting-results-displayed {
-        grid-column: 2 / 4;
-        grid-row: 2 / 3;
-        gap: 20px;
-        border-bottom: none;
-        height: 40%;
-    }
-
-    .emoji-container {
-        grid-column: 8 / 10;
-        grid-row: 2 / 3;
-        gap: 20px;
-
-    }
-
-    .emoji-container p {
-        font-size: 3em;
-    }
-}
-
-@media (width > 1024) {
-    .result-container h1 {
-        font-size: 72px;
-    }
-
-
-    .result-container {
-        display: grid;
-        justify-content: flex-end;
-        text-align: center;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto auto;
-        height: 100%;
-        width: 100%;
-    }
-
-
-    .result-title-container {
-        grid-column: 5 / 9;
-        grid-row: 1 / 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .voting-results-displayed {
-        grid-column: 2 / 4;
-        grid-row: 2 / 3;
-        gap: 20px;
-        border-bottom: none;
-        height: 50%;
-    }
-
-    .emoji-container {
-        grid-column: 8 / 10;
-        grid-row: 2 / 3;
-        gap: 20px;
-
-    }
-
-    .emoji-container p {
-        font-size: 3em;
-    }
-}
-
-@media (width < 1024) and (height < 712px) {
-    .result-container h1 {
-        font-size: 16px;
-    }
-
-
-    .result-container {
-        display: grid;
-        justify-content: flex-end;
-        text-align: center;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto auto;
-        height: 100%;
-        width: 100%;
-    }
-
-
-    .result-title-container {
-        grid-column: 5 / 9;
-        grid-row: 1 / 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .voting-results-displayed {
-        grid-column: 2 / 4;
-        grid-row: 2 / 3;
-        gap: 20px;
-        border-bottom: none;
-        height: 40%;
-    }
-
-    .emoji-container {
-        grid-column: 8 / 10;
-        grid-row: 2 / 3;
-        gap: 30px;
-
-    }
-
-    .emoji-container p {
-        font-size: 3em;
-    }
-}
-
 
 
 
@@ -269,4 +85,37 @@
     50% {
         transform: translateY(-20px);
     }
+}
+
+@media (width <= 1024px) {
+    .result-container h1 {
+        font-size: 48px;
+    }
+
+    .emoji-container p {
+        font-size: 4em;
+    }
+
+
+
+}
+
+@media (height <= 550px) {
+    .result-container h1 {
+        font-size: 32px;
+        
+    }
+
+    .emoji-container p {
+        font-size: 2em;
+    }
+
+    .voting-results-displayed {
+        padding-bottom: 0px;
+    }
+
+    .result-container {
+        height: 100%;
+    }
+
 }
