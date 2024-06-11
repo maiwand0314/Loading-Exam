@@ -37,7 +37,7 @@ const UsernameAndAvatar = () => {
         { id: 'swordmanDown', src: SwordmanSDownAvatar, alt: "avatar of swordman" },
     ];
 
-    const gameRoomId = "4400AB"
+    const gameRoomId = "ab1c34"
 
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * usernames.generatedUsernames.length);

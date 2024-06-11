@@ -1,5 +1,5 @@
 .name-and-avatar-container {
-    background-color: #209CEE;
+    background-color: #e46b43;
     display: grid;
     grid-template-columns: 12fr repeat(1fr);
     display: flex;
@@ -11,8 +11,10 @@
     overflow: hidden;
     position: relative;
 }
-.name-and-avatar-container h3, p {
+.name-and-avatar-container h3,
+.name-and-avatar-container p {
     color: #fafafc;
+  text-shadow: 1px 3px 1px black; 
 }
 
 .info-boxAvatar {
