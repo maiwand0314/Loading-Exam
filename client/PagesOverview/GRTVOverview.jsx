@@ -29,7 +29,7 @@ function GRTVOverview() {
                         <div style={{
                             height: "100%",
                             width: `${filled}%`,
-                            backgroundColor: "#a66cff",
+                            backgroundColor: "#860202",
                             transition: "width 0.5s"
                         }}></div>
 
@@ -39,7 +39,6 @@ function GRTVOverview() {
                 </div>
             </div>
         </>
-
 
 
     );

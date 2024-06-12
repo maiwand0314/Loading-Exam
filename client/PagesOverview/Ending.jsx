@@ -19,7 +19,7 @@ function EndingPageMaiwandOverview () {
 
 
     return (
-        <div className="containerEndingPage">
+        <div className="containerEndingPageEndingPageEnding">
             <h1 className="mainTitleEndingPage">Thanks for playing! We hope you enjoyed the show</h1>
             <div className='endingPageAvatarImage'>
             </div>

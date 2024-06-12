@@ -16,7 +16,7 @@ const AdminPanel = () => {
     useEffect(() => {
         if (isLoggedIn) {
             // Connect to WebSocket server when component mounts
-            const newSocket = new WebSocket('ws://localhost:3000');
+            const newSocket = new WebSocket('172.26.114.17/');
             setSocket(newSocket);
 
             // Clean up function to close WebSocket connection when component unmounts
@@ -169,8 +169,6 @@ const AdminPanel = () => {
                     <button onClick={() => handleChooseScene("waitingPage")} className="btn-admin-panel">Waiting Page</button>
                     <button onClick={startPageCycle} className="btn-admin-panel">Choice Page</button>
                     <button onClick={() => handleChooseScene("resultPage")} className="btn-admin-panel">Result Page</button>
-                    <button onClick={() => handleChooseScene("getReadyToVoteSecond2")} className="btn-admin-panel">Brown Version Choice Page</button>
-                    <button onClick={() => handleChooseScene("resultPageBrownVersion")} className="btn-admin-panel">Brown Version Result Page</button>
                     <button onClick={() => handleChooseScene("EndingPageMaiwand")} className="btn-admin-panel">Ending Page</button>
                 </div>
                 <input type="file" onChange={handleFileUpload} accept=".xlsx, .xls" />

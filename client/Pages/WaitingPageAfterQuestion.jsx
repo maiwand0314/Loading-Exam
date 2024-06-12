@@ -18,7 +18,7 @@ function WaitingPageAfterQuestion({ setCurrentPage }) {
         <><CharacterTopLeft></CharacterTopLeft>
            
         <div className="containerWaitingPageAfterQuestion">
-                    <h1 className="mainTitleAfterQuestion">Please enjoy the meme while counting votes</h1>
+                    <h1 className="mainTitleAfterQuestion">Please enjoy the funfact while counting votes</h1>
                     <div className="loadingDivAfterQuestion">
                 
                     <WaitingPageAfterQuestionLoadingBar />

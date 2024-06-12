@@ -18,6 +18,7 @@ import ResultPageOverViewBrown from "../PagesOverview/Result2";
 import IntermissionPage from "../Pages/IntermissionPage";
 import GRTVOverview from "../PagesOverview/GRTVOverview";
 import AQOverview from "../PagesOverview/AQOverview";
+import WaitingForPlayers from "../PagesOverview/Default.jsx";
 
 
 function OverView() {
@@ -28,7 +29,7 @@ function OverView() {
 
     useEffect(() => {
         // Connect to WebSocket server when component mounts
-        const newSocket = new WebSocket('ws://localhost:3000');
+        const newSocket = new WebSocket('172.26.114.17/');
         setSocket(newSocket);
 
         // Clean up function to close WebSocket connection when component unmounts
@@ -119,7 +120,7 @@ function OverView() {
     // Render component based on currentPage
     switch (currentPage) {
         case "waitingPage":
-            return<WaitingPage currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
+            return<WaitingForPlayers currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "intermissionScreen":
             return <IntermissionPage currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
         case "getReadyToVotePage":
