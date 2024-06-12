@@ -90,7 +90,7 @@ button:focus-visible {
 .progressbarEndingPage { 
     position: relative;
     overflow: hidden;
-    border: 5px solid #00ccff;
+    border: 5px solid #000000;
     justify-content: center;
     min-width: 80%;
     height: 10vh;

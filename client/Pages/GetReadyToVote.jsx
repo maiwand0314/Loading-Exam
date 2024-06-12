@@ -32,7 +32,7 @@ function GetReadyToVote() {
                 <div style={{
                     height: "100%",
                     width: `${filled}%`,
-                    backgroundColor: " #43a1e4",
+                    backgroundColor: "#860202",
                     transition: "width 0.5s"
                 }}></div>
 

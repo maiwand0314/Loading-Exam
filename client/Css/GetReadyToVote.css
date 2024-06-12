@@ -33,6 +33,9 @@
 	height: 80px;
 	border-radius: 5px;
 	background-color: #eee;
+	border-radius: 1em;
+	border: 5px solid black;
+	box-shadow: 5px 5px 10px black;
 }
 
 .progressPercentGetReady{

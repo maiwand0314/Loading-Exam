@@ -54,7 +54,7 @@
 .progressbarAfterQuestionPage{
   position: relative;
   overflow: hidden;
-	border: 5px solid #00ccff;
+	border: 5px solid black;
   justify-content: center;
 	/*border: 5px solid #004152;*/
 	min-width: 80%;

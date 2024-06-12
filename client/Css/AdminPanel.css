@@ -29,6 +29,14 @@
 .admin-panel-container p li h2 div {
     color: white;
 }
+.title{
+    color: white;
+    font-size: 1.25em;
+    padding: 0px 50px;
+    line-height: 1.5;
+    text-shadow: 3px 3px 1px black;
+    margin-bottom: 20px;
+}
 
 .admin-panel {
     width: 100%;
@@ -69,7 +77,7 @@
 .btn-admin-panel {
     color: #fff;
     cursor: pointer;
-    background-color: #0056b3;
+    background-color: #860202;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
