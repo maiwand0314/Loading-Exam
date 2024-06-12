@@ -1,5 +1,3 @@
-
-
 .containerGetReady {
 	background-color: #e46b43;
 	width: 100dvw;
@@ -18,7 +16,7 @@
 }
 
 .containerGetReady span {
-	color: black;
+	color: white;
 }
 
 
@@ -38,10 +36,8 @@
 }
 
 .progressPercentGetReady{
-
     font-size: 2em;
-
-	color: black;
+	color: white;
 	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }
 

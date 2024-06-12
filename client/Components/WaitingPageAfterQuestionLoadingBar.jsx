@@ -22,7 +22,7 @@ const [isRunning, setIsRunning] = useState(false);
 				  height: "100%",
 				  width: `${filled}%`,
 				/*  backgroundColor: "#2f2f54", */
-					backgroundColor: "#00728f",
+					backgroundColor: "#43a1e4",
 					
 				  	transition:"width 0.1s"
 

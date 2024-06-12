@@ -14,7 +14,7 @@ function Getready() {
 			  <div style={{
 				  height: "100%",
 				  width: `${filled}%`,
-				  backgroundColor: "#a66cff",
+				  backgroundColor: "#43a1e4",
 				  transition:"width 0.5s"
 			  }}></div>
 			  <span className="progressPercent">{ filled }%</span>
