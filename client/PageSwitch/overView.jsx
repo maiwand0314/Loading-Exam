@@ -2,19 +2,7 @@ import React, {useEffect, useState} from 'react';
 import '../Css/overView.css';
 import ResultPageOverView from "../PagesOverview/ResultOverview";
 import EndingPageMaiwandOverview from "../PagesOverview/Ending";
-
-import WaitingPage from "../PagesOverview/Default.jsx";
-
-import GetReadyToVote from "../Pages/GetReadyToVote";
-
-import WaitingPageAfterQuestion from "../Pages/WaitingPageAfterQuestion";
-
-import GetReadyToVoteSecond2 from "../PagesBrown/GetReadyToVoteSecond";
-import WaitingPageAfterBrownQuestion from "../PagesBrown/WaitingPageAfterBrownQuestion";
-
 import QuestionOverView from "../PagesOverview/QuestionOverview";
-import QuestionOverView2 from "../PagesOverview/Question2";
-import ResultPageOverViewBrown from "../PagesOverview/Result2";
 import IntermissionPage from "../Pages/IntermissionPage";
 import GRTVOverview from "../PagesOverview/GRTVOverview";
 import AQOverview from "../PagesOverview/AQOverview";
@@ -61,56 +49,40 @@ function OverView() {
     const handleOptionSelection = (option) => {
         // Update currentPage based on the option received
         switch (option) {
-            case "waitingPage":
-                setCurrentPageOverView("waitingPage");
+
+            case "Intermission Screen":
+                setCurrentPageOverView("Intermission Screen");
+                break;
+
+            case "Waiting Page":
+                setCurrentPageOverView("Waiting Page");
                 break;
 
 
-            case "getReadyToVotePage":
-                setCurrentPageOverView("getReadyToVotePage");
+            case "Get Ready To Vote Page":
+                setCurrentPageOverView("Get Ready To Vote Page");
                 break;
 
-            case "questionPage":
-                setCurrentPageOverView("questionPage");
-                break;
-
-
-            case "intermissionScreen":
-                setCurrentPageOverView("intermissionScreen");
+            case "Question Page":
+                setCurrentPageOverView("Question Page");
                 break;
 
 
 
-            case "resultPage":
-                setCurrentPageOverView("resultPage");
+
+            case "Waiting Page After Question":
+                setCurrentPageOverView("Waiting Page After Question");
+                break;
+
+            case "Result Page":
+                setCurrentPageOverView("Result Page");
                 break;
 
 
-            case "waitingPageAfterQuestion":
-                setCurrentPageOverView("waitingPageAfterQuestion");
-                break;
-
-            case "getReadyToVoteSecond2":
-                setCurrentPageOverView("getReadyToVoteSecond2");
-                break;
-
-            case "questionPageBrownVersion":
-                setCurrentPageOverView("questionPageBrownVersion");
-                break;
 
 
-            case "waitingPageAfterBrownQuestion":
-                setCurrentPageOverView("waitingPageAfterBrownQuestion")
-                break;
-
-
-            case "resultPageBrownVersion":
-                setCurrentPageOverView("resultPageBrownVersion")
-                break;
-
-
-            case "EndingPageMaiwand":
-                setCurrentPageOverView("EndingPageMaiwand")
+            case "Ending Page":
+                setCurrentPageOverView("Ending Page")
                 break;
             default:
                 break;
@@ -119,29 +91,19 @@ function OverView() {
 
     // Render component based on currentPage
     switch (currentPage) {
-        case "waitingPage":
+        case "Waiting Page":
             return<WaitingForPlayers currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
-        case "intermissionScreen":
+        case "Intermission Screen":
             return <IntermissionPage currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
-        case "getReadyToVotePage":
+        case "Get Ready To Vote Page":
             return <GRTVOverview currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
-        case "questionPage":
+        case "Question Page":
             return <QuestionOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
-        case "resultPage":
-            return <ResultPageOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
-        case "waitingPageAfterQuestion":
+        case "Waiting Page After Question":
             return <AQOverview currentPage={currentPage} setCurrentPage={setCurrentPageOverView} />;
-        case "questionPageBrownVersion":
-            return<QuestionOverView2 currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
-        case "getReadyToVoteSecond2":
-            return<GetReadyToVoteSecond2 currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
-        case "WaitingPageAfterQuestion3":
-            return<WaitingPageAfterQuestion currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
-        case "waitingPageAfterBrownQuestion":
-            return<WaitingPageAfterBrownQuestion currentPage={currentPage} setCurrentPage={setCurrentPageOverView}/>;
-        case "resultPageBrownVersion":
-            return<ResultPageOverViewBrown currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
-        case "EndingPageMaiwand":
+            case "Result Page":
+            return <ResultPageOverView currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView} />;
+        case "Ending Page":
             return<EndingPageMaiwandOverview currentPage={currentPage} setCurrentPageOverView={setCurrentPageOverView}/>;
         default:
             return <div>Error: Unknown page</div>;

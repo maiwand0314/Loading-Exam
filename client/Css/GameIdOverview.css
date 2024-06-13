@@ -1,0 +1,20 @@
+.game-id-container {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-top: 20px;
+    z-index: 200;
+}
+
+.game-id-text-container {
+    text-align: center;
+}
+
+.game-id-text {
+    font-size: 24px;
+
+
+    color: #102670;
+}

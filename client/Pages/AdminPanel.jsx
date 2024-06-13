@@ -46,18 +46,18 @@ const AdminPanel = () => {
 
     const startPageCycle = () => {
         clearAllTimeouts();
-        handleChooseScene("getReadyToVotePage", true);
+        handleChooseScene("Get Ready To Vote Page", true);
 
         const timeout1 = setTimeout(() => {
-            handleChooseScene("questionPage", true);
+            handleChooseScene("Question Page", true);
         }, 5000); // Transition to questionPage after 5 seconds
 
         const timeout2 = setTimeout(() => {
-            handleChooseScene("waitingPageAfterQuestion", true);
+            handleChooseScene("Waiting Page After Question", true);
         }, 25000); // Transition to waitingPageAfterQuestion after an additional 20 seconds
 
         const timeout3 = setTimeout(() => {
-            handleChooseScene("resultPage", true);
+            handleChooseScene("Result Page", true);
         }, 35000); // Transition to resultPage after an additional 10 seconds
 
         timeouts.current.push(timeout1, timeout2, timeout3);
@@ -93,7 +93,7 @@ const AdminPanel = () => {
             const nextIndex = currentIndex + 1;
             setCurrentIndex(nextIndex);
 
-            if (scenes[nextIndex] === "questionCycle" ){
+            if (scenes[nextIndex] === "Question Cycle" ){
                 startPageCycle();
                 return;
             }
@@ -165,11 +165,11 @@ const AdminPanel = () => {
             <div className="admin-panel">
                 <h1 className="title">Theatre Play Admin Panel</h1>
                 <div className="controls">
-                    <button onClick={() => handleChooseScene("intermissionScreen")} className="btn-admin-panel">Intermission Page</button>
-                    <button onClick={() => handleChooseScene("waitingPage")} className="btn-admin-panel">Waiting Page</button>
+                    <button onClick={() => handleChooseScene("Intermission Screen")} className="btn-admin-panel">Intermission Page</button>
+                    <button onClick={() => handleChooseScene("Waiting Page")} className="btn-admin-panel">Waiting Page</button>
                     <button onClick={startPageCycle} className="btn-admin-panel">Choice Page</button>
-                    <button onClick={() => handleChooseScene("resultPage")} className="btn-admin-panel">Result Page</button>
-                    <button onClick={() => handleChooseScene("EndingPageMaiwand")} className="btn-admin-panel">Ending Page</button>
+                    <button onClick={() => handleChooseScene("Result Page")} className="btn-admin-panel">Result Page</button>
+                    <button onClick={() => handleChooseScene("Ending Page")} className="btn-admin-panel">Ending Page</button>
                 </div>
                 <input type="file" onChange={handleFileUpload} accept=".xlsx, .xls" />
                 <div className="navigation-buttons">

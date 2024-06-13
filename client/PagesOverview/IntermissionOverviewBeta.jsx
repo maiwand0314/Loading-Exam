@@ -1,6 +1,6 @@
 import React from "react";
 
-function Blank() {
+function IntermissionOverviewBeta() {
     return (
         <div className="blank">
             <div className="loader-container-pedro-2">
@@ -11,4 +11,4 @@ function Blank() {
     );
 }
 
-export default Blank;
+export default IntermissionOverviewBeta;

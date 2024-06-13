@@ -7,14 +7,15 @@ import { WebSocketServer } from "ws"; // Import WebSocketServer
 import { QuestionApi } from "./question.js";
 import {QuestionApi2} from "./qustion2.js";
 import { ReviewApi } from "./review.js";
-import {LoginApi} from "./login.js"; // Import ReviewApi
+import {LoginApi} from "./login.js";
+import {GameidAPI} from "./gameid.js"; // Import ReviewApi
 
 dotenv.config();
 const app = express();
 
 app.use(bodyParser.json());
 
-let scene = "waitingPage";
+let scene = "Waiting Page";
 let counter = 0;
 const voteList = [];
 const ListA = [];
@@ -50,6 +51,7 @@ mongoClient.connect().then(async () => {
     app.use("/api/questions", QuestionApi2(db));
     app.use("/api/reviews", ReviewApi(db));
     app.use("/api/login", LoginApi(db));
+    app.use("/api/game-id", GameidAPI(db));
 });
 
 // Set up WebSocket server

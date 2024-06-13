@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import QuestionComp from "../Components/QuestionComp";
-import "../Css/Question2.css";
+import "../Css/Questions.css";
 
 
 function Questions() {

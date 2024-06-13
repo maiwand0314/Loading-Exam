@@ -5,10 +5,6 @@ import IntermissionPage from "../Pages/IntermissionPage";
 import Questions from "../Pages/Questions";
 import ResultPage from "../Pages/ResultPage";
 import WaitingPageAfterQuestion from "../Pages/WaitingPageAfterQuestion";
-import GetReadyToVoteSecond2 from "../PagesBrown/GetReadyToVoteSecond";
-import QuestionsBrownVersion from "../PagesBrown/QuestionsBrownVersion";
-import WaitingPageAfterBrownQuestion from '../PagesBrown/WaitingPageAfterBrownQuestion';
-import ResultPageBrownVersion from '../PagesBrown/ResultPageBrownVersion';
 import EndingPageNew from "../Pages/EndingPage";
 
 
@@ -56,42 +52,29 @@ function UserPage() {
     const handleOptionSelection = (option) => {
         // Update currentPage based on the option received
         switch (option) {
-            case "waitingPage":
-                setCurrentPage("waitingPage");
+            case "Waiting Page":
+                setCurrentPage("Waiting Page");
                 break;
-            case "intermissionScreen":
-                setCurrentPage("intermissionScreen");
+            case "Intermission Screen":
+                setCurrentPage("Intermission Screen");
                 break;
-            case "getReadyToVotePage":
-                setCurrentPage("getReadyToVotePage");
+            case "Get Ready To Vote Page":
+                setCurrentPage("Get Ready To Vote Page");
                 break;
-            case "questionPage":
-                setCurrentPage("questionPage");
+            case "Question Page":
+                setCurrentPage("Question Page");
                 break;
 
-            case "waitingPageAfterQuestion":
-                setCurrentPage("waitingPageAfterQuestion");
+            case "Waiting Page After Question":
+                setCurrentPage("Waiting Page After Question");
                 break;
-            case "resultPage":
-                setCurrentPage("resultPage");
+
+            case "Result Page":
+                setCurrentPage("Result Page");
                 break;
-            case "questionPageBrownVersion":
-                setCurrentPage("questionPageBrownVersion");
-                break;
-            case "getReadyToVoteSecond2":
-                setCurrentPage("getReadyToVoteSecond2");
-                break;
-            case "WaitingPageAfterQuestion3":
-                setCurrentPage("WaitingPageAfterQuestion3")
-                break;
-            case "waitingPageAfterBrownQuestion":
-                setCurrentPage("waitingPageAfterBrownQuestion")
-                break;
-            case "resultPageBrownVersion":
-                setCurrentPage("resultPageBrownVersion")
-                break;
-            case "EndingPageMaiwand":
-                setCurrentPage("EndingPageMaiwand")
+
+            case "Ending Page":
+                setCurrentPage("Ending Page")
                 break;
             default:
 
@@ -100,29 +83,19 @@ function UserPage() {
 
     // Render component based on currentPage
     switch (currentPage) {
-        case "waitingPage":
+        case "Waiting Page":
             return<WaitingPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-        case "intermissionScreen":
+        case "Intermission Screen":
             return <IntermissionPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-        case "getReadyToVotePage":
+        case "Get Ready To Vote Page":
             return <GetReadyToVote currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-        case "questionPage":
+        case "Question Page":
             return <Questions currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-        case "resultPage":
-            return <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-        case "waitingPageAfterQuestion":
+        case "Waiting Page After Question":
             return <WaitingPageAfterQuestion currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-        case "questionPageBrownVersion":
-            return<QuestionsBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
-        case "getReadyToVoteSecond2":
-            return<GetReadyToVoteSecond2 currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
-        case "WaitingPageAfterQuestion3":
-            return<WaitingPageAfterQuestion3 currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
-        case "waitingPageAfterBrownQuestion":
-            return<WaitingPageAfterBrownQuestion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
-        case "resultPageBrownVersion":
-            return<ResultPageBrownVersion currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
-        case "EndingPageMaiwand":
+        case "Result Page":
+            return <ResultPage currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+        case "Ending Page":
             return<EndingPageNew currentPage={currentPage} setCurrentPage={setCurrentPage}/>;
         default:
             return <div></div>;

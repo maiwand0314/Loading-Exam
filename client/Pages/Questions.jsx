@@ -2,7 +2,7 @@ import {React, useState, useEffect } from "react";
 import CharacterTopLeft from "../Components/CharacterTopLeft";
 import QuestionButton from "../Components/QuestionButton";
 import QuestionComp from "../Components/QuestionComp";
-import "../Css/Question2.css"
+import "../Css/Questions.css"
 async function insertChoice(choice) {
     await fetch("/api/choices", {
         method: "POST",
@@ -59,7 +59,7 @@ function Questions({ setCurrentPage }) {
                                     key={data.id}
                                     answer={data.answer}
                                     onClick={() => {
-                                        setCurrentPage('waitingPageAfterQuestion');
+                                        setCurrentPage('Waiting Page After Question');
                                         insertChoice(data.id);
                                     }}
                                 />
