@@ -6,10 +6,10 @@
 3. [Securing Backend Database Connection](#securing-backend-database-connection)
 4. [Running Sockets on a Public Local Server (Advanced)](#running-sockets-on-a-public-local-server-advanced)
 5. [Enabling Cookies for Localhost/Public Localhost (Advanced)](#enabling-cookies-for-localhostpublic-localhost-advanced)
+6. [URLs on Your Browser](#urls-on-your-browser)
 
 ## 1. Introduction
 This guide provides step-by-step instructions for setting up the project, connecting the backend server to a MongoDB database, and configuring sockets for access from external devices with cookie support on a local public server. It is crucial that the IDE used for this project supports JavaScript/React, as this is the supported language for the project's development. Without proper IDE support for the language, the configurations and processes outlined in this guide may not function as intended.
-RECOMMENDED IDE - VSCODE
 
 ## 2. Setting up the Project
 To run the application, it is essential to install the respective dependencies that are used in the project. The dependencies are listed in the project's `package.json` files under "dependencies".
@@ -91,6 +91,23 @@ Cookies.set("user_token", avatarId, {expires: 1, path: "/", secure: true, sameSi
 Cookies.set("name_token", randomUsername, {expires: 1, path: "/"});
 Cookies.set("user_token", avatarId, {expires: 1, path: "/"});
 \`\`\`
+
+## 6. URLs on Your Browser
+Port 3000
+
+**Landing Page:**
+- URL: [http://localhost:3000/](http://localhost:3000/)
+- Game code password: ab1c34
+
+**Admin Page:**
+- URL: [http://localhost:3000/admin](http://localhost:3000/admin)
+- Admin page username and password: admin, admin
+
+**Main Screen Page:**
+- URL: [http://localhost:3000/over-view=1](http://localhost:3000/over-view=1)
+
+**Game Page:**
+- URL: [http://localhost:3000/gameID=1](http://localhost:3000/gameID=1)
 
 By following this guide, you have secured your backend database connection, configured sockets for external access, enabled cookie support on a local public server, and successfully added the necessary dependencies. These steps are crucial for maintaining security and functionality during development and testing.
 
