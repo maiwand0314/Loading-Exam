@@ -17,7 +17,7 @@ function OverView() {
 
     useEffect(() => {
         // Connect to WebSocket server when component mounts
-        const newSocket = new WebSocket('172.26.114.17/');
+        const newSocket = new WebSocket('ws://localhost:3000');
         setSocket(newSocket);
 
         // Clean up function to close WebSocket connection when component unmounts
